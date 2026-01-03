@@ -1,0 +1,38 @@
+# MER Theory Repository - Git Ignore
+
+# PDF drafts (keep in _source-materials)
+*.pdf
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python (if we add simulations later)
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# LaTeX (if we compile later)
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Build outputs
+build/
+dist/
+

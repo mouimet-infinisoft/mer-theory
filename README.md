@@ -1,0 +1,97 @@
+# MER Theory
+
+**Multi-scale Emergent Reality Theory**
+
+> A unified physics framework bridging quantum mechanics and general relativity through observer-relative scale dynamics.
+
+---
+
+## 🎯 What is MER Theory?
+
+MER Theory proposes that the apparent contradictions between quantum mechanics (probabilistic, microscopic) and general relativity (deterministic, macroscopic) arise from **observer-relative scale perception**, not fundamental incompatibility.
+
+### Core Insight
+
+**Reality is scale-dependent.** What appears:
+- **Quantum/probabilistic** at one scale
+- **Classical/deterministic** at another scale  
+- **Cosmic/relativistic** at yet another scale
+
+...are all **projections of the same underlying universal dynamics** viewed through different observational windows.
+
+---
+
+## 🔑 Key Concepts
+
+### 1. **φ/ψ Conjugate Cycles**
+- **φ (phi) ≈ 1.618** → Expansion, emergence, growth
+- **ψ (psi) ≈ -0.618** → Regulation, constraint, dissipation
+- **Conjugate relationship**: φ + ψ = 1, φ × ψ = -1
+
+### 2. **Observer-Relative Cycles**
+An observer at cycle **N** perceives:
+- Cycle **N-1** as **quantum** (too small/fast to track deterministically)
+- Cycle **N** as **classical** (directly observable)
+- Cycle **N+1** as **cosmic** (too large/slow to observe completely)
+
+### 3. **Determinism → Probabilism**
+- **Fundamental level**: Deterministic φ/ψ dynamics
+- **Observed level**: Probabilistic due to scale limitations
+- Similar to **Lorenz attractor**: deterministic equations, chaotic/unpredictable trajectories
+
+### 4. **Geometric Manifestations**
+- **∞ (Lemniscate)**: Internal φ/ψ flux
+- **Fibonacci Spirals**: Scale transitions
+- **Mandelbrot/Julia Sets**: Universal fractal projections
+
+---
+
+## 📚 Documentation
+
+- **[Abstract](ABSTRACT.md)** - Executive summary
+- **[Table of Contents](docs/TOC.md)** - Full paper structure
+- **[Section 1: Introduction](docs/section-01-introduction.md)**
+- **[Section 2: Conceptual Framework](docs/section-02-conceptual-framework.md)**
+- **[Section 3: Mathematical Structure](docs/section-03-mathematical-structure.md)**
+
+---
+
+## 🚀 Current Status
+
+**Version**: 0.1 (Initial Draft)
+
+**Completed**:
+- ✅ Sections 1-3 (Introduction, Conceptual Framework, Mathematical Structure)
+
+**In Progress**:
+- ⏳ Section 4: Geometrical Structure and Visualization
+- ⏳ Sections 5-9: Applications, Methodology, Discussion, Conclusion, Appendices
+
+---
+
+## 🎓 Research Approach
+
+This theory is developed using **incremental software engineering methodology**:
+1. **Draft** → Complete section
+2. **Review** → Validate and refine
+3. **Version** → Release (v0.1 → v0.2 → v0.3...)
+4. **Iterate** → Improve based on feedback
+
+---
+
+## 📖 Background Materials
+
+Original research discussions and source materials are preserved in `_source-materials/`.
+
+---
+
+## 📧 Contact
+
+For questions or collaboration: [Contact information to be added]
+
+---
+
+**License**: [To be determined]
+
+**Last Updated**: 2026-01-03
+
