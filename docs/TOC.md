@@ -2,8 +2,10 @@
 
 **Multi-scale Emergent Reality Theory: A Unified Framework for Quantum Mechanics and General Relativity**
 
-**Version**: 0.1 (Initial Draft)  
+**Author**: Martin Ouimet
+**Version**: 0.1 (Initial Draft)
 **Last Updated**: 2026-01-03
+**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ---
 

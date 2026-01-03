@@ -1,5 +1,11 @@
 # Section 3: Mathematical Structure
 
+**Author**: Martin Ouimet
+**MER Theory Version**: 0.1
+**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+---
+
 ## 3.1 Formulation of φ/ψ Cycles
 
 ### Core Equation

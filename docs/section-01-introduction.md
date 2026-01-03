@@ -1,5 +1,11 @@
 # Section 1: Introduction
 
+**Author**: Martin Ouimet
+**MER Theory Version**: 0.1
+**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+---
+
 ## 1.1 Scientific Context and Motivation
 
 Modern physics is defined by two highly successful yet fundamentally distinct frameworks: **quantum mechanics (QM)**, which governs phenomena at the microscopic scale, and **general relativity (GR)**, which describes the gravitational dynamics of the cosmos. Despite their predictive power within their respective domains, these two theories remain conceptually incompatible. Quantum mechanics relies on probabilistic descriptions and discrete states, while general relativity models spacetime as a smooth, continuous manifold. The quest to reconcile these paradigms has motivated decades of research in fields such as quantum gravity, string theory, and loop quantum gravity. Yet, a universally accepted framework that unifies micro- and macro-scale physics remains elusive.

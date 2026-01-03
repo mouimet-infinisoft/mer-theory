@@ -2,6 +2,11 @@
 
 **Multi-scale Emergent Reality Theory: A Unified Framework for Quantum Mechanics and General Relativity**
 
+**Author**: Martin Ouimet
+**Version**: 0.1
+**Date**: 2026-01-03
+**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
 ---
 
 ## Executive Summary
@@ -119,6 +124,19 @@ By treating reality as a multi-scale emergent phenomenon governed by φ/ψ conju
 This framework represents a paradigm shift: from seeking a "theory of everything" to understanding how **one universal law manifests differently across scales of observation**.
 
 ---
+
+## Citation
+
+```
+Ouimet, M. (2026). Multi-scale Emergent Reality Theory: A Unified Framework
+for Quantum Mechanics and General Relativity. GitHub repository.
+https://github.com/mouimet-infinisoft/mer-theory
+```
+
+---
+
+**Copyright**: © 2026 Martin Ouimet
+**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) - Free to share and adapt with attribution
 
 **For full details, see the complete paper in [docs/TOC.md](docs/TOC.md).**
 

@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+authors:
+  - family-names: "Ouimet"
+    given-names: "Martin"
+    orcid: ""
+title: "Multi-scale Emergent Reality Theory: A Unified Framework for Quantum Mechanics and General Relativity"
+version: 0.1
+date-released: 2026-01-03
+url: "https://github.com/mouimet-infinisoft/mer-theory"
+repository-code: "https://github.com/mouimet-infinisoft/mer-theory"
+license: CC-BY-4.0
+keywords:
+  - quantum mechanics
+  - general relativity
+  - unified theory
+  - multi-scale physics
+  - observer-relative dynamics
+  - golden ratio
+  - phi-psi cycles
+  - emergent reality
+abstract: "MER Theory proposes a unified framework bridging quantum mechanics and general relativity through observer-relative scale dynamics. The theory introduces phi/psi conjugate cycles based on the golden ratio, demonstrating how deterministic universal laws manifest as probabilistic observations at different scales."
+

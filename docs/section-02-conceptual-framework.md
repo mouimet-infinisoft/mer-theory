@@ -1,5 +1,11 @@
 # Section 2: Conceptual Framework of MER
 
+**Author**: Martin Ouimet
+**MER Theory Version**: 0.1
+**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+---
+
 ## 2.1 Unique Universal Law
 
 MER Theory proposes that **reality is governed by a single universal law**, but our perception of it depends entirely on:

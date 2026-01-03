@@ -4,6 +4,12 @@
 
 > A unified physics framework bridging quantum mechanics and general relativity through observer-relative scale dynamics.
 
+**Author**: Martin Ouimet
+**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+**Repository**: https://github.com/mouimet-infinisoft/mer-theory
+
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
 ---
 
 ## 🎯 What is MER Theory?
@@ -85,13 +91,27 @@ Original research discussions and source materials are preserved in `_source-mat
 
 ---
 
-## 📧 Contact
+## 📧 Contact & Citation
 
-For questions or collaboration: [Contact information to be added]
+**Author**: Martin Ouimet
+**GitHub**: [@mouimet-infinisoft](https://github.com/mouimet-infinisoft)
+**Repository**: https://github.com/mouimet-infinisoft/mer-theory
+
+For questions, collaboration, or academic inquiries, please open an issue on GitHub.
+
+### How to Cite
+
+```
+Ouimet, M. (2026). Multi-scale Emergent Reality Theory: A Unified Framework
+for Quantum Mechanics and General Relativity. GitHub repository.
+https://github.com/mouimet-infinisoft/mer-theory
+```
 
 ---
 
-**License**: [To be determined]
+**License**: [CC BY 4.0](LICENSE) - You are free to share and adapt this work with attribution.
+
+**Copyright**: © 2026 Martin Ouimet
 
 **Last Updated**: 2026-01-03
 
