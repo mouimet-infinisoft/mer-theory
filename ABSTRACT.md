@@ -45,6 +45,8 @@ Scale is not a fundamental dimension but an **emergent property of interaction**
 - **ε (epsilon)** = (L_S/L_O) + (T_S/T_O) + (E_S/E_O)
 - **Projection filter**: P_λ = exp(-α·ε²)
 
+Here λ indexes the observer's position in the scale hierarchy, while ε measures the mismatch between system and observer scales that feeds into the projection filter.
+
 An observer at cycle **N** perceives:
 - Cycle **N-1** as **quantum** (too small/fast to track deterministically)
 - Cycle **N** as **classical** (directly observable)
@@ -68,7 +70,7 @@ MER reveals deep connections between:
 
 ## Scientific Implications
 
-### **Resolves Quantum-Relativity Paradoxes**
+### **Reframes Quantum-Relativity Paradoxes**
 - **Wave-particle duality**: Same object, different observational resolutions
 - **Quantum superposition**: Deterministic at universal level, probabilistic at observational scale
 - **Entanglement**: Shared cycle coherence across spatial separation
@@ -92,7 +94,7 @@ MER reveals deep connections between:
 |--------|----------|--------|
 | **String Theory** | Extra dimensions, supersymmetry | No unique predictions, untestable |
 | **Loop Quantum Gravity** | Quantize spacetime | Does not unify forces |
-| **MER Theory** | Observer-relative scale dynamics | Testable, reproducible, multi-scale |
+| **MER Theory** | Observer-relative scale dynamics | Emphasizes concrete, multi-scale, testable predictions |
 
 ---
 
@@ -104,9 +106,10 @@ MER reveals deep connections between:
 - Conceptual foundation
 - Mathematical formulation
 - Geometric structure
+- Initial scientific applications (Section 5, v0.1 draft)
 
 **In Progress**:
-- Detailed scientific applications
+- Refinement of scientific applications and numerical checks
 - Experimental validation protocols
 - Simulation development
 
@@ -121,7 +124,7 @@ By treating reality as a multi-scale emergent phenomenon governed by φ/ψ conju
 - **Testable experimental predictions**
 - **Conceptual clarity** on long-standing paradoxes
 
-This framework represents a paradigm shift: from seeking a "theory of everything" to understanding how **one universal law manifests differently across scales of observation**.
+This framework represents a conceptual reframing: from seeking a "theory of everything" to understanding how **one universal law manifests differently across scales of observation**.
 
 ---
 
