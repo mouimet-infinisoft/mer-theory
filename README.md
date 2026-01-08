@@ -59,6 +59,8 @@ An observer at cycle **N** perceives:
 - **[Section 1: Introduction](docs/section-01-introduction.md)**
 - **[Section 2: Conceptual Framework](docs/section-02-conceptual-framework.md)**
 - **[Section 3: Mathematical Structure](docs/section-03-mathematical-structure.md)**
+ - **[Section 4: Geometrical Structure and Visualization](docs/section-04-geometrical-structure.md)**
+ - **[Section 5: Scientific Applications](docs/section-05-scientific-applications.md)**
 
 ---
 
@@ -67,11 +69,13 @@ An observer at cycle **N** perceives:
 **Version**: 0.1 (Initial Draft)
 
 **Completed**:
-- ✅ Sections 1-3 (Introduction, Conceptual Framework, Mathematical Structure)
+- ✅ Sections 1-5 (Introduction, Conceptual Framework, Mathematical Structure, Geometrical Structure, Scientific Applications)
 
 **In Progress**:
-- ⏳ Section 4: Geometrical Structure and Visualization
-- ⏳ Sections 5-9: Applications, Methodology, Discussion, Conclusion, Appendices
+- ⏳ Section 6: Reproducible Methodology
+- ⏳ Section 7: Discussion
+- ⏳ Section 8: Conclusion
+- ⏳ Section 9: Appendices
 
 ---
 
@@ -113,5 +117,5 @@ https://github.com/mouimet-infinisoft/mer-theory
 
 **Copyright**: © 2026 Martin Ouimet
 
-**Last Updated**: 2026-01-03
+**Last Updated**: 2026-01-08
 
