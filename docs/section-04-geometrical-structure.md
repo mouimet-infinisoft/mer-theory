@@ -79,6 +79,8 @@ Flux(θ) = φ·exp(θ) - ψ·exp(-θ)
 | Classical | Pendulum phase space | Chaotic attractors |
 | Cosmic | Galaxy merger dynamics | Gravitational lensing |
 
+Throughout this section, φ and ψ denote the conjugate expansion/regulation cycles introduced in §2.2, and λ retains its meaning as the observer-relative scale parameter from §2.3.
+
 ---
 
 ## 4.2 Stabilization Circle and Scale Limits
@@ -113,6 +115,8 @@ R_stable(λ) = λ · √(φ² + ψ²)
 
 **Interpretation**: The stable radius is approximately **√3 times the characteristic scale**.
 
+Here λ is chosen proportional to the lemniscate semi-axis a, so this expression is consistent with the earlier relation R_stable = a·√2 up to that proportionality choice.
+
 ### Scale Limit Dynamics
 
 As a system approaches the stabilization circle:
@@ -137,9 +141,9 @@ P_remain → 0  (system must transition to new scale)
 Variance(r) ∝ (R_stable - r)^(-1)
 ```
 
-**Prediction 2**: Transition probability peaks at r = R_stable
+**Prediction 2**: Transition probability peaks at r ≈ R_stable
 ```
-P_transition(r) = δ(r - R_stable)
+P_transition(r) ∝ δ(r - R_stable)
 ```
 
 **Prediction 3**: Energy quantization follows φⁿ spacing
@@ -199,7 +203,7 @@ Systems near the vertex exhibit:
 3. **Universality**: Behavior independent of microscopic details
 4. **Self-similarity**: Fractal structure emerges
 
-**MER Prediction**: All phase transitions occur at lemniscate vertices.
+**MER Hypothesis**: Phase transitions can be modeled as occurring at lemniscate vertices (critical points of φ/ψ balance).
 
 ---
 
@@ -269,6 +273,8 @@ E_n = E_0 · φ^n  (for n = 1, 2, 3, ...)
 tan(pitch_angle) = 1/φ
 pitch_angle ≈ 31.7° ± 2°
 ```
+
+These spiral relationships are proposed as empirical hypotheses within MER Theory; confirming or refuting them requires systematic data analysis across atomic, planetary, and galactic scales.
 
 ---
 
@@ -392,9 +398,9 @@ For a given scale λ, the MER diagram is fully specified by:
 5. Observer position: λ_observer
 ```
 
-### Computational Implementation
+### Computational Implementation (Pseudocode)
 
-MER diagrams can be generated algorithmically:
+MER diagrams can be generated algorithmically. The following is Python-like pseudocode illustrating how one might implement the MER geometric pipeline:
 
 ```python
 def generate_MER_diagram(lambda_scale, observer_scale):
@@ -449,6 +455,8 @@ The geometric structures of MER Theory provide:
 - ✅ Fibonacci spirals (scale transitions)
 - ✅ Mandelbrot/Julia sets (observable projections)
 - ✅ Multi-scale nesting (self-similarity)
+
+For compact visual summaries of these structures, see: [Section 4 Diagrams: Geometrical Structure and Visualization](section-04-diagrams.md).
 
 **Next steps**:
 - Generate computational visualizations
