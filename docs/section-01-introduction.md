@@ -10,7 +10,7 @@
 
 Modern physics is defined by two highly successful yet fundamentally distinct frameworks: **quantum mechanics (QM)**, which governs phenomena at the microscopic scale, and **general relativity (GR)**, which describes the gravitational dynamics of the cosmos. Despite their predictive power within their respective domains, these two theories remain conceptually incompatible. Quantum mechanics relies on probabilistic descriptions and discrete states, while general relativity models spacetime as a smooth, continuous manifold. The quest to reconcile these paradigms has motivated decades of research in fields such as quantum gravity, string theory, and loop quantum gravity. Yet, a universally accepted framework that unifies micro- and macro-scale physics remains elusive.
 
-The **MER Theory** (Multi-scale Emergent Reality) arises from the need to bridge this conceptual gap by establishing a framework that simultaneously respects quantum probabilistic behavior and relativistic continuity. This theory emphasizes the **observer-dependent nature of scale**, recognizing that phenomena can appear radically different depending on the reference frame and the scale of observation. By formalizing the interactions between scales, MER Theory aims to provide a unified description of reality that is both theoretically consistent and experimentally approachable.
+The **MER Theory** (Multi-scale Emergent Reality) arises from the need to bridge this conceptual gap by establishing a framework that simultaneously respects quantum probabilistic behavior and relativistic continuity. This theory emphasizes **observer-relative scale perception**, recognizing that phenomena can appear radically different depending on the reference frame and the **scale mismatch** between observer and system. By formalizing the interactions between scales, MER Theory aims to provide a unified description of reality that is both theoretically consistent and experimentally approachable.
 
 ## 1.2 Problem Statement: Unifying Quantum Mechanics and Relativity
 
@@ -22,7 +22,7 @@ Current models encounter significant challenges when attempting to reconcile qua
 
 **Limitations of existing unification attempts**: Approaches like string theory and quantum loop gravity provide mathematically elegant frameworks but remain largely untestable with current experimental technology. There is a need for a model that provides both predictive power and empirical accessibility.
 
-MER Theory addresses these challenges by proposing a **multi-scale framework** in which cycles of observation, emergent structures, and probabilistic phenomena coexist across scales, allowing for an integrated understanding of physical reality.
+MER Theory addresses these challenges by proposing a **multi-scale framework** in which cycles of observation, emergent structures, and probabilistic phenomena coexist across scales, allowing for an integrated understanding of physical reality that treats many apparent contradictions as consequences of **scale-dependent observation** rather than fundamental inconsistency.
 
 ## 1.3 Objectives of This Paper
 
@@ -47,6 +47,8 @@ While MER Theory seeks to provide a comprehensive multi-scale model of reality, 
 **Reproducibility and experimental constraints**: While MER Theory proposes testable predictions, some phenomena, particularly at cosmic or quantum extremes, may remain challenging to observe directly.
 
 **Pragmatic boundaries**: The theory aims for clarity, internal consistency, and conceptual unification rather than providing exhaustive solutions to all unresolved questions in physics.
+
+**Complementarity with existing theories**: MER is intended to complement, rather than replace, established frameworks such as quantum mechanics and general relativity by reframing how their domains connect across observational scales.
 
 ---
 
