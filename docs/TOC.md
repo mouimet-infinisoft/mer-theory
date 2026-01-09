@@ -39,7 +39,7 @@
 
 ---
 
-## 4. Geometrical Structure and Visualization ⏳
+## 4. Geometrical Structure and Visualization 📝
 
 4.1 Lemniscate ∞ and Internal Flux  
 4.2 Stabilization Circle and Scale Limits  
@@ -50,7 +50,7 @@
 
 ---
 
-## 5. Concrete Scientific Applications ⏳
+## 5. Concrete Scientific Applications 📝
 
 5.1 Quantum Mechanics: Wave-Particle Duality, Entanglement  
 5.2 Relativity: Gravity, Black Holes, Cosmic Expansion  
@@ -82,7 +82,7 @@
 ## 8. Conclusion ⏳
 
 8.1 Summary of MER Findings  
-8.2 How MER Explains the Inexplicable  
+8.2 How MER Reframes Previously Puzzling Phenomena  
 8.3 Potential Applications and Scientific Impact  
 8.4 Multi-Scale and Universal Vision
 
@@ -100,7 +100,7 @@
 ## Legend
 
 - ✅ **Complete** - Section drafted and ready for review
-- ⏳ **In Progress** - Section planned, not yet written
+- ⏳ **In Progress** - Section planned or being drafted, not yet complete
 - 🔄 **Under Review** - Section being revised
 - 📝 **Draft** - Initial version exists, needs refinement
 
