@@ -1,4 +1,4 @@
-# Section 3: Mathematical Structure
+# 3. Mathematical Structure
 
 **Author**: Martin Ouimet  
 **MER Theory Version**: 0.1  
@@ -12,9 +12,7 @@
 
 The fundamental MER equation governing universal dynamics:
 
-```
-State(n+1) = φ·f_expand(State_n) + ψ·f_regulate(State_n)
-```
+$$\text{State}_{n+1} = \varphi \cdot f_{\text{expand}}(\text{State}_n) + \psi \cdot f_{\text{regulate}}(\text{State}_n)$$
 
 Where:
 - **φ ≈ 1.618** (expansion eigenvalue)
@@ -24,14 +22,9 @@ Where:
 
 ### Expanded Form with Scale Parameter
 
-```
-State(n+1, λ) = φ·exp(λ)·State_n + ψ·log(λ)·State_n + Feedback_term(λ)
-```
+$$\text{State}_{n+1,\lambda} = \varphi \cdot e^{\lambda} \cdot \text{State}_n + \psi \cdot \log(\lambda) \cdot \text{State}_n + \text{Feedback}(\lambda)$$
 
-Where:
-```
-λ = λ(interaction_intensity, distance, energy_scale)
-```
+Where $\lambda = \lambda(\text{interaction intensity}, \text{distance}, \text{energy scale})$.
 
 ## 3.2 Multi-Scale Modeling
 
@@ -39,16 +32,11 @@ Where:
 
 What an observer at scale λ actually measures:
 
-```
-Observable(λ) = P_λ[State_universal]
-              = State_universal · exp(-α·ε²)
-```
+$$\text{Observable}(\lambda) = P_\lambda[\text{State}_{\text{universal}}] = \text{State}_{\text{universal}} \cdot e^{-\alpha \varepsilon^2}$$
 
 Where the scale adequacy parameter is:
 
-```
-ε(S,O) = (L_S/L_O) + (T_S/T_O) + (E_S/E_O)
-```
+$$\varepsilon(S,O) = \frac{L_S}{L_O} + \frac{T_S}{T_O} + \frac{E_S}{E_O}$$
 
 And:
 - **α** = scaling factor (system-dependent)
@@ -57,11 +45,11 @@ And:
 
 ### Interpretation
 
-| ε Value | Filter P_λ | Observation Type              |
-|---------|-----------|-------------------------------|
-| ε ≪ 1   | P_λ ≈ 1   | Quantum, probabilistic        |
-| ε ~ 1   | P_λ ~ 0.5 | Classical, semi-deterministic |
-| ε ≫ 1   | P_λ ≈ 0   | Cosmic, deterministic         |
+| ε Value | Filter $P_\lambda$ | Observation Type              |
+|---------|-------------------|-------------------------------|
+| ε $\ll$ 1   | $P_\lambda \approx 1$   | Quantum, probabilistic        |
+| ε ~ 1   | $P_\lambda \sim 0.5$ | Classical, semi-deterministic |
+| ε $\gg$ 1   | $P_\lambda \approx 0$   | Cosmic, deterministic         |
 
 ## 3.3 Scale Transitions and Golden/Fibonacci Ratios
 
@@ -69,37 +57,23 @@ And:
 
 When passing from scale n to scale n+1:
 
-```
-λ_(n+1) = λ_n · φ
+$$\lambda_{n+1} = \lambda_n \cdot \varphi$$
 
-Energy_scale_(n+1) = Energy_scale_n / √φ
-
-Frequency_(n+1) = Frequency_n · √φ
-```
+$$E_{n+1} = \frac{E_n}{\sqrt{\varphi}}, \qquad f_{n+1} = f_n \cdot \sqrt{\varphi}$$
 
 ### Fibonacci Progression
 
 This creates a Fibonacci-like progression:
 
-```
-λ_n follows: 1, φ, φ², φ³, φ⁴, ...
-           ≈ 1, 1.618, 2.618, 4.236, 6.854, ...
-```
+$$\lambda_n \in \{1, \varphi, \varphi^2, \varphi^3, \varphi^4, \ldots\} \approx \{1, 1.618, 2.618, 4.236, 6.854, \ldots\}$$
 
 ### Fibonacci Emergence
 
 Fibonacci emerges naturally from scale transition dynamics:
 
-```
-State_n = φ·State_(n-1) + ψ·State_(n-2)
-```
+$$\text{State}_n = \varphi \cdot \text{State}_{n-1} + \psi \cdot \text{State}_{n-2}$$
 
-Since φ + ψ = 1:
-
-```
-State_n = State_(n-1) + (State_(n-1) - State_(n-2))
-        = Fibonacci recurrence
-```
+Since φ + ψ = 1, this reduces to the Fibonacci recurrence.
 
 **Therefore**: Within this simple recurrence model, Fibonacci emerges as the **canonical stable growth pattern** that preserves φ/ψ balance across scales.
 
@@ -113,9 +87,7 @@ State_n = State_(n-1) + (State_(n-1) - State_(n-2))
 
 ### Probability Density
 
-```
-P(x) = |ψ_observed|² = exp(-α·ε²) · |ψ_universal|²
-```
+$$P(x) = |\psi_{\text{observed}}|^2 = e^{-\alpha \varepsilon^2} \cdot |\psi_{\text{universal}}|^2$$
 
 Where:
 - **ψ_universal** = deterministic at Planck scale (unobservable)
@@ -134,11 +106,8 @@ When you increase instrumental resolution (decrease L_O, T_O, E_O):
 ### Lorenz Attractor as φ/ψ Projection
 
 Standard Lorenz equations:
-```
-dx/dt = σ(y - x)
-dy/dt = x(ρ - z) - y
-dz/dt = xy - βz
-```
+
+$$\frac{dx}{dt} = \sigma(y - x), \quad \frac{dy}{dt} = x(\rho - z) - y, \quad \frac{dz}{dt} = xy - \beta z$$
 
 ### MER Reinterpretation
 
@@ -149,9 +118,7 @@ Lorenz is a 3D projection of φ/ψ cycles:
 
 ### Key Connection
 
-```
-φ/ψ ratio in Lorenz system = σ/β ≈ φ/|ψ| ≈ 2.618
-```
+$$\frac{\varphi}{\psi} \text{ ratio in Lorenz system} = \frac{\sigma}{\beta} \approx \frac{\varphi}{|\psi|} \approx 2.618$$
 
 In MER, this numerical proximity is interpreted as one **possible explanation** for why many chaotic systems exhibit 2-lobe attractors, though this remains a heuristic analogy rather than a rigorous derivation.
 
@@ -165,39 +132,34 @@ In MER, this numerical proximity is interpreted as one **possible explanation** 
 
 ### Quantum Mechanics (QM)
 
-**Standard Schrödinger**:
-```
-iℏ ∂ψ/∂t = -ℏ²/2m ∇²ψ + V(x)ψ
-```
+**Standard Schrödinger equation**:
+
+$$i\hbar \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m} \nabla^2 \psi + V(x)\psi$$
 
 **MER Reinterpretation**:
-```
-ψ_observed(x,t,λ) = ψ_universal · P_λ[φ(x,t) + ψ(x,t)]
-```
+
+$$\psi_{\text{observed}}(x,t,\lambda) = \psi_{\text{universal}} \cdot P_\lambda[\varphi(x,t) + \psi(x,t)]$$
 
 Where:
 - Wave function ψ is a **projection** of universal φ/ψ cycle at quantum scale
-- Probability density: `|ψ|² = exp(-α·ε²) · |ψ_universal|²`
+- Probability density: $|\psi|^2 = e^{-\alpha \varepsilon^2} \cdot |\psi_{\text{universal}}|^2$
 - Uncertainty arises from **incomplete projection** when system and observer scales are strongly mismatched (large |ε|).
 
 ### General Relativity (GR)
 
 **Standard Einstein Field Equations**:
-```
-R_μν - (1/2)g_μν·R + Λ·g_μν = (8πG/c⁴)·T_μν
-```
+
+$$R_{\mu\nu} - \frac{1}{2}g_{\mu\nu}R + \Lambda g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu}$$
 
 **MER Reinterpretation**:
 
 Gravity is accumulated φ/ψ cycles at cosmological scale:
 
-```
-Curvature_observed(x) = ∫[φ(x,t) - ψ(x,t)] dt / ∫[φ(x,t) + ψ(x,t)] dt
+$$\text{Curvature}_{\text{observed}}(x) = \frac{\int[\varphi(x,t) - \psi(x,t)] \, dt}{\int[\varphi(x,t) + \psi(x,t)] \, dt}$$
 
-Effective metric: g_μν_eff = exp(φ/ψ ratio) · η_μν
-```
+$$g_{\mu\nu}^{\text{eff}} = \exp(\varphi/\psi \text{ ratio}) \cdot \eta_{\mu\nu}$$
 
-Where η_μν is Minkowski metric.
+Where $\eta_{\mu\nu}$ is Minkowski metric.
 
 **Interpretation**:
 - High φ/ψ ratio (matter concentration) → strong curvature

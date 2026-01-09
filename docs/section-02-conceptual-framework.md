@@ -1,4 +1,4 @@
-# Section 2: Conceptual Framework of MER
+# 2. Conceptual Framework of MER
 
 **Author**: Martin Ouimet
 **MER Theory Version**: 0.1
@@ -31,18 +31,13 @@ The fundamental dynamics of MER are based on two conjugate processes:
 - **Physical manifestation**: Antimatter, energy dissipation, wave collapse
 
 ### Conjugate Relationship
-```
-φ + ψ = 1    (conservation relation)
-φ × ψ = -1   (conjugate property)
-ψ = -1/φ     (mathematical identity)
-```
+
+$$\varphi + \psi = 1 \quad \text{(conservation)}, \qquad \varphi \times \psi = -1 \quad \text{(conjugate)}, \qquad \psi = -1/\varphi$$
 
 ### Universal Dynamics
 The iterative law governing all scales:
 
-```
-State(n+1) = φ(State_n) + ψ(State_n)
-```
+$$\text{State}_{n+1} = \varphi(\text{State}_n) + \psi(\text{State}_n)$$
 
 These cycles create **stable, bounded, non-trivial dynamics** that don't explode or collapse—analogous to chaotic attractors like the Lorenz attractor.
 
@@ -52,9 +47,8 @@ In MER Theory, **scale is not a fundamental dimension** but an **emergent proper
 
 ### Scale Parameter λ (Lambda)
 
-```
-λ = f(interaction intensity, distance, energy, time)
-```
+$$\lambda = f(\text{interaction intensity}, \text{distance}, \text{energy}, \text{time})$$
+
 Here λ indexes the observer's position in the scale hierarchy.
 
 Scale determines:
@@ -68,15 +62,11 @@ The related parameter ε (introduced in §2.4) quantifies the **scale mismatch**
 
 Moving between scales happens via the golden ratio:
 
-```
-λ_(n+1) = λ_n × φ
-```
+$$\lambda_{n+1} = \lambda_n \times \varphi$$
 
 This creates a **Fibonacci-like progression** across scales:
-```
-λ_n: 1, φ, φ², φ³, φ⁴, ...
-   ≈ 1, 1.618, 2.618, 4.236, 6.854, ...
-```
+
+$$\lambda_n \in \{1, \varphi, \varphi^2, \varphi^3, \varphi^4, \ldots\} \approx \{1, 1.618, 2.618, 4.236, 6.854, \ldots\}$$
 
 ## 2.4 Projections and Perception: Determinism → Probabilism
 
@@ -84,21 +74,15 @@ This creates a **Fibonacci-like progression** across scales:
 
 What an observer actually measures is a **projection** of the universal deterministic state:
 
-```
-Observable(λ) = P_λ[State_universal]
-```
+$$\text{Observable}(\lambda) = P_\lambda[\text{State}_{\text{universal}}]$$
 
 Where the projection filter is:
 
-```
-P_λ = exp(-α·ε²)
-```
+$$P_\lambda = e^{-\alpha \varepsilon^2}$$
 
 And the scale parameter ε (epsilon) is:
 
-```
-ε = (L_S/L_O) + (T_S/T_O) + (E_S/E_O)
-```
+$$\varepsilon = \frac{L_S}{L_O} + \frac{T_S}{T_O} + \frac{E_S}{E_O}$$
 
 Where:
 - **S** = System being observed
@@ -113,9 +97,9 @@ This ε is a dimensionless measure of **scale mismatch** between system and obse
 
 | ε Value | Regime | Observation Type | Example |
 |---------|--------|------------------|---------|
-| ε ≪ 1 | Quantum | Probabilistic | Electron in double-slit |
+| ε $\ll$ 1 | Quantum | Probabilistic | Electron in double-slit |
 | ε ≈ 1 | Classical | Semi-deterministic | Human-scale mechanics |
-| ε ≫ 1 | Cosmic | Deterministic | Galaxy rotation |
+| ε $\gg$ 1 | Cosmic | Deterministic | Galaxy rotation |
 
 ### Observer-Relative Cycles
 

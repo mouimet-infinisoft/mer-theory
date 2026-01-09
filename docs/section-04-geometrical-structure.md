@@ -1,4 +1,4 @@
-# Section 4: Geometrical Structure and Visualization
+# 4. Geometrical Structure and Visualization
 
 **Author**: Martin Ouimet  
 **MER Theory Version**: 0.1  
@@ -22,16 +22,17 @@ The geometric structures described here provide:
 
 ### The Fundamental Topology
 
+![MER Lemniscate](paper/images/lemniscate.png){width=60%}
+
+*Figure 4.1:* MER lemniscate schematic. The left lobe (φ-dominated) shows expansion and outward flux; the right lobe (ψ-dominated) shows regulation and inward flux.
+
 The **lemniscate** (∞) represents the most fundamental geometric manifestation of φ/ψ conjugate cycles:
 
-```
-Lemniscate equation (polar form):
-r²(θ) = a² · cos(2θ)
+**Lemniscate equation (polar form):**
+$$r^2(\theta) = a^2 \cos(2\theta)$$
 
-Parametric form:
-x(t) = a · cos(t) / (1 + sin²(t))
-y(t) = a · sin(t)·cos(t) / (1 + sin²(t))
-```
+**Parametric form:**
+$$x(t) = \frac{a \cos(t)}{1 + \sin^2(t)}, \qquad y(t) = \frac{a \sin(t)\cos(t)}{1 + \sin^2(t)}$$
 
 ### Physical Interpretation
 
@@ -59,10 +60,7 @@ The lemniscate structure emerges naturally from φ/ψ dynamics:
 
 The flux through the lemniscate follows:
 
-```
-Flux(θ) = φ·exp(θ) - ψ·exp(-θ)
-        = 1.618·exp(θ) + 0.618·exp(-θ)
-```
+$$\text{Flux}(\theta) = \varphi e^{\theta} - \psi e^{-\theta} = 1.618 e^{\theta} + 0.618 e^{-\theta}$$
 
 **Key properties**:
 - Flux is **never zero** (continuous dynamics)
@@ -89,11 +87,9 @@ Throughout this section, φ and ψ denote the conjugate expansion/regulation cyc
 
 Every lemniscate is bounded by a **stabilization circle** that defines the maximum extent of φ/ψ oscillations:
 
-```
-Circle radius: R_stable = a·√2
+$$R_{\text{stable}} = a\sqrt{2}$$
 
-Where 'a' is the lemniscate semi-axis
-```
+where $a$ is the lemniscate semi-axis.
 
 ### Physical Meaning
 
@@ -106,28 +102,19 @@ The stabilization circle represents:
 
 ### Mathematical Formulation
 
-```
-R_stable(λ) = λ · √(φ² + ψ²)
-            = λ · √(1.618² + 0.618²)
-            = λ · √2.999...
-            ≈ λ · √3
-```
+$$R_{\text{stable}}(\lambda) = \lambda \sqrt{\varphi^2 + \psi^2} = \lambda \sqrt{1.618^2 + 0.618^2} \approx \lambda \sqrt{3}$$
 
 **Interpretation**: The stable radius is approximately **√3 times the characteristic scale**.
 
-Here λ is chosen proportional to the lemniscate semi-axis a, so this expression is consistent with the earlier relation R_stable = a·√2 up to that proportionality choice.
+Here λ is chosen proportional to the lemniscate semi-axis a, so this expression is consistent with the earlier relation $R_{\text{stable}} = a\sqrt{2}$ up to that proportionality choice.
 
 ### Scale Limit Dynamics
 
 As a system approaches the stabilization circle:
 
-```
-Probability of remaining in cycle:
-P_remain(r) = exp(-α·(r/R_stable)²)
+$$P_{\text{remain}}(r) = e^{-\alpha (r/R_{\text{stable}})^2}$$
 
-For r → R_stable:
-P_remain → 0  (system must transition to new scale)
-```
+For $r \to R_{\text{stable}}$: $P_{\text{remain}} \to 0$ (system must transition to new scale).
 
 **Within MER, this toy model is proposed as a way to interpret**:
 - Why atoms have discrete energy levels (scale quantization)
@@ -139,21 +126,25 @@ P_remain → 0  (system must transition to new scale)
 *The following are heuristic MER-inspired predictions based on the stabilization-circle toy model above; they should be read as hypotheses for empirical testing, not as established results.*
 
 **Prediction 1**: Systems near stabilization boundary show increased fluctuations
-```
-Variance(r) ∝ (R_stable - r)^(-1)
-```
+$$\text{Var}(r) \propto (R_{\text{stable}} - r)^{-1}$$
 
-**Prediction 2**: Transition probability peaks at r ≈ R_stable
-```
-P_transition(r) ∝ δ(r - R_stable)
-```
+**Prediction 2**: Transition probability peaks at $r \approx R_{\text{stable}}$
+$$P_{\text{transition}}(r) \propto \delta(r - R_{\text{stable}})$$
 
-**Prediction 3**: Energy quantization follows φⁿ spacing
-```
-E_n = E_0 · φⁿ  (n = 0, 1, 2, ...)
-```
+**Prediction 3**: Energy quantization follows $\varphi^n$ spacing
+$$E_n = E_0 \cdot \varphi^n \quad (n = 0, 1, 2, \ldots)$$
 
 ---
+
+*Figure 4.2:* Detail of the Mandelbrot set boundary used to illustrate fractal boundaries and critical scales.
+
+![Mandelbrot Set (detail)](paper/images/mandelbrot.png){width=70%}
+
+## 4.4 Fibonacci Spirals and Scale Transitions
+
+![Fibonacci Spiral](paper/images/fibonacci_spiral.png){width=60%}
+
+*Figure 4.3:* Fibonacci spiral schematic illustrating scale transitions.
 
 ## 4.3 Vertex / Black Holes and Critical Points
 
@@ -161,11 +152,9 @@ E_n = E_0 · φⁿ  (n = 0, 1, 2, ...)
 
 The **vertex** of the lemniscate (where the two lobes meet) represents a **critical point** in φ/ψ dynamics:
 
-```
-Vertex location: (x, y) = (0, 0)
-Flux at vertex: Flux_max = φ + |ψ| = 2.236...
-Curvature at vertex: κ → ∞ (singularity)
-```
+- Vertex location: $(x, y) = (0, 0)$
+- Flux at vertex: $\text{Flux}_{\max} = \varphi + |\psi| = 2.236\ldots$
+- Curvature at vertex: $\kappa \to \infty$ (singularity)
 
 ### Black Hole Analogy
 
@@ -183,12 +172,10 @@ The vertex exhibits properties analogous to a black hole:
 
 Near the vertex, dynamics become singular:
 
-```
-State(r → 0) ~ r^(-φ)  (power-law divergence)
+$$\text{State}(r \to 0) \sim r^{-\varphi} \quad \text{(power-law divergence)}$$
 
 Time dilation:
-dt_local/dt_universal = √(1 - (r_vertex/r)²)
-```
+$$\frac{dt_{\text{local}}}{dt_{\text{universal}}} = \sqrt{1 - (r_{\text{vertex}}/r)^2}$$
 
 **Physical Interpretation**:
 - Vertex represents **maximum information density**
@@ -200,8 +187,8 @@ dt_local/dt_universal = √(1 - (r_vertex/r)²)
 
 Systems near the vertex exhibit:
 
-1. **Diverging correlation length**: ξ ~ |r - r_vertex|^(-ν)
-2. **Power-law scaling**: Observable ~ |r - r_vertex|^(-β)
+1. **Diverging correlation length**: $\xi \sim |r - r_{\text{vertex}}|^{-\nu}$
+2. **Power-law scaling**: Observable $\sim |r - r_{\text{vertex}}|^{-\beta}$
 3. **Universality**: Behavior independent of microscopic details
 4. **Self-similarity**: Fractal structure emerges
 
@@ -215,23 +202,13 @@ Systems near the vertex exhibit:
 
 The golden ratio φ naturally generates **logarithmic spirals**:
 
-```
-Spiral equation:
-r(θ) = a · φ^(θ/π)
-
-Growth rate:
-dr/dθ = (ln φ / π) · r(θ)
-```
+$$r(\theta) = a \cdot \varphi^{\theta/\pi}, \qquad \frac{dr}{d\theta} = \frac{\ln \varphi}{\pi} \cdot r(\theta)$$
 
 ### Fibonacci Sequence Emergence
 
 Discrete sampling of the spiral at integer angles produces the Fibonacci sequence:
 
-```
-F(n+1) = F(n) + F(n-1)
-
-Ratio: F(n+1)/F(n) → φ as n → ∞
-```
+$$F_{n+1} = F_n + F_{n-1}, \qquad \frac{F_{n+1}}{F_n} \to \varphi \text{ as } n \to \infty$$
 
 **Geometric interpretation**:
 - Each Fibonacci number represents a **scale level**
@@ -242,41 +219,23 @@ Ratio: F(n+1)/F(n) → φ as n → ∞
 
 Transitions between scales follow Fibonacci spacing:
 
-```
-λ_n+1 = φ · λ_n
-
-Energy levels:
-E_n = E_0 · φ^n
-
-Time scales:
-T_n = T_0 · φ^n
-```
+$$\lambda_{n+1} = \varphi \cdot \lambda_n, \qquad E_n = E_0 \cdot \varphi^n, \qquad T_n = T_0 \cdot \varphi^n$$
 
 **Observable consequences**:
-1. **Atomic spectra**: Energy levels spaced by φⁿ factors
+1. **Atomic spectra**: Energy levels spaced by $\varphi^n$ factors
 2. **Molecular vibrations**: Frequency ratios ≈ φ
-3. **Planetary orbits**: Semi-major axes follow φⁿ (approximate)
+3. **Planetary orbits**: Semi-major axes follow $\varphi^n$ (approximate)
 4. **Galaxy arms**: Spiral pitch angle = arctan(1/φ) ≈ 31.7°
 
 ### Testable Predictions
 
 *These are heuristic MER-inspired predictions of the spiral scaling picture and should be interpreted as empirical hypotheses within MER, not as confirmed relationships.*
 
-**Prediction 1**: Molecular vibrational spectra
-```
-ω_n+1 / ω_n ≈ φ ± 0.05  (within 5% accuracy)
-```
+**Prediction 1**: Molecular vibrational spectra: $\omega_{n+1} / \omega_n \approx \varphi \pm 0.05$
 
-**Prediction 2**: Quantum dot energy levels
-```
-E_n = E_0 · φ^n  (for n = 1, 2, 3, ...)
-```
+**Prediction 2**: Quantum dot energy levels: $E_n = E_0 \cdot \varphi^n$ for $n = 1, 2, 3, \ldots$
 
-**Prediction 3**: Galaxy spiral arm pitch angle
-```
-tan(pitch_angle) = 1/φ
-pitch_angle ≈ 31.7° ± 2°
-```
+**Prediction 3**: Galaxy spiral arm pitch angle: $\tan(\theta_{\text{pitch}}) = 1/\varphi$, so $\theta_{\text{pitch}} \approx 31.7° \pm 2°$
 
 These spiral relationships are proposed as empirical hypotheses within MER Theory; confirming or refuting them requires systematic data analysis across atomic, planetary, and galactic scales.
 
@@ -288,13 +247,9 @@ These spiral relationships are proposed as empirical hypotheses within MER Theor
 
 The **Mandelbrot set** and **Julia sets** are geometric manifestations of φ/ψ iteration:
 
-```
-Mandelbrot iteration:
-z_n+1 = z_n² + c
+**Mandelbrot iteration**: $z_{n+1} = z_n^2 + c$
 
-MER interpretation:
-State_n+1 = φ·State_n + ψ·State_n* + c(λ)
-```
+**MER interpretation**: $\text{State}_{n+1} = \varphi \cdot \text{State}_n + \psi \cdot \text{State}_n^* + c(\lambda)$
 
 ### Why Fractals Emerge
 
@@ -309,12 +264,9 @@ Fractals arise naturally from φ/ψ cycles because:
 
 For a given scale λ, the **Julia set** represents the **observable boundary**:
 
-```
-Julia set J_c = {z : iteration of z under f_c remains bounded}
+$$J_c = \{z : \text{iteration of } z \text{ under } f_c \text{ remains bounded}\}$$
 
-MER interpretation:
-J_λ = {State : |State| < R_stable(λ)}
-```
+**MER interpretation**: $J_\lambda = \{\text{State} : |\text{State}| < R_{\text{stable}}(\lambda)\}$
 
 **Physical meaning**:
 - **Inside Julia set**: Observable, stable states
@@ -325,12 +277,9 @@ J_λ = {State : |State| < R_stable(λ)}
 
 The **Mandelbrot set** represents the **parameter space** of all possible scales:
 
-```
-Mandelbrot set M = {c : Julia set J_c is connected}
+$$M = \{c : J_c \text{ is connected}\}$$
 
-MER interpretation:
-M = {λ : φ/ψ cycle at scale λ is stable}
-```
+**MER interpretation**: $M = \{\lambda : \varphi/\psi \text{ cycle at scale } \lambda \text{ is stable}\}$
 
 **Physical meaning**:
 - **Inside M**: Stable scales (observable universe)
@@ -341,21 +290,11 @@ M = {λ : φ/ψ cycle at scale λ is stable}
 
 *These are heuristic MER-inspired predictions of the fractal-boundary construction and are intended as hypotheses for empirical and numerical investigation, rather than as established facts.*
 
-**Prediction 1**: Quantum wavefunction boundaries are fractal
-```
-Fractal dimension: D_f ≈ 1.5 - 2.0 (depending on system)
-```
+**Prediction 1**: Quantum wavefunction boundaries are fractal: $D_f \approx 1.5 - 2.0$
 
-**Prediction 2**: Decoherence boundaries show self-similarity
-```
-Boundary complexity: C(ε) ~ ε^(-D_f)
-```
+**Prediction 2**: Decoherence boundaries show self-similarity: $C(\varepsilon) \sim \varepsilon^{-D_f}$
 
-**Prediction 3**: Phase transition critical exponents match fractal dimensions
-```
-β = D_f / 2
-ν = 1 / (2 - D_f)
-```
+**Prediction 3**: Phase transition critical exponents match fractal dimensions: $\beta = D_f / 2$, $\nu = 1 / (2 - D_f)$
 
 ---
 
@@ -365,30 +304,19 @@ Boundary complexity: C(ε) ~ ε^(-D_f)
 
 A complete MER visualization integrates all geometric elements:
 
-```
-[Diagram structure - to be implemented]
-
-Outer layer: Stabilization circle (scale boundary)
-Middle layer: Lemniscate ∞ (φ/ψ cycles)
-Inner layer: Fibonacci spiral (scale transitions)
-Central point: Vertex (critical point)
-Background: Julia/Mandelbrot fractal (observable projection)
-```
+- **Outer layer**: Stabilization circle (scale boundary)
+- **Middle layer**: Lemniscate ∞ (φ/ψ cycles)
+- **Inner layer**: Fibonacci spiral (scale transitions)
+- **Central point**: Vertex (critical point)
+- **Background**: Julia/Mandelbrot fractal (observable projection)
 
 ### Multi-Scale Nesting
 
 MER diagrams are **self-similar** across scales:
 
-```
-Scale hierarchy:
-Cosmic (λ_cosmic) ⊃ Classical (λ_classical) ⊃ Quantum (λ_quantum)
+$$\lambda_{\text{cosmic}} \supset \lambda_{\text{classical}} \supset \lambda_{\text{quantum}}$$
 
-Each scale contains:
-- Its own lemniscate
-- Its own stabilization circle
-- Its own vertex
-- Its own fractal boundary
-```
+Each scale contains its own lemniscate, stabilization circle, vertex, and fractal boundary.
 
 **Key insight**: The **same geometric structure** appears at every scale, only the **parameters** change.
 
@@ -396,13 +324,11 @@ Each scale contains:
 
 For a given scale λ, the MER diagram is fully specified by:
 
-```
-1. Lemniscate semi-axis: a(λ)
-2. Stabilization radius: R(λ) = a(λ)·√2
-3. Spiral growth rate: φ
-4. Fractal dimension: D_f(λ)
-5. Observer position: λ_observer
-```
+1. Lemniscate semi-axis: $a(\lambda)$
+2. Stabilization radius: $R(\lambda) = a(\lambda)\sqrt{2}$
+3. Spiral growth rate: $\varphi$
+4. Fractal dimension: $D_f(\lambda)$
+5. Observer position: $\lambda_{\text{observer}}$
 
 ### Computational Implementation (Pseudocode)
 

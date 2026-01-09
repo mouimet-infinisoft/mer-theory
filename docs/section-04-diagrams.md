@@ -46,7 +46,7 @@ flowchart TB
 flowchart TB
   subgraph Diagram["MER boundary dynamics at scale λ"]
     inner["Inner region: r << R_stable\\nHigh P_remain(r)"]
-    near["Near boundary: r ≈ R_stable\\nFluctuations ↑, transitions likely"]
+    near["Near boundary: r ~= R_stable\\nFluctuations up, transitions likely"]
     outer["Outer region: r >> R_stable\\nLow P_remain(r)"]
   end
   inner --> near --> outer
@@ -82,10 +82,10 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-  E0["Level n=0\\nλ0, E0, T0"]
-  E1["Level n=1\\nλ1 = φ·λ0\\nE1 = φ·E0"]
-  E2["Level n=2\\nλ2 = φ·λ1\\nE2 = φ²·E0"]
-  E3["Level n=3\\nλ3 = φ·λ2\\nE3 = φ³·E0"]
+  E0["Level n=0\\nlambda0, E0, T0"]
+  E1["Level n=1\\nlambda1 = phi * lambda0\\nE1 = phi * E0"]
+  E2["Level n=2\\nlambda2 = phi * lambda1\\nE2 = phi^2 * E0"]
+  E3["Level n=3\\nlambda3 = phi * lambda2\\nE3 = phi^3 * E0"]
   E0 --> E1 --> E2 --> E3
 ```
 

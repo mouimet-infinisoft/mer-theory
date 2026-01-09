@@ -1,4 +1,4 @@
-# Section 1: Introduction
+# 1. Introduction
 
 **Author**: Martin Ouimet
 **MER Theory Version**: 0.1
@@ -58,5 +58,5 @@ This section establishes the context, identifies the core problem, and clearly o
 
 ---
 
-**Next**: [Section 2: Conceptual Framework](section-02-conceptual-framework.md)
+**Next**: [2. Conceptual Framework of MER](section-02-conceptual-framework.md)
 

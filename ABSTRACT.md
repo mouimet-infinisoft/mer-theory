@@ -3,7 +3,7 @@
 **Multi-scale Emergent Reality Theory: A Unified Framework for Quantum Mechanics and General Relativity**
 
 **Author**: Martin Ouimet
-**Version**: 0.1
+**Version**: v0.1.7
 **Date**: 2026-01-09
 **License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
@@ -34,9 +34,9 @@ What appears:
 
 ### 1. **φ/ψ Conjugate Cycles**
 MER introduces a fundamental dynamic based on the golden ratio and its conjugate:
-- **φ ≈ 1.618**: Expansion, emergence, propagation
-- **ψ ≈ -0.618**: Regulation, constraint, dissipation
-- **Conjugate relationship**: φ + ψ = 1, φ × ψ = -1
+- **φ** ($\varphi \approx 1.618$): Expansion, emergence, propagation
+- **ψ** ($\psi \approx -0.618$): Regulation, constraint, dissipation
+- **Conjugate relationship**: $\varphi + \psi = 1$, $\varphi \times \psi = -1$
 
 These cycles create stable, bounded, non-trivial dynamics analogous to chaotic attractors (e.g., Lorenz attractor), where deterministic laws produce locally unpredictable but globally structured behavior.
 
@@ -76,7 +76,7 @@ MER reveals deep connections between:
 - **Entanglement**: Shared cycle coherence across spatial separation
 - **Gravity**: Emergent from φ/ψ dynamics at cosmic scales
 
-### **Proposed Testable Hypotheses (v0.1)**
+### **Proposed Testable Hypotheses (v0.1.7)**
 - Scale transitions that approximately follow golden-ratio proportions
 - Observable fractal patterns in quantum-to-classical transitions
 - Toy-model level predictions for black hole dynamics and cosmic expansion
@@ -100,7 +100,7 @@ MER reveals deep connections between:
 
 ## Current Status
 
-**Version 0.1** - Initial theoretical framework established (first complete draft of Sections 1–5)
+**Version v0.1.7** - Initial theoretical framework established (first complete draft of Sections 1–5)
 
 **Completed**:
 - Conceptual foundation

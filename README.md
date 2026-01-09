@@ -8,7 +8,7 @@
 **License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)  
 **Repository**: https://github.com/mouimet-infinisoft/mer-theory  
 
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)  
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)  [![DOI](https://zenodo.org/badge/1127095415.svg)](https://doi.org/10.5281/zenodo.18194971)
 
 ---
 
@@ -30,8 +30,8 @@ MER Theory proposes that the apparent contradictions between quantum mechanics (
 ## 🔑 Key Concepts
 
 ### 1. **φ/ψ Conjugate Cycles**
-- **φ (phi) ≈ 1.618** → Expansion, emergence, growth
-- **ψ (psi) ≈ -0.618** → Regulation, constraint, dissipation
+- **φ** ($\varphi \approx 1.618$) → Expansion, emergence, growth
+- **ψ** ($\psi \approx -0.618$) → Regulation, constraint, dissipation
 - **Conjugate relationship**: φ + ψ = 1, φ × ψ = -1
 
 ### 2. **Observer-Relative Cycles**
@@ -56,17 +56,40 @@ An observer at cycle **N** perceives:
 
 - **[Abstract](ABSTRACT.md)** - Executive summary
 - **[Table of Contents](docs/TOC.md)** - Full paper structure
-- **[Section 1: Introduction](docs/section-01-introduction.md)**
-- **[Section 2: Conceptual Framework](docs/section-02-conceptual-framework.md)**
-- **[Section 3: Mathematical Structure](docs/section-03-mathematical-structure.md)**
- - **[Section 4: Geometrical Structure and Visualization](docs/section-04-geometrical-structure.md)**
- - **[Section 5: Scientific Applications](docs/section-05-scientific-applications.md)**
+- **[1. Introduction](docs/section-01-introduction.md)**
+- **[2. Conceptual Framework of MER](docs/section-02-conceptual-framework.md)**
+- **[3. Mathematical Structure](docs/section-03-mathematical-structure.md)**
+- **[4. Geometrical Structure and Visualization](docs/section-04-geometrical-structure.md)**
+- **[5. Concrete Scientific Applications](docs/section-05-scientific-applications.md)**
+
+---
+
+## 🛠️ Build & Release (minimal)
+
+Keep it simple — two one-line commands:
+
+- Build (generate figures and compile PDF):
+
+```bash
+python3 scripts/build_pdf.py
+# PDF output: build/mer-theory.pdf
+```
+
+- Release (bump version, build, validate, tag, push, create GitHub release):
+
+```bash
+./scripts/release.sh --yes
+```
+
+Notes:
+- To enable citation processing locally, either upgrade Pandoc to a version >= 2.11 (supports `--citeproc`) or install `pandoc-citeproc` in your environment.
+- The scripts will not perform system-level package installation by default. If you want me to try installing `pandoc-citeproc` automatically (requires sudo/apt), tell me and I will proceed.
 
 ---
 
 ## 🚀 Current Status
 
-**Version**: 0.1 (Initial Draft)
+**Version**: v0.1.7 (Initial Draft)
 
 **Completed**:
 - ✅ Sections 1:Introduction  
@@ -81,9 +104,9 @@ An observer at cycle **N** perceives:
 - ⏳ Section 8: Conclusion
 - ⏳ Section 9: Appendices
 
-### Epistemic status of v0.1
+### Epistemic status of v0.1.7
 
-MER Theory v0.1 is a **first-draft, exploratory framework**. It mixes precise internal definitions with heuristic mechanisms that could connect MER to standard physics, as well as speculative or numerological correspondences (especially in Sections 4 and 5). The latter should be treated as hypotheses and starting points for discussion, not as established physical results.
+MER Theory v0.1.7 is a **first-draft, exploratory framework**. It mixes precise internal definitions with heuristic mechanisms that could connect MER to standard physics, as well as speculative or numerological correspondences (especially in Sections 4 and 5). The latter should be treated as hypotheses and starting points for discussion, not as established physical results.
 
 ---
 

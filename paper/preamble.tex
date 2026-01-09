@@ -1,0 +1,39 @@
+% Publication-quality LaTeX preamble for Pandoc + XeLaTeX
+% Font setup
+\usepackage{fontspec}
+% Prefer a high-quality serif for print (Linux Libertine as available)
+\setmainfont{Linux Libertine O}[Ligatures=TeX,Mapping=tex-text]
+\setsansfont{TeX Gyre Heros}
+\setmonofont{DejaVu Sans Mono}
+
+% Micro-typography and math
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath}
+\usepackage{amsmath,amssymb}
+\usepackage{unicode-math}
+% Use a robust math font available on the system; prefer STIX Math when available
+\setmathfont{STIX Math}
+
+% PDF metadata embedding (XMP)
+\usepackage{hyperxmp}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc},
+  pdfauthor={Martin Ouimet},
+  pdftitle={Multi-scale Emergent Reality Theory (MER)},
+  pdfsubject={Multi-scale unification of quantum and gravitational phenomena},
+  pdfkeywords={multi-scale, quantum, general relativity, golden ratio, Fibonacci, MER}
+}
+
+% Other useful packages
+\usepackage{csquotes}
+\usepackage{booktabs}
+\usepackage{bookmark}
+
+% Small formatting tweaks
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+
+% Prevent emojis from breaking; recommend removing emoji from source
+% Additional macros
+\newcommand{\varphiSym}{\varphi}

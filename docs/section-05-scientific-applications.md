@@ -1,4 +1,4 @@
-# Section 5: Concrete Scientific Applications
+# 5. Concrete Scientific Applications
 
 **Author**: Martin Ouimet  
 **MER Theory Version**: 0.1  
@@ -39,14 +39,14 @@ The universal state is **always deterministic** and follows φ/ψ cycles. What a
 ```
 ε = (L_S/L_O) + (T_S/T_O) + (E_S/E_O)
 
-When ε ≪ 1 (quantum regime):
-- Observer resolution L_O ≫ L_S (much larger than system)
+When $\epsilon \ll 1$ (quantum regime):
+- Observer resolution $L_O \gg L_S$ (much larger than system)
 - Cannot track individual φ/ψ cycle
 - Observes "blurred" projection → wave behavior
 - Interference pattern emerges from φ/ψ phase coherence
 
 When ε ≳ 1 (classical / higher-scale regime):
-- Observer resolution L_O ≪ L_S (much smaller than system)
+- Observer resolution $L_O \ll L_S$ (much smaller than system)
 - Can track individual φ/ψ cycle
 - Observes "sharp" projection → particle behavior
 - No interference (decoherence)
@@ -80,29 +80,29 @@ For electron double-slit:
 **System parameters**:
 ```
 Electron:
-- de Broglie wavelength: λ_dB = 10⁻¹⁰ m
-- Time scale: T_S = ℏ/E ≈ 10⁻¹⁵ s
-- Energy: E_S ≈ 10⁻¹⁸ J
+- de Broglie wavelength: lambda_dB = 1e-10 m
+- Time scale: T_S = hbar/E approx 1e-15 s
+- Energy: E_S approx 1e-18 J
 
 Standard detector:
-- Spatial resolution: L_O = 10⁻⁴ m
-- Time resolution: T_O = 10⁻⁹ s
-- Energy resolution: E_O = 10⁻¹⁶ J
+- Spatial resolution: L_O = 1e-4 m
+- Time resolution: T_O = 1e-9 s
+- Energy resolution: E_O = 1e-16 J
 ```
 
 **Calculate ε**:
 ```
-ε = (10⁻¹⁰ / 10⁻⁴) + (10⁻¹⁵ / 10⁻⁹) + (10⁻¹⁸ / 10⁻¹⁶)
-  = 10⁻⁶ + 10⁻⁶ + 0.01
-  ≈ 0.010
+epsilon = (1e-10 / 1e-4) + (1e-15 / 1e-9) + (1e-18 / 1e-16)
+  = 1e-6 + 1e-6 + 0.01
+  = 0.010
 ```
 
 **MER Prediction**:
 ```
-Visibility = exp(-0.01 × 0.010²)
+Visibility = exp(-0.01 * (0.010)**2)
            = exp(-0.000001)
-           ≈ 0.999999
-           ≈ 1.0 (perfect interference)
+           = 0.999999
+           ~ 1.0 (perfect interference)
 ```
 
 **Experimental result**: Visibility ≈ 0.95-1.0 ✓ **Agreement excellent**
@@ -134,7 +134,7 @@ But the **observed state** depends on ε:
 ```
 State_observed = State_universal · exp(-α·ε²)
 
-When ε ≪ 1:
+When $\epsilon \ll 1$:
 - Projection filter ≈ 1 (high transmission)
 - Observer sees "blurred" state
 - Appears as superposition of multiple possibilities
@@ -159,16 +159,16 @@ Cat (macroscopic system):
 - Energy: E_S ≈ 100 J (metabolic)
 
 Quantum trigger (radioactive atom):
-- Size: L_trigger ≈ 10⁻¹⁰ m
-- Time scale: T_trigger ≈ 10⁻¹⁵ s
-- Energy: E_trigger ≈ 10⁻¹⁸ J
+- Size: L_trigger ≈ 1e-10 m
+- Time scale: T_trigger ≈ 1e-15 s
+- Energy: E_trigger ≈ 1e-18 J
 ```
 
 **Calculate ε for cat observing atom**:
 ```
-ε = (10⁻¹⁰ / 0.3) + (10⁻¹⁵ / 1) + (10⁻¹⁸ / 100)
-  ≈ 3×10⁻¹⁰ + 10⁻¹⁵ + 10⁻²⁰
-  ≈ 3×10⁻¹⁰ ≪ 1
+ε = (1e-10 / 0.3) + (1e-15 / 1) + (1e-18 / 100)
+  ≈ 3×1e-10 + 1e-15 + 10^-²⁰
+  ≈ 3×1e-10 $\ll$ 1
 ```
 
 **MER Prediction**:
@@ -233,7 +233,7 @@ CHSH(d) = 2√2 · [1 - exp(-d/L_coh)] + 2 · exp(-d/L_coh)
 Where:
 - d = separation distance
 - L_coh ≈ coherence length of φ/ψ cycle
-- L_coh ~ 10⁴ m (estimated from experiments)
+- L_coh ~ 10^4 m (estimated from experiments)
 ```
 
 **Testable prediction**:
@@ -261,14 +261,14 @@ Two photons from parametric down-conversion:
 **Calculate coherence length**:
 ```
 L_coh = c · T_coherence
-      = c · (ℏ / ΔE)
-      ≈ 3×10⁸ · (10⁻³⁴ / 10⁻²⁰)
+      = c · (\hbar / ΔE)
+      ≈ 3×10⁸ · (10^-³^4 / 10^-²⁰)
       ≈ 3×10⁶ m (3000 km)
 ```
 
 **MER Prediction**:
 ```
-At d = 10 m ≪ L_coh:
+At $d = 10\ \mathrm{m} \ll L_{coh}$:
 CHSH ≈ 2.828 (no decoherence)
 
 At d = 3000 km ≈ L_coh:
@@ -284,7 +284,7 @@ CHSH ≈ 2.4 (significant decoherence)
 #### Conventional Understanding
 
 ```
-Δx · Δp ≥ ℏ/2
+Δx · Δp ≥ \hbar/2
 ```
 
 Position and momentum cannot be simultaneously known with arbitrary precision.
@@ -309,11 +309,11 @@ Product:
 Δx_observed · Δp_observed = (Δx_universal · Δp_universal) · exp(2α·ε²)
 ```
 
-**For quantum regime** (ε ≪ 1):
+**For quantum regime** ($\epsilon \ll 1$):
 ```
 exp(2α·ε²) ≈ 1 + 2α·ε²
 
-Δx · Δp ≈ Δx_universal · Δp_universal ≈ ℏ/2
+Δx · Δp ≈ Δx_universal · Δp_universal ≈ \hbar/2
 ```
 
 **Key insight**: Uncertainty principle is **not fundamental**—it's a consequence of observing deterministic φ/ψ cycles through limited resolution.
@@ -330,19 +330,19 @@ exp(2α·ε²) ≈ 1 + 2α·ε²
 
 General Relativity: Gravity is **curvature of spacetime** caused by mass-energy:
 ```
-G_μν = (8πG/c⁴) T_μν
+G_μν = (8πG/c^4) T_μν
 ```
 
 #### MER Interpretation
 
 **Gravity emerges from ψ-dominated regulation at large scales.**
 
-At cosmic scales (ε ≫ 1), the **regulation term** ψ dominates:
+At cosmic scales ($\epsilon \gg 1$), the **regulation term** $\psi$ dominates:
 
 ```
 State(n+1) = φ·f_expand + ψ·f_regulate
 
-For ε ≫ 1:
+For $\epsilon \gg 1$:
 ψ-term dominates → constraint enforcement
 → Appears as "attraction" or "curvature"
 ```
@@ -370,14 +370,14 @@ G_μν = -(φ/ψ) · T_μν
      ≈ -2.618 · T_μν
 
 Comparing (very schematically) to Einstein:
-G_μν = (8πG/c⁴) T_μν
+G_μν = (8πG/c^4) T_μν
 
 Formally equating coefficients implies:
-8πG/c⁴ ≈ 2.618
+8πG/c^4 ≈ 2.618
 
 Solving for G in this toy correspondence:
-G ≈ (2.618 · c⁴) / (8π)
-  ≈ 6.67 × 10⁻¹¹ m³/(kg·s²)
+G ≈ (2.618 · c^4) / (8π)
+  ≈ 6.67 × 10^-¹¹ m³/(kg·s²)
 ```
 
 This match to the observed value of G is **numerically suggestive but highly speculative**. The construction ignores full tensor structure, dimensional analysis subtleties, and dynamical consistency, so it should be viewed as a **numerological hint** rather than a rigorous prediction.
@@ -414,7 +414,7 @@ Singularity = Vertex point
 r_singularity = 0 (φ/ψ crossing)
 
 Hawking radiation = Quantum fluctuations at vertex
-T_Hawking ~ ℏ/(k_B · r_horizon)
+T_Hawking ~ \hbar/(k_B · r_horizon)
 ```
 
 #### Speculative MER-inspired mass–radius relation
@@ -451,14 +451,14 @@ At the vertex, quantum fluctuations emerge from φ/ψ cycle:
 
 ```
 Energy fluctuation:
-ΔE ~ ℏ · (φ/ψ) / Δt
-    ~ ℏ · φ² / (r_horizon/c)
-    ~ ℏc / r_horizon
+ΔE ~ \hbar · (φ/ψ) / Δt
+    ~ \hbar · φ² / (r_horizon/c)
+    ~ \hbarc / r_horizon
 
 Temperature:
 T_Hawking = ΔE / k_B
-          = ℏc / (k_B · r_horizon)
-          = ℏc³ / (k_B · GM)
+          = \hbarc / (k_B · r_horizon)
+          = \hbarc³ / (k_B · GM)
 ```
 
 **Comment**: This has the same scaling form as Hawking's temperature (up to factors of order unity) in this heuristic picture, but should not be taken as a full derivation.
@@ -473,9 +473,9 @@ T_Hawking = ΔE / k_B
 
 The universe is **expanding** (Hubble's law):
 ```
-v = H₀ · d
+v = H_0 · d
 
-Where H₀ ≈ 70 km/s/Mpc (Hubble constant)
+Where H_0 ≈ 70 km/s/Mpc (Hubble constant)
 ```
 
 Dark energy drives **accelerating expansion**.
@@ -510,22 +510,22 @@ H = (1/a) · (da/dt) = 0.618 / t
 
 In this simple MER-inspired scaling picture:
 ```
-H₀ = 0.618 / t_universe
+H_0 = 0.618 / t_universe
 
 Where t_universe ≈ 13.8 billion years
                 = 4.35 × 10¹⁷ s
 
-H₀ = 0.618 / (4.35 × 10¹⁷)
-   = 1.42 × 10⁻¹⁸ s⁻¹
-   = 1.42 × 10⁻¹⁸ × (3.09 × 10²² m/Mpc)
+H_0 = 0.618 / (4.35 × 10¹⁷)
+   = 1.42 × 1e-18 s^-¹
+   = 1.42 × 1e-18 × (3.09 × 10²² m/Mpc)
    = 43.9 km/s/Mpc
 ```
 
-**Observed**: H₀ ≈ 70 km/s/Mpc
+**Observed**: H_0 ≈ 70 km/s/Mpc
 
 **Discrepancy**: About a factor of ~1.6 ≈ φ, indicating that this toy scaling is at best an order-of-magnitude estimate.
 
-**Speculative interpretation**: One hand-wavy MER reading is that the observed H₀ might include both φ-expansion AND local ψ-regulation effects. In this picture, pure φ-expansion would give ~44 km/s/Mpc, with additional contributions from local dynamics.
+**Speculative interpretation**: One hand-wavy MER reading is that the observed H_0 might include both φ-expansion AND local ψ-regulation effects. In this picture, pure φ-expansion would give ~44 km/s/Mpc, with additional contributions from local dynamics.
 
 ---
 
@@ -605,7 +605,7 @@ How do **probabilistic** quantum mechanics and **deterministic** classical mecha
 2. Observer with limited resolution ε measures:
    Observable = State · exp(-α·ε²)
 
-3. For ε ≪ 1 (quantum):
+3. For ε $\ll$ 1 (quantum):
    - Cannot resolve individual φ/ψ cycle
    - Observes time-averaged distribution
    - Distribution appears probabilistic
@@ -623,26 +623,26 @@ How do **probabilistic** quantum mechanics and **deterministic** classical mecha
 
 ```
 System:
-- Initial angle: θ₀
-- Initial angular velocity: ω₀
+- Initial angle: θ_0
+- Initial angular velocity: ω_0
 - Air resistance: γ
 - Gravity: g
 
 Deterministic equation:
-θ(t) = θ₀ + ω₀·t - (1/2)·g·sin(θ)·t² - γ·ω·t
+θ(t) = θ_0 + ω_0·t - (1/2)·g·sin(θ)·t² - γ·ω·t
 
 Outcome:
 Heads if θ(t_land) ∈ [0, π]
 Tails if θ(t_land) ∈ [π, 2π]
 ```
 
-**Observer cannot measure** θ₀ and ω₀ precisely:
+**Observer cannot measure** θ_0 and ω_0 precisely:
 ```
-Δθ₀ ~ 0.1 rad
-Δω₀ ~ 1 rad/s
+Δθ_0 ~ 0.1 rad
+Δω_0 ~ 1 rad/s
 
 Scale mismatch:
-ε = (Δθ_system / Δθ_observer) ≈ 0.01 / 0.1 = 0.1 ≪ 1
+ε = (Δθ_system / Δθ_observer) ≈ 0.01 / 0.1 = 0.1 $\ll$ 1
 ```
 
 **Result**: Observer perceives **50/50 probability**, even though outcome is deterministic.
@@ -709,7 +709,7 @@ Explanation: **Dark matter halo** provides additional gravitational potential.
 
 At galactic scales:
 ```
-ε = (L_star / L_galaxy) ≈ (10⁶ m / 10²¹ m) ≈ 10⁻¹⁵ ≪ 1
+ε = (L_star / L_galaxy) ≈ (10⁶ m / 10²¹ m) ≈ 1e-15 $\ll$ 1
 ```
 
 **Observer (us) cannot resolve** individual stellar φ/ψ cycles. We observe **averaged** gravitational potential:
@@ -719,16 +719,16 @@ V_observed(r) = V_visible(r) + V_φ/ψ(r)
 
 Where:
 V_visible(r) ~ -GM/r (Newtonian)
-V_φ/ψ(r) ~ -φ·(GM/r)·ln(r/r₀) (φ-cycle contribution)
+V_φ/ψ(r) ~ -φ·(GM/r)·ln(r/r_0) (φ-cycle contribution)
 
 Total:
-V_total(r) ~ -GM/r · [1 + φ·ln(r/r₀)]
+V_total(r) ~ -GM/r · [1 + φ·ln(r/r_0)]
 ```
 
 **Rotation velocity**:
 ```
 v²(r) = r · dV/dr
-      ~ GM/r · [1 + φ·ln(r/r₀)] · [1 + φ]
+      ~ GM/r · [1 + φ·ln(r/r_0)] · [1 + φ]
       ~ constant (for large r)
 ```
 
@@ -915,9 +915,9 @@ Volatility autocorrelation: C(τ) ∝ τ^(-1/φ)
 ```
 Climate = Multi-scale φ/ψ cycles
 
-Daily weather: φ/ψ at day scale (ε ≪ 1, chaotic)
+Daily weather: φ/ψ at day scale (ε $\ll$ 1, chaotic)
 Seasonal: φ/ψ at year scale (ε ≈ 1, periodic)
-Climate: φ/ψ at decade-century scale (ε ≫ 1, trending)
+Climate: φ/ψ at decade-century scale (ε $\gg$ 1, trending)
 ```
 
 **Prediction**: Temperature variance should scale as:
@@ -996,9 +996,9 @@ The following table summarizes simple MER-inspired toy relations and how their n
 |------------|-----------------------|----------|------------------------------|
 | Double-slit visibility | V ~ exp(-αε²) | V ≈ 0.95-1.0 | ✓ Excellent |
 | CHSH parameter | 2.828 at short distance | 2.8 ± 0.1 | ✓ Excellent |
-| Gravitational constant | G ~ φ²c⁴/(8π) | 6.67×10⁻¹¹ | ✓ Excellent |
+| Gravitational constant | G ~ φ²c^4/(8π) | 6.67×10^-¹¹ | ✓ Excellent |
 | Black hole radius | r ~ √2·GM/c² | r = 2GM/c² | ✓ Factor √2 |
-| Hubble constant | H₀ ~ 44 km/s/Mpc | 70 km/s/Mpc | ~ Factor φ |
+| Hubble constant | H_0 ~ 44 km/s/Mpc | 70 km/s/Mpc | ~ Factor φ |
 | Spiral pitch angle | 31.7° | 10-30° | ✓ Good |
 | Rotation curve | v ~ φ·v_Newtonian | v ~ 1.5-2×v_N | ✓ Good |
 | Star formation | n = φ ≈ 1.618 | n ≈ 1.4 | ✓ Good |
