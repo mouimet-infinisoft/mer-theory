@@ -57,11 +57,11 @@ And:
 
 ### Interpretation
 
-| ε Value | Filter P_λ | Observation Type |
-|---------|-----------|------------------|
-| ε ≫ 1 | P_λ ≈ 1 | Classical, deterministic |
-| ε ~ 1 | P_λ ~ 0.5 | Intermediate, semi-quantum |
-| ε ≪ 1 | P_λ ≈ 0 | Quantum, probabilistic |
+| ε Value | Filter P_λ | Observation Type           |
+|---------|-----------|----------------------------|
+| ε ≪ 1   | P_λ ≈ 1   | Classical, deterministic   |
+| ε ~ 1   | P_λ ~ 0.5 | Intermediate, semi-quantum |
+| ε ≫ 1   | P_λ ≈ 0   | Quantum, probabilistic     |
 
 ## 3.3 Scale Transitions and Golden/Fibonacci Ratios
 
@@ -108,7 +108,8 @@ State_n = State_(n-1) + (State_(n-1) - State_(n-2))
 ### Determinism → Probabilism Transition
 
 - **Fundamental level**: Deterministic φ/ψ dynamics
-- **Observed level**: Probabilistic due to scale-imposed limitations
+- **Observed level**: Probabilistic due to scale-imposed limitations and system–observer scale mismatch (ε)
+- Within MER, this probability is **epistemic**: it reflects information lost in the projection, not indeterminism in the underlying φ/ψ law.
 
 ### Probability Density
 
@@ -119,7 +120,7 @@ P(x) = |ψ_observed|² = exp(-α·ε²) · |ψ_universal|²
 Where:
 - **ψ_universal** = deterministic at Planck scale (unobservable)
 - **P_λ** = projection filter at observational scale λ
-- **Uncertainty** arises from incomplete projection (ε ≪ 1)
+- **Uncertainty** arises from incomplete projection when there is significant scale mismatch (large |ε|) between system and observer.
 
 ### Prediction
 
@@ -177,7 +178,7 @@ iℏ ∂ψ/∂t = -ℏ²/2m ∇²ψ + V(x)ψ
 Where:
 - Wave function ψ is a **projection** of universal φ/ψ cycle at quantum scale
 - Probability density: `|ψ|² = exp(-α·ε²) · |ψ_universal|²`
-- Uncertainty arises from **incomplete projection** (ε ≪ 1)
+- Uncertainty arises from **incomplete projection** when system and observer scales are strongly mismatched (large |ε|).
 
 ### General Relativity (GR)
 
