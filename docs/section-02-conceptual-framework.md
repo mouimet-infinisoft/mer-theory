@@ -14,7 +14,7 @@ MER Theory proposes that **reality is governed by a single universal law**, but 
 - **Resolution capacity** (what we can measure)
 - **Interaction context** (how observer couples to phenomenon)
 
-**Core Insight**: Determinism and probability are not contradictory; they are the same phenomenon viewed at different scales with different observational limitations.
+**Core Insight**: Determinism and probability are not contradictory; they are scale-dependent descriptions of the same underlying dynamics viewed through different observational limitations. Within MER, probability is **epistemic**—it reflects limitations imposed by scale and resolution, not a breakdown of underlying determinism.
 
 ## 2.2 Conjugate Cycles φ/ψ: Expansion and Regulation
 
@@ -55,11 +55,14 @@ In MER Theory, **scale is not a fundamental dimension** but an **emergent proper
 ```
 λ = f(interaction intensity, distance, energy, time)
 ```
+Here λ indexes the observer's position in the scale hierarchy.
 
 Scale determines:
 - What is **observable** vs **hidden** at that level
 - The **resolution** of measurement
 - The **transition threshold** to adjacent scales
+
+The related parameter ε (introduced in §2.4) quantifies the **scale mismatch** between system and observer at a given λ.
 
 ### Scale Transitions
 
@@ -104,6 +107,8 @@ Where:
 - **T** = Time scale
 - **E** = Energy scale
 
+This ε is a dimensionless measure of **scale mismatch** between system and observer.
+
 ### Three Observational Regimes
 
 | ε Value | Regime | Observation Type | Example |
@@ -119,9 +124,9 @@ An observer at cycle **N** perceives:
 - Cycle **N** as **classical** (directly observable)
 - Cycle **N+1** as **cosmic** (too large/slow to observe completely)
 
-**Key Principle**: The same deterministic system appears:
-- **Deterministic** at the universal level (if you could see everything)
-- **Probabilistic** when projected through limited observational window λ
+**Key Principle**: The same underlying deterministic system appears:
+- **Deterministic** at the universal level (if observation spans all relevant scales)
+- **Probabilistic** at a given observational scale λ when there is significant scale mismatch between observer and system (large |ε|)
 
 ## 2.5 Relation to Fractals, Fibonacci, and Prime Numbers
 
