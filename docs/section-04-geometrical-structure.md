@@ -8,11 +8,11 @@
 
 ## Overview
 
-This section presents the **geometric foundations** of MER Theory, demonstrating how φ/ψ conjugate cycles manifest as recognizable geometric structures across all scales. These visualizations are not merely illustrative—they represent the **actual topology** of universal dynamics as projected onto different observational scales.
+This section presents the **geometric foundations** of MER Theory, illustrating how φ/ψ conjugate cycles might manifest as recognizable geometric structures across different scales. Within MER, these visualizations are treated as candidate topologies for universal dynamics projected onto various observational scales, rather than as empirically established facts.
 
 The geometric structures described here provide:
 1. **Visual intuition** for abstract mathematical concepts
-2. **Testable predictions** through observable patterns
+2. **Potentially testable hypotheses and predictions** through observable patterns
 3. **Universal templates** applicable across quantum, classical, and cosmic scales
 4. **Computational frameworks** for simulation and validation
 
@@ -129,12 +129,14 @@ For r → R_stable:
 P_remain → 0  (system must transition to new scale)
 ```
 
-**This explains**:
+**Within MER, this toy model is proposed as a way to interpret**:
 - Why atoms have discrete energy levels (scale quantization)
 - Why black holes have event horizons (scale boundaries)
 - Why phase transitions occur (crossing stabilization threshold)
 
 ### Observable Predictions
+
+*The following are heuristic MER-inspired predictions based on the stabilization-circle toy model above; they should be read as hypotheses for empirical testing, not as established results.*
 
 **Prediction 1**: Systems near stabilization boundary show increased fluctuations
 ```
@@ -258,6 +260,8 @@ T_n = T_0 · φ^n
 
 ### Testable Predictions
 
+*These are heuristic MER-inspired predictions of the spiral scaling picture and should be interpreted as empirical hypotheses within MER, not as confirmed relationships.*
+
 **Prediction 1**: Molecular vibrational spectra
 ```
 ω_n+1 / ω_n ≈ φ ± 0.05  (within 5% accuracy)
@@ -334,6 +338,8 @@ M = {λ : φ/ψ cycle at scale λ is stable}
 - **Boundary of M**: Critical scales (phase transitions)
 
 ### Observable Predictions
+
+*These are heuristic MER-inspired predictions of the fractal-boundary construction and are intended as hypotheses for empirical and numerical investigation, rather than as established facts.*
 
 **Prediction 1**: Quantum wavefunction boundaries are fractal
 ```
@@ -445,7 +451,7 @@ The geometric structures of MER Theory provide:
 
 1. **Visual intuition**: Complex dynamics become geometrically clear
 2. **Universal templates**: Same structures across all scales
-3. **Testable predictions**: Geometric ratios and patterns are measurable
+3. **Tentative, testable geometric hypotheses**: ratios and patterns that can be compared with data
 4. **Computational tools**: Diagrams can be generated and compared to data
 
 **Key geometric elements**:

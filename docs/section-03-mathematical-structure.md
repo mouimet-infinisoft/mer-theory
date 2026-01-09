@@ -1,8 +1,8 @@
 # Section 3: Mathematical Structure
 
-**Author**: Martin Ouimet
-**MER Theory Version**: 0.1
-**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+**Author**: Martin Ouimet  
+**MER Theory Version**: 0.1  
+**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)  
 
 ---
 
@@ -57,11 +57,11 @@ And:
 
 ### Interpretation
 
-| ε Value | Filter P_λ | Observation Type           |
-|---------|-----------|----------------------------|
-| ε ≪ 1   | P_λ ≈ 1   | Classical, deterministic   |
-| ε ~ 1   | P_λ ~ 0.5 | Intermediate, semi-quantum |
-| ε ≫ 1   | P_λ ≈ 0   | Quantum, probabilistic     |
+| ε Value | Filter P_λ | Observation Type              |
+|---------|-----------|-------------------------------|
+| ε ≪ 1   | P_λ ≈ 1   | Quantum, probabilistic        |
+| ε ~ 1   | P_λ ~ 0.5 | Classical, semi-deterministic |
+| ε ≫ 1   | P_λ ≈ 0   | Cosmic, deterministic         |
 
 ## 3.3 Scale Transitions and Golden/Fibonacci Ratios
 
@@ -101,7 +101,7 @@ State_n = State_(n-1) + (State_(n-1) - State_(n-2))
         = Fibonacci recurrence
 ```
 
-**Therefore**: Fibonacci is the **only stable growth pattern** that preserves φ/ψ balance across scales.
+**Therefore**: Within this simple recurrence model, Fibonacci emerges as the **canonical stable growth pattern** that preserves φ/ψ balance across scales.
 
 ## 3.4 Observable Projection and Probabilities
 
@@ -153,7 +153,7 @@ Lorenz is a 3D projection of φ/ψ cycles:
 φ/ψ ratio in Lorenz system = σ/β ≈ φ/|ψ| ≈ 2.618
 ```
 
-**This is why chaotic systems show 2-lobe attractors!**
+In MER, this numerical proximity is interpreted as one **possible explanation** for why many chaotic systems exhibit 2-lobe attractors, though this remains a heuristic analogy rather than a rigorous derivation.
 
 ### Structural Analogy
 
@@ -215,5 +215,5 @@ This section establishes the mathematical foundation of MER Theory, demonstratin
 ---
 
 **Previous**: [Section 2: Conceptual Framework](section-02-conceptual-framework.md)  
-**Next**: [Section 4: Geometrical Structure and Visualization](section-04-geometrical-structure.md) *(To be written)*
+**Next**: [Section 4: Geometrical Structure and Visualization](section-04-geometrical-structure.md) *(Draft v0.1)*
 

@@ -2,10 +2,10 @@
 
 **Multi-scale Emergent Reality Theory: A Unified Framework for Quantum Mechanics and General Relativity**
 
-**Author**: Martin Ouimet
-**Version**: 0.1 (Initial Draft)
-**Last Updated**: 2026-01-03
-**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+**Author**: Martin Ouimet  
+**Version**: 0.1 (Initial Draft)  
+**Last Updated**: 2026-01-09  
+**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)  
 
 ---
 
@@ -108,20 +108,20 @@
 
 ## Version History
 
-### v0.1 (2026-01-03)
+### v0.1 (2026-01-09)
 - Initial structure established
-- Sections 1-3 completed
-- Sections 4-9 planned
+- Sections 1-5 completed as first-draft v0.1 text
+- Sections 6-9 planned
 
 ---
 
 ## Next Steps
 
 **Immediate priorities**:
-1. Complete Section 4 (Geometrical Structure)
+1. Refine Sections 4–5 (geometry and applications) based on feedback
 2. Develop visualizations and diagrams
 3. Create simulation code for φ/ψ dynamics
-4. Complete Section 5 (Scientific Applications)
+4. Draft Sections 6–9 (methodology, discussion, conclusion, appendices)
 
 **Review cycle**:
 - Complete v0.1 → Review → Refine → v0.2

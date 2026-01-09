@@ -4,7 +4,7 @@
 
 **Author**: Martin Ouimet
 **Version**: 0.1
-**Date**: 2026-01-03
+**Date**: 2026-01-09
 **License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ---
@@ -76,15 +76,15 @@ MER reveals deep connections between:
 - **Entanglement**: Shared cycle coherence across spatial separation
 - **Gravity**: Emergent from φ/ψ dynamics at cosmic scales
 
-### **Testable Predictions**
-- Scale transitions follow golden ratio proportions
+### **Proposed Testable Hypotheses (v0.1)**
+- Scale transitions that approximately follow golden-ratio proportions
 - Observable fractal patterns in quantum-to-classical transitions
-- Specific predictions for black hole dynamics and cosmic expansion
+- Toy-model level predictions for black hole dynamics and cosmic expansion
 
-### **Methodological Advantages**
-- **Reproducible**: Iterative φ/ψ process can be simulated
-- **Multi-scale**: Applies from quantum to cosmic scales
-- **Experimentally accessible**: Predictions testable with current technology
+### **Methodological Aims**
+- **Reproducible in principle**: Iterative φ/ψ process can be simulated numerically
+- **Multi-scale**: Intended to apply from quantum to cosmic scales
+- **Experimentally relevant**: Many ideas are framed as hypotheses or toy models that could, with refinement, be tested with current or near-future technology
 
 ---
 
@@ -94,13 +94,13 @@ MER reveals deep connections between:
 |--------|----------|--------|
 | **String Theory** | Extra dimensions, supersymmetry | No unique predictions, untestable |
 | **Loop Quantum Gravity** | Quantize spacetime | Does not unify forces |
-| **MER Theory** | Observer-relative scale dynamics | Emphasizes concrete, multi-scale, testable predictions |
+| **MER Theory** | Observer-relative scale dynamics | Emphasizes concrete, multi-scale, testable hypotheses and toy-model predictions |
 
 ---
 
 ## Current Status
 
-**Version 0.1** - Initial theoretical framework established
+**Version 0.1** - Initial theoretical framework established (first complete draft of Sections 1–5)
 
 **Completed**:
 - Conceptual foundation
@@ -117,11 +117,11 @@ MER reveals deep connections between:
 
 ## Conclusion
 
-MER Theory offers a **pragmatic, testable, and conceptually elegant** approach to unifying quantum mechanics and general relativity by recognizing that **scale-dependent observation**, not fundamental incompatibility, is the source of apparent paradoxes in modern physics.
+MER Theory offers a **pragmatic, testable-in-principle, and conceptually elegant** approach to unifying quantum mechanics and general relativity by recognizing that **scale-dependent observation**, not fundamental incompatibility, is the source of apparent paradoxes in modern physics.
 
-By treating reality as a multi-scale emergent phenomenon governed by φ/ψ conjugate cycles, MER provides:
+By treating reality as a multi-scale emergent phenomenon governed by φ/ψ conjugate cycles, MER aims to provide:
 - A **unified mathematical framework**
-- **Testable experimental predictions**
+- **Candidate experimental and observational predictions** (often in toy-model form)
 - **Conceptual clarity** on long-standing paradoxes
 
 This framework represents a conceptual reframing: from seeking a "theory of everything" to understanding how **one universal law manifests differently across scales of observation**.

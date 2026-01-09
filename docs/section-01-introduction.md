@@ -44,7 +44,9 @@ While MER Theory seeks to provide a comprehensive multi-scale model of reality, 
 
 **Multi-scale applicability**: The framework considers three main observational scales—**micro (quantum)**, **human (meso)**, and **macro (cosmic)**. These scales are relative to the observer, and phenomena may appear differently depending on the reference cycle.
 
-**Reproducibility and experimental constraints**: While MER Theory proposes testable predictions, some phenomena, particularly at cosmic or quantum extremes, may remain challenging to observe directly.
+**Reproducibility and experimental constraints**: While MER Theory proposes testable ideas and illustrative quantitative correspondences, some phenomena, particularly at cosmic or quantum extremes, may remain challenging to observe directly.
+
+**Status of this version (0.1)**: This draft mixes (a) exact definitions within MER, (b) heuristic mechanisms that could connect MER to standard physics, and (c) speculative or numerological correspondences. The latter two should be treated as hypotheses and starting points for further work, not as established results.
 
 **Pragmatic boundaries**: The theory aims for clarity, internal consistency, and conceptual unification rather than providing exhaustive solutions to all unresolved questions in physics.
 

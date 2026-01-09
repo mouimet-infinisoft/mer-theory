@@ -4,11 +4,11 @@
 
 > A unified physics framework bridging quantum mechanics and general relativity through observer-relative scale dynamics.
 
-**Author**: Martin Ouimet
-**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-**Repository**: https://github.com/mouimet-infinisoft/mer-theory
+**Author**: Martin Ouimet  
+**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)  
+**Repository**: https://github.com/mouimet-infinisoft/mer-theory  
 
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)  
 
 ---
 
@@ -69,13 +69,21 @@ An observer at cycle **N** perceives:
 **Version**: 0.1 (Initial Draft)
 
 **Completed**:
-- ✅ Sections 1-5 (Introduction, Conceptual Framework, Mathematical Structure, Geometrical Structure, Scientific Applications)
+- ✅ Sections 1:Introduction  
+- ✅ Sections 2:Conceptual Framework
+- ✅ Sections 3:Mathematical Structure
+- ✅ Sections 4:Geometrical Structure
+- ✅ Sections 5:Scientific Applications
 
 **In Progress**:
 - ⏳ Section 6: Reproducible Methodology
 - ⏳ Section 7: Discussion
 - ⏳ Section 8: Conclusion
 - ⏳ Section 9: Appendices
+
+### Epistemic status of v0.1
+
+MER Theory v0.1 is a **first-draft, exploratory framework**. It mixes precise internal definitions with heuristic mechanisms that could connect MER to standard physics, as well as speculative or numerological correspondences (especially in Sections 4 and 5). The latter should be treated as hypotheses and starting points for discussion, not as established physical results.
 
 ---
 
@@ -97,9 +105,9 @@ Original research discussions and source materials are preserved in `_source-mat
 
 ## 📧 Contact & Citation
 
-**Author**: Martin Ouimet
-**GitHub**: [@mouimet-infinisoft](https://github.com/mouimet-infinisoft)
-**Repository**: https://github.com/mouimet-infinisoft/mer-theory
+**Author**: Martin Ouimet  
+**GitHub**: [@mouimet-infinisoft](https://github.com/mouimet-infinisoft)  
+**Repository**: https://github.com/mouimet-infinisoft/mer-theory  
 
 For questions, collaboration, or academic inquiries, please open an issue on GitHub.
 
@@ -117,5 +125,5 @@ https://github.com/mouimet-infinisoft/mer-theory
 
 **Copyright**: © 2026 Martin Ouimet
 
-**Last Updated**: 2026-01-08
+**Last Updated**: 2026-01-09
 
