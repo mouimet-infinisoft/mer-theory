@@ -383,13 +383,6 @@ The geometric structures of MER Theory provide:
 - ✅ Mandelbrot/Julia sets (observable projections)
 - ✅ Multi-scale nesting (self-similarity)
 
-For compact visual summaries of these structures, see: [Section 4 Diagrams: Geometrical Structure and Visualization](section-04-diagrams.md).
 
-**Next steps**:
-- Generate computational visualizations
-- Compare geometric predictions to experimental data
-- Develop interactive MER diagram tools
-
----
 
 
