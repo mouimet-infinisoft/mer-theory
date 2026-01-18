@@ -1,10 +1,5 @@
+\clearpage
 # 4. Geometrical Structure and Visualization
-
-**Author**: Martin Ouimet  
-**MER Theory Version**: 0.1  
-**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-
----
 
 ## Overview
 
@@ -396,9 +391,5 @@ For compact visual summaries of these structures, see: [Section 4 Diagrams: Geom
 - Develop interactive MER diagram tools
 
 ---
-
-**Continue to**: [Section 5: Concrete Scientific Applications](section-05-scientific-applications.md)
-
-**Return to**: [Table of Contents](TOC.md)
 
 

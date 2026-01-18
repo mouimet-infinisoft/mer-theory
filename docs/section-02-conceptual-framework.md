@@ -1,10 +1,5 @@
+\clearpage
 # 2. Conceptual Framework of MER
-
-**Author**: Martin Ouimet
-**MER Theory Version**: 0.1
-**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-
----
 
 ## 2.1 Unique Universal Law
 
@@ -138,6 +133,4 @@ This section establishes the conceptual foundation of MER Theory, introducing th
 
 ---
 
-**Previous**: [Section 1: Introduction](section-01-introduction.md)  
-**Next**: [Section 3: Mathematical Structure](section-03-mathematical-structure.md)
 

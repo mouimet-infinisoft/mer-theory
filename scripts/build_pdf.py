@@ -24,6 +24,7 @@ SECTIONS = [
     "section-02-conceptual-framework.md",
     "section-03-mathematical-structure.md",
     "section-04-geometrical-structure.md",
+    # "section-04-diagrams.md",
     "section-05-scientific-applications.md",
 ]
 
@@ -41,70 +42,22 @@ def assemble_main():
     version_path = ROOT / 'VERSION.md'
     if version_path.exists():
         version = version_path.read_text(encoding='utf-8').strip()
-
-    # Prepare cover: read template and substitute placeholders
-    cover_tpl = PAPER_DIR / "cover.tex"
-    cover_content = ""
-    if cover_tpl.exists():
-        cover_content = cover_tpl.read_text(encoding='utf-8')
-        cover_content = cover_content.replace('PLACEHOLDER_VERSION', version)
-        from datetime import date
-        cover_content = cover_content.replace('PLACEHOLDER_DATE', date.today().isoformat())
-        # short abstract
-        abs_text = ""
-        abstract_path = ROOT / "ABSTRACT.md"
-        if abstract_path.exists():
-            abs_text = abstract_path.read_text(encoding='utf-8').strip().split('\n\n')[0]
-            # strip leading Markdown headings or code fences from abstract snippet
-            import re
-            abs_text = re.sub(r"^#+\s*", "", abs_text)
-            abs_text = re.sub(r"```.*?```", "", abs_text, flags=re.S)
-
-    # Escape LaTeX special chars in the cover abstract if present
-    def escape_latex(s: str) -> str:
-        # minimal escaping for common special chars
-        replacements = {
-            '\\': r'\\textbackslash{}',
-            '&': r'\\&',
-            '%': r'\\%',
-            '$': r'\\$',
-            '#': r'\\#',
-            '_': r'\\_',
-            '{': r'\\{',
-            '}': r'\\}',
-            '~': r'\\textasciitilde{}',
-            '^': r'\\textasciicircum{}',
-        }
-        for old, new in replacements.items():
-            s = s.replace(old, new)
-        return s
-
-    if cover_content:
-        # sanitize abstract placeholder
-        cover_content = cover_content.replace('PLACEHOLDER_ABSTRACT', escape_latex(abs_text))
-
     with open(PAPER_MD, "w", encoding="utf-8") as out:
-        # Insert cover as a raw LaTeX block (Pandoc fenced code block with =latex)
-        if cover_content:
-            out.write('```{=latex}\n')
-            out.write(cover_content + '\n')
-            out.write('```\n\n')
-        else:
-            # If no cover, include a simple title header for Pandoc to process
-            out.write("% Multi-scale Emergent Reality Theory (MER)\n")
-            out.write("% Martin Ouimet\n")
-            out.write(f"% v{version}\n\n")
-        
-        # Include abstract (only if we did not render it on the cover)
-        abstract_path = ROOT / "ABSTRACT.md"
-        if abstract_path.exists() and not cover_content:
-            out.write("# Abstract\n\n")
-            with open(abstract_path, "r", encoding="utf-8") as f:
-                lines = [line for line in f if not line.strip().startswith('---')]
-                out.write(''.join(lines) + "\n")
-        
-        out.write("\n---\n\n")
-        
+        # Simple Pandoc title header
+        # out.write("% Multi-scale Emergent Reality Theory (MER)\n")
+        # out.write("% Martin Ouimet\n")
+        # out.write(f"% v{version}\n\n")
+
+        # Include abstract
+        # abstract_path = ROOT / "ABSTRACT.md"
+        # if abstract_path.exists():
+        #     out.write("# Abstract\n\n")
+        #     with open(abstract_path, "r", encoding="utf-8") as f:
+        #         lines = [line for line in f if not line.strip().startswith('---')]
+        #         out.write(''.join(lines) + "\n")
+
+        # out.write("\n---\n\n")
+
         # Include sections
         for section in SECTIONS:
             src = DOCS_DIR / section
@@ -135,7 +88,7 @@ def build_pdf():
         "pandoc",
         str(PAPER_MD),
         "-s",
-        "--number-sections",
+        # "--number-sections",
         "--pdf-engine=xelatex",
         "-V", "geometry:margin=1in",
         "-o", str(PDF_OUT)
@@ -146,12 +99,33 @@ def build_pdf():
     if bib.exists():
         cmd.extend(["--citeproc", f"--bibliography={bib}"])
     
-    # Add preamble if present
-    preamble = PAPER_DIR / "preamble.tex"
-    if preamble.exists():
-        cmd.extend(["-H", str(preamble)])
-    
+    # Add preamble if present (should NOT contain \documentclass)
+    # preamble = PAPER_DIR / "preamble.tex"
+    # if preamble.exists():
+    #     cmd.extend(["-H", str(preamble)])
+
+    # If a cover template exists, substitute version/date placeholders and
+    # write a temporary cover file to include before the body.
+    cover_src = PAPER_DIR / "cover.tex"
+    version_val = (ROOT / 'VERSION.md').read_text(encoding='utf-8').strip() if (ROOT / 'VERSION.md').exists() else 'dev'
+    from datetime import date
+    date_val = date.today().isoformat()
+    if cover_src.exists():
+        cover_tmp = BUILD_DIR / "cover-include.tex"
+        # strip any leading whitespace (avoid stray characters before backslash)
+        cover_text = cover_src.read_text(encoding='utf-8')
+        # Trim leading BOM/whitespace but ensure leading backslash for TeX commands
+        cover_text = cover_text.lstrip('\ufeff\u200b\t \n')
+        # Fix accidental missing backslash before TeX command names (e.g. hispagestyle)
+        cover_text = cover_text.replace('hispagestyle{', '\\thispagestyle{')
+        # Replace placeholders
+        cover_text = cover_text.replace('PLACEHOLDER_DATE', date_val)
+        cover_text = cover_text.replace('PLACEHOLDER_VERSION', version_val)
+        cover_tmp.write_text(cover_text, encoding='utf-8')
+        cmd.extend(["--include-before-body", str(cover_tmp)])
+
     print(f"Building PDF: {PDF_OUT}")
+
     subprocess.run(cmd, check=True)
     print(f"[check] PDF generated: {PDF_OUT}")
 

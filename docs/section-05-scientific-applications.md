@@ -1,10 +1,5 @@
+\clearpage
 # 5. Concrete Scientific Applications
-
-**Author**: Martin Ouimet  
-**MER Theory Version**: 0.1  
-**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-
----
 
 ## Overview
 
@@ -1058,9 +1053,3 @@ The following table summarizes simple MER-inspired toy relations and how their n
 3. Novel technologies (quantum computing, gravitational wave detection)
 
 ---
-
-**Continue to**: [Section 6: Reproducible Methodology](section-06-reproducible-methodology.md)
-
-**Return to**: [Table of Contents](TOC.md)
-
-

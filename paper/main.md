@@ -1,156 +1,6 @@
-% Multi-scale Emergent Reality Theory (MER)
-% Martin Ouimet
-% v0.1.25
-
-# Abstract
-
-# MER Theory - Abstract
-
-**Multi-scale Emergent Reality Theory: A Unified Framework for Quantum Mechanics and General Relativity**
-
-**Author**: Martin Ouimet
-**Version**: v0.1.25
-**Date**: 2026-01-09
-**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+\clearpage# 1. Introduction
 
 
-## Executive Summary
-
-Modern physics is characterized by two highly successful yet fundamentally incompatible frameworks: **quantum mechanics** (QM), governing microscopic phenomena through probabilistic descriptions, and **general relativity** (GR), describing macroscopic gravitational dynamics through deterministic spacetime geometry. Despite decades of effort, attempts to unify these paradigms-including string theory and loop quantum gravity-have failed to produce a universally accepted, experimentally verifiable framework.
-
-**MER Theory** (Multi-scale Emergent Reality Theory) proposes a novel approach: **the apparent contradictions between QM and GR arise not from fundamental incompatibility, but from observer-relative scale perception.**
-
-
-## Core Thesis
-
-**Reality is governed by a single universal law, but observations are scale-dependent.**
-
-What appears:
-- **Quantum/probabilistic** at microscopic scales
-- **Classical/deterministic** at human scales
-- **Relativistic/cosmic** at macroscopic scales
-
-...are all **projections of the same underlying deterministic dynamics** viewed through different observational windows defined by the observer's position in the cycle hierarchy.
-
-
-## Key Innovations
-
-### 1. **φ/ψ Conjugate Cycles**
-MER introduces a fundamental dynamic based on the golden ratio and its conjugate:
-- **φ** ($\varphi \approx 1.618$): Expansion, emergence, propagation
-- **ψ** ($\psi \approx -0.618$): Regulation, constraint, dissipation
-- **Conjugate relationship**: $\varphi + \psi = 1$, $\varphi \times \psi = -1$
-
-These cycles create stable, bounded, non-trivial dynamics analogous to chaotic attractors (e.g., Lorenz attractor), where deterministic laws produce locally unpredictable but globally structured behavior.
-
-### 2. **Observer-Relative Scale Parameter (λ)**
-Scale is not a fundamental dimension but an **emergent property of interaction**:
-- **ε (epsilon)** = (L_S/L_O) + (T_S/T_O) + (E_S/E_O)
-- **Projection filter**: P_λ = exp(-α·ε²)
-
-Here λ indexes the observer's position in the scale hierarchy, while ε measures the mismatch between system and observer scales that feeds into the projection filter.
-
-An observer at cycle **N** perceives:
-- Cycle **N-1** as **quantum** (too small/fast to track deterministically)
-- Cycle **N** as **classical** (directly observable)
-- Cycle **N+1** as **cosmic** (too large/slow to observe completely)
-
-### 3. **Determinism → Probabilism Transition**
-Probability is **not fundamental** but **epistemic**:
-- At the universal level: deterministic φ/ψ dynamics
-- At the observational level: probabilistic due to scale-imposed limitations
-- Similar to how the Lorenz attractor is deterministic yet produces chaotic, unpredictable trajectories
-
-### 4. **Geometric Unification**
-MER reveals deep connections between:
-- **Lemniscate (∞)**: Internal φ/ψ flux
-- **Fibonacci spirals**: Optimal scale transitions
-- **Mandelbrot/Julia sets**: Universal fractal projections
-- **Black holes**: Critical vertices in scale transitions
-- **Wave-particle duality**: Scale-dependent projections of the same entity
-
-
-## Scientific Implications
-
-### **Reframes Quantum-Relativity Paradoxes**
-- **Wave-particle duality**: Same object, different observational resolutions
-- **Quantum superposition**: Deterministic at universal level, probabilistic at observational scale
-- **Entanglement**: Shared cycle coherence across spatial separation
-- **Gravity**: Emergent from φ/ψ dynamics at cosmic scales
-
-### **Proposed Testable Hypotheses (v0.1.25)**
-- Scale transitions that approximately follow golden-ratio proportions
-- Observable fractal patterns in quantum-to-classical transitions
-- Toy-model level predictions for black hole dynamics and cosmic expansion
-
-### **Methodological Aims**
-- **Reproducible in principle**: Iterative φ/ψ process can be simulated numerically
-- **Multi-scale**: Intended to apply from quantum to cosmic scales
-- **Experimentally relevant**: Many ideas are framed as hypotheses or toy models that could, with refinement, be tested with current or near-future technology
-
-
-## Comparison with Existing Theories
-
-| Theory | Approach | Status |
-|--------|----------|--------|
-| **String Theory** | Extra dimensions, supersymmetry | No unique predictions, untestable |
-| **Loop Quantum Gravity** | Quantize spacetime | Does not unify forces |
-| **MER Theory** | Observer-relative scale dynamics | Emphasizes concrete, multi-scale, testable hypotheses and toy-model predictions |
-
-
-## Current Status
-
-**Version v0.1.25** - Initial theoretical framework established (first complete draft of Sections 1–5)
-
-**Completed**:
-- Conceptual foundation
-- Mathematical formulation
-- Geometric structure
-- Initial scientific applications (Section 5, v0.1 draft)
-
-**In Progress**:
-- Refinement of scientific applications and numerical checks
-- Experimental validation protocols
-- Simulation development
-
-
-## Conclusion
-
-MER Theory offers a **pragmatic, testable-in-principle, and conceptually elegant** approach to unifying quantum mechanics and general relativity by recognizing that **scale-dependent observation**, not fundamental incompatibility, is the source of apparent paradoxes in modern physics.
-
-By treating reality as a multi-scale emergent phenomenon governed by φ/ψ conjugate cycles, MER aims to provide:
-- A **unified mathematical framework**
-- **Candidate experimental and observational predictions** (often in toy-model form)
-- **Conceptual clarity** on long-standing paradoxes
-
-This framework represents a conceptual reframing: from seeking a "theory of everything" to understanding how **one universal law manifests differently across scales of observation**.
-
-
-## Citation
-
-```
-Ouimet, M. (2026). Multi-scale Emergent Reality Theory: A Unified Framework
-for Quantum Mechanics and General Relativity. GitHub repository.
-https://github.com/mouimet-infinisoft/mer-theory
-```
-
-
-**Copyright**: © 2026 Martin Ouimet
-**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) - Free to share and adapt with attribution
-
-**For full details, see the complete paper in [docs/TOC.md](docs/TOC.md).**
-
-
-
----
-
-# 1. Introduction
-
-**Author**: Martin Ouimet
-**MER Theory Version**: 0.1
-**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-
----
 
 ## 1.1 Scientific Context and Motivation
 
@@ -204,17 +54,11 @@ This section establishes the context, identifies the core problem, and clearly o
 
 ---
 
-**Next**: [2. Conceptual Framework of MER](section-02-conceptual-framework.md)
 
 
 
+\clearpage
 # 2. Conceptual Framework of MER
-
-**Author**: Martin Ouimet
-**MER Theory Version**: 0.1
-**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-
----
 
 ## 2.1 Unique Universal Law
 
@@ -348,18 +192,11 @@ This section establishes the conceptual foundation of MER Theory, introducing th
 
 ---
 
-**Previous**: [Section 1: Introduction](section-01-introduction.md)  
-**Next**: [Section 3: Mathematical Structure](section-03-mathematical-structure.md)
 
 
 
+\clearpage
 # 3. Mathematical Structure
-
-**Author**: Martin Ouimet  
-**MER Theory Version**: 0.1  
-**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)  
-
----
 
 ## 3.1 Formulation of φ/ψ Cycles
 
@@ -531,18 +368,9 @@ This section establishes the mathematical foundation of MER Theory, demonstratin
 
 ---
 
-**Previous**: [Section 2: Conceptual Framework](section-02-conceptual-framework.md)  
-**Next**: [Section 4: Geometrical Structure and Visualization](section-04-geometrical-structure.md) *(Draft v0.1)*
 
-
-
+\clearpage
 # 4. Geometrical Structure and Visualization
-
-**Author**: Martin Ouimet  
-**MER Theory Version**: 0.1  
-**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-
----
 
 ## Overview
 
@@ -935,20 +763,11 @@ For compact visual summaries of these structures, see: [Section 4 Diagrams: Geom
 
 ---
 
-**Continue to**: [Section 5: Concrete Scientific Applications](section-05-scientific-applications.md)
-
-**Return to**: [Table of Contents](TOC.md)
 
 
 
-
+\clearpage
 # 5. Concrete Scientific Applications
-
-**Author**: Martin Ouimet  
-**MER Theory Version**: 0.1  
-**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-
----
 
 ## Overview
 
@@ -2002,11 +1821,5 @@ The following table summarizes simple MER-inspired toy relations and how their n
 3. Novel technologies (quantum computing, gravitational wave detection)
 
 ---
-
-**Continue to**: [Section 6: Reproducible Methodology](section-06-reproducible-methodology.md)
-
-**Return to**: [Table of Contents](TOC.md)
-
-
 
 

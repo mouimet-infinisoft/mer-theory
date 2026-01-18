@@ -1,10 +1,6 @@
-# 1. Introduction
+\clearpage# 1. Introduction
 
-**Author**: Martin Ouimet
-**MER Theory Version**: 0.1
-**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
----
 
 ## 1.1 Scientific Context and Motivation
 
@@ -58,5 +54,4 @@ This section establishes the context, identifies the core problem, and clearly o
 
 ---
 
-**Next**: [2. Conceptual Framework of MER](section-02-conceptual-framework.md)
 

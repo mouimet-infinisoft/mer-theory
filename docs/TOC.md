@@ -1,14 +1,5 @@
 # MER Theory - Table of Contents
 
-**Multi-scale Emergent Reality Theory: A Unified Framework for Quantum Mechanics and General Relativity**
-
-**Author**: Martin Ouimet  
-**Version**: 0.1 (Initial Draft)  
-**Last Updated**: 2026-01-09  
-**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)  
-
----
-
 ## 1. Introduction ✅
 
 1.1 Scientific Context and Motivation  
@@ -126,9 +117,3 @@
 **Review cycle**:
 - Complete v0.1 → Review → Refine → v0.2
 - Incremental improvement following software engineering methodology
-
----
-
-**For executive summary, see [ABSTRACT.md](../ABSTRACT.md)**  
-**For project overview, see [README.md](../README.md)**
-

@@ -1,3 +1,21 @@
+% Simple LaTeX preamble for scientific formatting
+% Do NOT include \documentclass here — pandoc provides it. Only add packages.
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+% xelatex is used via pandoc; inputenc is not required but harmless
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0pt}
+% Headings
+\usepackage{sectsty}
+\allsectionsfont{\sffamily}
 % Publication-quality LaTeX preamble for Pandoc + XeLaTeX
 % Font setup
 \usepackage{fontspec}
