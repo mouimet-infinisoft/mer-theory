@@ -9,7 +9,7 @@
 **Repository**: https://github.com/mouimet-infinisoft/mer-theory  
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)   
-[![DOI](https://zenodo.org/badge/1127095415.svg)](https://doi.org/10.5281/zenodo.18194971)  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18286576.svg)](https://doi.org/10.5281/zenodo.18286576)  
 
 ---
 
@@ -90,24 +90,22 @@ Notes:
 
 ## 🚀 Current Status
 
-**Version**: v0.1.7 (Initial Draft)
-
-**Completed**:
+**Work In Progress**:
 - ✅ Sections 1:Introduction  
 - ✅ Sections 2:Conceptual Framework
 - ✅ Sections 3:Mathematical Structure
 - ✅ Sections 4:Geometrical Structure
 - ✅ Sections 5:Scientific Applications
 
-**In Progress**:
+**Future Work**:
 - ⏳ Section 6: Reproducible Methodology
 - ⏳ Section 7: Discussion
 - ⏳ Section 8: Conclusion
 - ⏳ Section 9: Appendices
 
-### Epistemic status of v0.1.7
+### Epistemic status
 
-MER Theory v0.1.7 is a **first-draft, exploratory framework**. It mixes precise internal definitions with heuristic mechanisms that could connect MER to standard physics, as well as speculative or numerological correspondences (especially in Sections 4 and 5). The latter should be treated as hypotheses and starting points for discussion, not as established physical results.
+MER Theory is a **work in progress, exploratory framework**. It mixes precise internal definitions with heuristic mechanisms that could connect MER to standard physics, as well as speculative or numerological correspondences (especially in Sections 4 and 5). The latter should be treated as hypotheses and starting points for discussion, not as established physical results.
 
 ---
 
