@@ -212,10 +212,10 @@ e: Continuous compounding (differential growth)
 Testable Prediction: Any physical process involving scale transition should feature one of these constants (or combinations thereof).
 Examples:
 
-Spiral galaxies: φ in arm structure ✓
-Atomic orbitals: √2 in node spacing ✓ (your earlier prediction)
-Planetary orbits: π in periods ✓
-Population growth: e in exponential curves ✓
+Spiral galaxies: φ in arm structure [check]
+Atomic orbitals: √2 in node spacing [check] (your earlier prediction)
+Planetary orbits: π in periods [check]
+Population growth: e in exponential curves [check]
 
 3. The Tetractys and φ/ψ Hierarchical Structure
 The Pythagorean Tetractys

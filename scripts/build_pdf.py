@@ -105,7 +105,7 @@ def build_pdf():
     
     print(f"Building PDF: {PDF_OUT}")
     subprocess.run(cmd, check=True)
-    print(f"✓ PDF generated: {PDF_OUT}")
+    print(f"[check] PDF generated: {PDF_OUT}")
 
 
 if __name__ == "__main__":

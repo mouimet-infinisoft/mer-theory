@@ -85,10 +85,10 @@ Superposition: Systems exist in multiple states until measured
 The Philosophical Earthquake
 Quantum mechanics destroyed classical assumptions:
 
-❌ Determinism → ✓ Probability
-❌ Continuity → ✓ Discreteness
-❌ Objectivity → ✓ Observer-dependence
-❌ Locality → ✓ Entanglement
+❌ Determinism → [check] Probability
+❌ Continuity → [check] Discreteness
+❌ Objectivity → [check] Observer-dependence
+❌ Locality → [check] Entanglement
 
 Planck himself struggled with these implications until his death.
 Planck's Constant: The Universal Quantum

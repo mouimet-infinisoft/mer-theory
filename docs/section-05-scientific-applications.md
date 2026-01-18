@@ -71,8 +71,8 @@ Where:
 
 ```
 For electron double-slit:
-- Standard detector (L_O = 100 μm): ε ≈ 0.01 → V ≈ 0.95 ✓
-- High-res detector (L_O = 10 nm): ε ≈ 100 → V ≈ 0.00 ✓
+- Standard detector (L_O = 100 μm): ε ≈ 0.01 → V ≈ 0.95 [check]
+- High-res detector (L_O = 10 nm): ε ≈ 100 → V ≈ 0.00 [check]
 ```
 
 #### Numerical Example: Double-Slit Experiment
@@ -105,7 +105,7 @@ Visibility = exp(-0.01 * (0.010)**2)
            ~ 1.0 (perfect interference)
 ```
 
-**Experimental result**: Visibility ≈ 0.95-1.0 ✓ **Agreement excellent**
+**Experimental result**: Visibility ≈ 0.95-1.0 [check] **Agreement excellent**
 
 ---
 
@@ -241,7 +241,7 @@ Where:
 *This is a MER-specific conjecture not present in standard quantum mechanics and would require targeted long-distance Bell tests for validation or falsification.*
 
 ```
-At d = 1 m:    CHSH ≈ 2.828 (standard QM) ✓
+At d = 1 m:    CHSH ≈ 2.828 (standard QM) [check]
 At d = 10 km:  CHSH ≈ 2.72  (4% decrease)
 At d = 100 km: CHSH ≈ 2.50  (12% decrease)
 ```
@@ -582,7 +582,7 @@ Standard Lorenz: σ=10, ρ=28, β=8/3
 Fractal dimension: D ≈ 2.06
 
 MER Lorenz: σ=1.618, ρ=2.618, β=0.382
-Fractal dimension: D ≈ 1.62 ≈ φ ✓
+Fractal dimension: D ≈ 1.62 ≈ φ [check]
 ```
 
 ---
@@ -743,7 +743,7 @@ v_flat = √(GM_visible · φ²)
        ≈ 1.618 · v_Newtonian
 ```
 
-**Observed**: Rotation velocities are typically 1.5-2× higher than expected from visible matter. ✓
+**Observed**: Rotation velocities are typically 1.5-2× higher than expected from visible matter. [check]
 
 ---
 
@@ -843,7 +843,7 @@ Heart rate variability (HRV) should show:
 - Power spectrum: 1/f^β with β ≈ 1/φ ≈ 0.618
 ```
 
-**Observed**: Healthy HRV has D ≈ 1.5-1.7 ✓
+**Observed**: Healthy HRV has D ≈ 1.5-1.7 [check]
 
 ---
 
@@ -868,7 +868,7 @@ P(size) ∝ size^(-τ)
 Where τ = φ ≈ 1.618
 ```
 
-**Observed**: τ ≈ 1.5 (close to φ) ✓
+**Observed**: τ ≈ 1.5 (close to φ) [check]
 
 ---
 
@@ -898,7 +898,7 @@ Distribution: P(r) ∝ exp(-|r|^φ)
 Volatility autocorrelation: C(τ) ∝ τ^(-1/φ)
 ```
 
-**Observed**: Fat tails with exponent ~1.5-1.7 (close to φ) ✓
+**Observed**: Fat tails with exponent ~1.5-1.7 (close to φ) [check]
 
 ---
 
@@ -926,7 +926,7 @@ Var(T, Δt) ∝ (Δt)^(1/φ)
            ∝ (Δt)^0.618
 ```
 
-**Observed**: Hurst exponent H ≈ 0.6-0.7 (close to 1/φ) ✓
+**Observed**: Hurst exponent H ≈ 0.6-0.7 (close to 1/φ) [check]
 
 ---
 
@@ -949,7 +949,7 @@ P(size) ∝ size^(-φ)
 
 **Prediction**: Cascade exponent ≈ -1.618
 
-**Observed**: Typical exponents -1.5 to -2.0 ✓
+**Observed**: Typical exponents -1.5 to -2.0 [check]
 
 ---
 
@@ -994,16 +994,16 @@ The following table summarizes simple MER-inspired toy relations and how their n
 
 | Phenomenon | MER-inspired relation | Observed | Agreement (purely numerical) |
 |------------|-----------------------|----------|------------------------------|
-| Double-slit visibility | V ~ exp(-αε²) | V ≈ 0.95-1.0 | ✓ Excellent |
-| CHSH parameter | 2.828 at short distance | 2.8 ± 0.1 | ✓ Excellent |
-| Gravitational constant | G ~ φ²c^4/(8π) | 6.67×10^-¹¹ | ✓ Excellent |
-| Black hole radius | r ~ √2·GM/c² | r = 2GM/c² | ✓ Factor √2 |
+| Double-slit visibility | V ~ exp(-αε²) | V ≈ 0.95-1.0 | [check] Excellent |
+| CHSH parameter | 2.828 at short distance | 2.8 ± 0.1 | [check] Excellent |
+| Gravitational constant | G ~ φ²c^4/(8π) | 6.67×10^-¹¹ | [check] Excellent |
+| Black hole radius | r ~ √2·GM/c² | r = 2GM/c² | [check] Factor √2 |
 | Hubble constant | H_0 ~ 44 km/s/Mpc | 70 km/s/Mpc | ~ Factor φ |
-| Spiral pitch angle | 31.7° | 10-30° | ✓ Good |
-| Rotation curve | v ~ φ·v_Newtonian | v ~ 1.5-2×v_N | ✓ Good |
-| Star formation | n = φ ≈ 1.618 | n ≈ 1.4 | ✓ Good |
+| Spiral pitch angle | 31.7° | 10-30° | [check] Good |
+| Rotation curve | v ~ φ·v_Newtonian | v ~ 1.5-2×v_N | [check] Good |
+| Star formation | n = φ ≈ 1.618 | n ≈ 1.4 | [check] Good |
 | Lorenz dimension | D ≈ φ | D ≈ 2.06 | ~ Close |
-| HRV dimension | D ≈ φ | D ≈ 1.5-1.7 | ✓ Excellent |
+| HRV dimension | D ≈ φ | D ≈ 1.5-1.7 | [check] Excellent |
 
 **Overall**: Several of these toy correspondences land within factors of order unity (sometimes near φ), but given their heuristic construction they should be viewed as suggestive numerology, not confirmation of MER.
 
