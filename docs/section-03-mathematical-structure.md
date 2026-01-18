@@ -1,10 +1,5 @@
+\clearpage
 # 3. Mathematical Structure
-
-**Author**: Martin Ouimet  
-**MER Theory Version**: 0.1  
-**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)  
-
----
 
 ## 3.1 Formulation of φ/ψ Cycles
 
@@ -175,7 +170,3 @@ Where $\eta_{\mu\nu}$ is Minkowski metric.
 This section establishes the mathematical foundation of MER Theory, demonstrating compatibility with existing physics while providing a unified framework through φ/ψ conjugate cycles and observer-relative scale dynamics.
 
 ---
-
-**Previous**: [Section 2: Conceptual Framework](section-02-conceptual-framework.md)  
-**Next**: [Section 4: Geometrical Structure and Visualization](section-04-geometrical-structure.md) *(Draft v0.1)*
-

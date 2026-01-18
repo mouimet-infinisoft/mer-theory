@@ -1,3 +1,4 @@
+\clearpage
 # Section 4 Diagrams: Geometrical Structure and Visualization
 
 This document contains Mermaid diagram definitions for the key MER geometric structures described in Section 4.

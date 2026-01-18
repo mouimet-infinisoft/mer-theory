@@ -1,10 +1,5 @@
+\clearpage
 # 4. Geometrical Structure and Visualization
-
-**Author**: Martin Ouimet  
-**MER Theory Version**: 0.1  
-**License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-
----
 
 ## Overview
 
@@ -388,17 +383,6 @@ The geometric structures of MER Theory provide:
 - ✅ Mandelbrot/Julia sets (observable projections)
 - ✅ Multi-scale nesting (self-similarity)
 
-For compact visual summaries of these structures, see: [Section 4 Diagrams: Geometrical Structure and Visualization](section-04-diagrams.md).
 
-**Next steps**:
-- Generate computational visualizations
-- Compare geometric predictions to experimental data
-- Develop interactive MER diagram tools
-
----
-
-**Continue to**: [Section 5: Concrete Scientific Applications](section-05-scientific-applications.md)
-
-**Return to**: [Table of Contents](TOC.md)
 
 
