@@ -13,6 +13,30 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
+# Helper: create an atomic package by copying artifacts into a temporary staging
+# directory and creating the tarball from there to avoid 'file changed as we read it'
+package_artifacts(){
+  local ver="$1"
+  local staging
+  staging=$(mktemp -d)
+  echo "-> Staging artifacts in: $staging"
+  # copy top-level files
+  for f in LICENSE CITATION.cff README.md VERSION.md; do
+    [[ -f "$f" ]] && cp -a "$f" "$staging/"
+  done
+  # copy directories if present
+  for d in paper scripts docs build; do
+    if [[ -d "$d" ]]; then
+      cp -a "$d" "$staging/"
+    fi
+  done
+  mkdir -p build
+  # create tarball from staging directory
+  tar -C "$staging" -czf "build/mer-theory-$ver.tar.gz" . || { echo "WARNING: packaging failed"; }
+  # cleanup
+  rm -rf "$staging"
+}
+
 NONINTERACTIVE=0
 DRY_RUN=0
 FORCE=0
@@ -254,7 +278,7 @@ else
   echo "No scripts/build_release.sh found or not executable; attempting direct steps..."
   echo "-> Generating figures..."; python3 scripts/figures.py paper/images || true
   echo "-> Building PDF..."; python3 scripts/build_pdf.py || true
-  echo "-> Packaging..."; VERSION="$NEW_VER"; tar -czf "build/mer-theory-$VERSION.tar.gz" LICENSE CITATION.cff README.md VERSION.md paper scripts docs build || true
+  echo "-> Packaging..."; VERSION="$NEW_VER"; package_artifacts "$VERSION"
 fi
 
 # Validation step: run pdffonts if available
@@ -317,7 +341,7 @@ else
 
   echo "-> Packaging...";
   VERSION="$NEW_VER"
-  tar -czf "build/mer-theory-$VERSION.tar.gz" LICENSE CITATION.cff README.md VERSION.md paper scripts docs build || { echo "WARNING: packaging had issues"; }
+  package_artifacts "$VERSION" || { echo "WARNING: packaging had issues"; }
 fi
 
 ART_TAR="build/mer-theory-${NEW_VER}.tar.gz"

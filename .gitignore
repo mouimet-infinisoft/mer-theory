@@ -36,3 +36,6 @@ venv/
 build/
 dist/
 
+pandoc-*.tar.gz
+pandoc-*/
+pandoc-*/**
