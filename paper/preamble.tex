@@ -1,6 +1,38 @@
 % Simple LaTeX preamble for scientific formatting
 % Do NOT include \documentclass here — pandoc provides it. Only add packages.
+% Use a more robust font and better math formatting
 \usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0pt}
+
+% Use high-quality serif for print (Linux Libertine as available)
+\usepackage{fontspec}
+\setmainfont{Linux Libertine O}[Ligatures=TeX,Mapping=tex-text]
+\setsansfont{TeX Gyre Heros}
+\setmonofont{DejaVu Sans Mono}
+
+% Micro-typography and math
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath}
+\usepackage{unicode-math}
+\setmathfont{STIX Math}
+
+% PDF metadata embedding (XMP)
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc},
+  pdfproducer={LaTeX via pandoc},
+  pdfkeywords={MER Theory, Quantum Mechanics, General Relativity}
+} 
 \usepackage[T1]{fontenc}
 % xelatex is used via pandoc; inputenc is not required but harmless
 \usepackage[utf8]{inputenc}
