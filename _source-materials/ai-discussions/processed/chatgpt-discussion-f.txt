@@ -4330,7 +4330,7 @@ L
 =
 L
 τ
-✓
+[check]
 [νr
 ] = [
 c
@@ -4342,14 +4342,14 @@ L
 =
 1
 τ
-✓
+[check]
 [dtphys] = [
 dN
 νeff]
 =
 1
 1/τ
-= τ ✓
+= τ [check]
 [ΦΛ
 ] = [c
 2
@@ -4362,7 +4362,7 @@ L
 2
 τ
 2
-✓
+[check]
 36
 Gravitational Acceleration: 
  
@@ -4385,7 +4385,7 @@ L
 L
 τ
 2
-✓
+[check]
 [σ*
 ] = [
 π
@@ -4399,10 +4399,10 @@ L
 /τ
 1/τ
 × 1 = L
-2 ✓
+2 [check]
 [m] = [mr
 ( χ − 1)] = [mr
-] = M ✓
+] = M [check]
 k Ω m σ*
 37
 15. CALIBRATION AND COMPLETION HOOKS 

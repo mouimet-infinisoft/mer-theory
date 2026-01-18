@@ -13,6 +13,30 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
+# Helper: create an atomic package by copying artifacts into a temporary staging
+# directory and creating the tarball from there to avoid 'file changed as we read it'
+package_artifacts(){
+  local ver="$1"
+  local staging
+  staging=$(mktemp -d)
+  echo "-> Staging artifacts in: $staging"
+  # copy top-level files
+  for f in LICENSE CITATION.cff README.md VERSION.md; do
+    [[ -f "$f" ]] && cp -a "$f" "$staging/"
+  done
+  # copy directories if present
+  for d in paper scripts docs build; do
+    if [[ -d "$d" ]]; then
+      cp -a "$d" "$staging/"
+    fi
+  done
+  mkdir -p build
+  # create tarball from staging directory
+  tar -C "$staging" -czf "build/mer-theory-$ver.tar.gz" . || { echo "WARNING: packaging failed"; }
+  # cleanup
+  rm -rf "$staging"
+}
+
 NONINTERACTIVE=0
 DRY_RUN=0
 FORCE=0
@@ -177,6 +201,13 @@ else
   fi
 fi
 
+# Ensure we do not accidentally include local pandoc archives or other tooling bundles
+git rm --cached -f pandoc-*.tar.gz >/dev/null 2>&1 || true
+if ! grep -q '^pandoc-.*\.tar\.gz$' .gitignore 2>/dev/null; then
+  echo 'pandoc-*.tar.gz' >> .gitignore || true
+  git add .gitignore || true
+fi
+
 # Clean any existing build artifacts to ensure a fresh build
 if [[ -d build ]]; then
   echo "-> Cleaning existing build/ directory"
@@ -247,7 +278,7 @@ else
   echo "No scripts/build_release.sh found or not executable; attempting direct steps..."
   echo "-> Generating figures..."; python3 scripts/figures.py paper/images || true
   echo "-> Building PDF..."; python3 scripts/build_pdf.py || true
-  echo "-> Packaging..."; VERSION="$NEW_VER"; tar -czf "build/mer-theory-$VERSION.tar.gz" LICENSE CITATION.cff README.md VERSION.md paper scripts docs build || true
+  echo "-> Packaging..."; VERSION="$NEW_VER"; package_artifacts "$VERSION"
 fi
 
 # Validation step: run pdffonts if available
@@ -292,14 +323,31 @@ if [[ -x scripts/build_release.sh ]]; then
   ./scripts/build_release.sh || { echo "Build failed" >&2; exit 1; }
 else
   echo "No scripts/build_release.sh found or not executable; attempting direct steps..."
-  echo "-> Generating figures..."; python3 scripts/figures.py paper/images || true
-  echo "-> Building PDF..."; python3 scripts/build_pdf.py || true
-  echo "-> Packaging..."; VERSION="$NEW_VER"; tar -czf "build/mer-theory-$VERSION.tar.gz" LICENSE CITATION.cff README.md VERSION.md paper scripts docs build || true
+  echo "-> Generating figures..."
+  if ! python3 scripts/figures.py paper/images; then
+    echo "ERROR: figure generation failed. Inspect scripts/figures.py or install dependencies (numpy, matplotlib)." >&2
+    if [[ $FORCE -eq 1 ]]; then
+      echo "Proceeding due to --force, but packaged figures may be outdated or missing.";
+    else
+      echo "Aborting release due to failed figure generation. Use --force to override."; exit 1
+    fi
+  fi
+
+  echo "-> Building PDF...";
+  if ! python3 scripts/build_pdf.py; then
+    echo "ERROR: PDF build failed. Aborting release." >&2
+    exit 1
+  fi
+
+  echo "-> Packaging...";
+  VERSION="$NEW_VER"
+  package_artifacts "$VERSION" || { echo "WARNING: packaging had issues"; }
 fi
 
 ART_TAR="build/mer-theory-${NEW_VER}.tar.gz"
-ART_PDF="$(ls -1 build/*.pdf 2>/dev/null | grep -i "$NEW_VER" || true)"
-if [[ -z "$ART_PDF" ]]; then
+# Use the stable, non-versioned PDF if present
+ART_PDF="build/mer-theory.pdf"
+if [[ ! -f "$ART_PDF" ]]; then
   ART_PDF="$(ls -1 build/*.pdf 2>/dev/null | tail -n1 || true)"
 fi
 
@@ -325,22 +373,107 @@ if command_exists gh; then
   [[ -f "$ART_TAR" ]] && ASSETS+=("$ART_TAR")
   [[ -n "$ART_PDF" && -f "$ART_PDF" ]] && ASSETS+=("$ART_PDF")
 
-  if [[ ${#ASSETS[@]} -gt 0 ]]; then
-    gh release create "v$NEW_VER" "${ASSETS[@]}" --title "v$NEW_VER" --notes "Release v$NEW_VER" || {
-      echo "WARNING: 'gh release create' failed; release may still exist or you may need to run the command manually." >&2
-    }
-  else
-    gh release create "v$NEW_VER" --title "v$NEW_VER" --notes "Release v$NEW_VER" || { echo "WARNING: 'gh release create' failed." >&2; }
+# Prepare a structured release notes file to help Zenodo map metadata
+    NOTES_FILE="build/release-notes-v$NEW_VER.md"
+    mkdir -p "$(dirname "$NOTES_FILE")"
+    echo "# Release v$NEW_VER" > "$NOTES_FILE"
+    echo >> "$NOTES_FILE"
+    # Title: take from README first heading or fallback to repo name
+    REPO_TITLE="$(head -n1 README.md | sed -E 's/^#\s*//;s/\s*$//')"
+    if [[ -z "$REPO_TITLE" ]]; then
+      REPO_TITLE="$(basename $(git rev-parse --show-toplevel))"
+    fi
+    echo "**Title:** $REPO_TITLE" >> "$NOTES_FILE"
+    # Authors (try CITATION.cff then README)
+    if [[ -f "CITATION.cff" ]]; then
+      echo >> "$NOTES_FILE"
+      echo "**Citation metadata (CITATION.cff):**" >> "$NOTES_FILE"
+      sed -n '1,120p' CITATION.cff >> "$NOTES_FILE" || true
+    else
+      # try to extract Author from README
+      AUTHOR_LINE="$(grep -i '^\*\*Author\*\*:' README.md || true)"
+      if [[ -n "$AUTHOR_LINE" ]]; then
+        echo >> "$NOTES_FILE"; echo "**Author:** ${AUTHOR_LINE#**Author**: }" >> "$NOTES_FILE"
+      fi
+    fi
+    echo >> "$NOTES_FILE"
+    # Abstract
+    if [[ -f "ABSTRACT.md" ]]; then
+      echo "## Abstract" >> "$NOTES_FILE"
+      sed -n '1,200p' ABSTRACT.md >> "$NOTES_FILE" || true
+    fi
+    echo >> "$NOTES_FILE"
+    # Keywords: try to fetch from README 'Keywords and subjects' section
+    KW="$(sed -n '/Keywords and subjects/,/---/p' README.md 2>/dev/null | tr '\n' ' ' | sed -E 's/.*Keywords and subjects[^A-Za-z0-9]*//i' | tr -d '\`' | awk '{for(i=1;i<=NF;i++) if(length($i)>2) printf "%s ", $i }' | sed -E 's/ $//')"
+    if [[ -n "$KW" ]]; then
+      echo "**Keywords:** $KW" >> "$NOTES_FILE"
+    fi
+
+    # Indicate desired type to help human readers (Zenodo will decide resource type automatically); we also update Zenodo via API below
+    echo >> "$NOTES_FILE"
+    echo "**Preferred resource type:** Publication (Working document / working paper)" >> "$NOTES_FILE"
+    echo >> "$NOTES_FILE"
+    echo "Release notes:" >> "$NOTES_FILE"
+    echo "" >> "$NOTES_FILE"
+    # Append changelog or commit messages
+    git log --pretty=format:'- %s' -n 10 >> "$NOTES_FILE" || true
+
+    if [[ ${#ASSETS[@]} -gt 0 ]]; then
+      gh release create "v$NEW_VER" "${ASSETS[@]}" --title "${REPO_TITLE} (v$NEW_VER)" --notes-file "$NOTES_FILE" || {
+        echo "WARNING: 'gh release create' failed; release may still exist or you may need to run the command manually." >&2
+      }
+    else
+      gh release create "v$NEW_VER" --title "${REPO_TITLE} (v$NEW_VER)" --notes-file "$NOTES_FILE" || { echo "WARNING: 'gh release create' failed." >&2; }
   fi
-else
-  echo "gh not installed; skipping GitHub release creation. Install GitHub CLI (gh) to enable this step." >&2
-fi
 
-cat <<EOF
-Success: release v$NEW_VER created (local tag and remote push succeeded).
-Artifacts:
-  - tar: ${ART_TAR:-(not found)}
-  - pdf: ${ART_PDF:-(not found)}
+    # If a ZENODO_TOKEN is set, attempt to create/update a Zenodo deposition and publish automatically.
+    # This will only run when ZENODO_TOKEN is present in the environment (e.g., in a local release invocation or a CI job where you explicitly provide a token).
+    if [[ -n "${ZENODO_TOKEN:-}" ]]; then
+      echo "ZENODO_TOKEN detected; attempting to update/create a Zenodo deposition and publish..."
 
-Done.
-EOF
+      # Prepare title/description and optional creators/keywords
+      DESC="$(sed -n '1,4p' ABSTRACT.md 2>/dev/null | tr '\n' ' ' | sed -E 's/"/\\"/g')"
+      TITLE="$REPO_TITLE"
+
+      CREATOR_ARG=( )
+      if [[ -f CITATION.cff ]]; then
+        # naive extraction of first author name from CITATION.cff
+        FIRST_AUTHOR="$(grep -E '^\s*-\s*name:' CITATION.cff 2>/dev/null | head -n1 | sed -E 's/.*name:\s*//')"
+        if [[ -n "$FIRST_AUTHOR" ]]; then
+          CREATOR_ARG+=( --creators "$FIRST_AUTHOR" )
+        fi
+      else
+        AUTHOR_LINE="$(grep -i '^\*\*Author\*\*:' README.md || true)"
+        if [[ -n "$AUTHOR_LINE" ]]; then
+          AUTHOR="${AUTHOR_LINE#**Author**: }"
+          CREATOR_ARG+=( --creators "$AUTHOR" )
+        fi
+      fi
+
+      KW=""
+      if grep -q 'Keywords and subjects' README.md 2>/dev/null; then
+        KW="$(sed -n '/Keywords and subjects/,/---/p' README.md 2>/dev/null | tr '\n' ' ' | sed -E 's/.*Keywords and subjects[^A-Za-z0-9]*//i' | tr -d '\`' | awk '{for(i=1;i<=NF;i++) if(length($i)>2) printf "%s ", $i }' | sed -E 's/ $//')"
+      fi
+
+      CMD=( python3 scripts/zenodo_publish.py --release "v$NEW_VER" --files "$ART_PDF" "$ART_TAR" --publish --title "$TITLE" --description "$DESC" )
+      if [[ ${#CREATOR_ARG[@]} -gt 0 ]]; then
+        CMD+=( "${CREATOR_ARG[@]}" )
+      fi
+      if [[ -n "$KW" ]]; then
+        for k in $KW; do CMD+=( --keywords "$k" ); done
+      fi
+
+      echo "Running automatic Zenodo helper: ${CMD[*]}"
+      if ! "${CMD[@]}"; then
+        echo "Warning: automatic Zenodo publish failed; you may run the helper manually (scripts/zenodo_publish.py)." >&2
+      fi
+    fi
+
+
+
+  fi
+
+  exit 0
+
+
+
