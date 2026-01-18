@@ -42,7 +42,27 @@ def assemble_main():
     if version_path.exists():
         version = version_path.read_text(encoding='utf-8').strip()
 
+    # Prepare cover: read template and substitute placeholders
+    cover_tpl = PAPER_DIR / "cover.tex"
+    cover_content = ""
+    if cover_tpl.exists():
+        cover_content = cover_tpl.read_text(encoding='utf-8')
+        cover_content = cover_content.replace('PLACEHOLDER_VERSION', version)
+        from datetime import date
+        cover_content = cover_content.replace('PLACEHOLDER_DATE', date.today().isoformat())
+        # short abstract
+        abs_text = ""
+        abstract_path = ROOT / "ABSTRACT.md"
+        if abstract_path.exists():
+            abs_text = abstract_path.read_text(encoding='utf-8').strip().split('\n\n')[0]
+        cover_content = cover_content.replace('PLACEHOLDER_ABSTRACT', abs_text)
+
     with open(PAPER_MD, "w", encoding="utf-8") as out:
+        # Insert cover via raw LaTeX (Pandoc will pass through)
+        if cover_content:
+            out.write('\\begin{rawlatex}\n')
+            out.write(cover_content + '\n')
+            out.write('\\end{rawlatex}\n\n')
         out.write("% Multi-scale Emergent Reality Theory (MER)\n")
         out.write("% Martin Ouimet\n")
         out.write(f"% v{version}\n\n")
