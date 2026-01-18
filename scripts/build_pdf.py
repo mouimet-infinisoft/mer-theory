@@ -55,21 +55,49 @@ def assemble_main():
         abstract_path = ROOT / "ABSTRACT.md"
         if abstract_path.exists():
             abs_text = abstract_path.read_text(encoding='utf-8').strip().split('\n\n')[0]
-        cover_content = cover_content.replace('PLACEHOLDER_ABSTRACT', abs_text)
+            # strip leading Markdown headings or code fences from abstract snippet
+            import re
+            abs_text = re.sub(r"^#+\s*", "", abs_text)
+            abs_text = re.sub(r"```.*?```", "", abs_text, flags=re.S)
+
+    # Escape LaTeX special chars in the cover abstract if present
+    def escape_latex(s: str) -> str:
+        # minimal escaping for common special chars
+        replacements = {
+            '\\': r'\\textbackslash{}',
+            '&': r'\\&',
+            '%': r'\\%',
+            '$': r'\\$',
+            '#': r'\\#',
+            '_': r'\\_',
+            '{': r'\\{',
+            '}': r'\\}',
+            '~': r'\\textasciitilde{}',
+            '^': r'\\textasciicircum{}',
+        }
+        for old, new in replacements.items():
+            s = s.replace(old, new)
+        return s
+
+    if cover_content:
+        # sanitize abstract placeholder
+        cover_content = cover_content.replace('PLACEHOLDER_ABSTRACT', escape_latex(abs_text))
 
     with open(PAPER_MD, "w", encoding="utf-8") as out:
-        # Insert cover via raw LaTeX (Pandoc will pass through)
+        # Insert cover as a raw LaTeX block (Pandoc fenced code block with =latex)
         if cover_content:
-            out.write('\\begin{rawlatex}\n')
+            out.write('```{=latex}\n')
             out.write(cover_content + '\n')
-            out.write('\\end{rawlatex}\n\n')
-        out.write("% Multi-scale Emergent Reality Theory (MER)\n")
-        out.write("% Martin Ouimet\n")
-        out.write(f"% v{version}\n\n")
+            out.write('```\n\n')
+        else:
+            # If no cover, include a simple title header for Pandoc to process
+            out.write("% Multi-scale Emergent Reality Theory (MER)\n")
+            out.write("% Martin Ouimet\n")
+            out.write(f"% v{version}\n\n")
         
-        # Include abstract
+        # Include abstract (only if we did not render it on the cover)
         abstract_path = ROOT / "ABSTRACT.md"
-        if abstract_path.exists():
+        if abstract_path.exists() and not cover_content:
             out.write("# Abstract\n\n")
             with open(abstract_path, "r", encoding="utf-8") as f:
                 lines = [line for line in f if not line.strip().startswith('---')]
