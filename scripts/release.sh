@@ -13,6 +13,14 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
+# Safety: only allow running releases from the main branch (unless FORCE=1)
+CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD 2>/dev/null || true)"
+if [[ "${CURRENT_BRANCH}" != "main" ]]; then
+  echo "ERROR: Releases are only allowed from the 'main' branch. Current branch: ${CURRENT_BRANCH}" >&2
+  echo "Merge changes into 'main' or run with --force if you understand the risks." >&2
+  exit 1
+fi
+
 # Helper: create an atomic package by copying artifacts into a temporary staging
 # directory and creating the tarball from there to avoid 'file changed as we read it'
 package_artifacts(){
