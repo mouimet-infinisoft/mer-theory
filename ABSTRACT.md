@@ -3,7 +3,7 @@
 **Multi-scale Emergent Reality Theory: A Unified Framework for Quantum Mechanics and General Relativity**
 
 **Author**: Martin Ouimet
-**Version**: v0.1.7
+**Version**: v0.1.21
 **Date**: 2026-01-09
 **License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
@@ -76,7 +76,7 @@ MER reveals deep connections between:
 - **Entanglement**: Shared cycle coherence across spatial separation
 - **Gravity**: Emergent from φ/ψ dynamics at cosmic scales
 
-### **Proposed Testable Hypotheses (v0.1.7)**
+### **Proposed Testable Hypotheses (v0.1.21)**
 - Scale transitions that approximately follow golden-ratio proportions
 - Observable fractal patterns in quantum-to-classical transitions
 - Toy-model level predictions for black hole dynamics and cosmic expansion
@@ -100,7 +100,7 @@ MER reveals deep connections between:
 
 ## Current Status
 
-**Version v0.1.7** - Initial theoretical framework established (first complete draft of Sections 1–5)
+**Version v0.1.21** - Initial theoretical framework established (first complete draft of Sections 1–5)
 
 **Completed**:
 - Conceptual foundation

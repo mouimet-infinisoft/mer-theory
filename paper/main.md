@@ -1,7 +1,6 @@
 % Multi-scale Emergent Reality Theory (MER)
 % Martin Ouimet
-% v0.1.1
-
+% v0.1.21
 
 # Abstract
 
@@ -10,7 +9,7 @@
 **Multi-scale Emergent Reality Theory: A Unified Framework for Quantum Mechanics and General Relativity**
 
 **Author**: Martin Ouimet
-**Version**: 0.1.1
+**Version**: v0.1.21
 **Date**: 2026-01-09
 **License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
@@ -79,7 +78,7 @@ MER reveals deep connections between:
 - **Entanglement**: Shared cycle coherence across spatial separation
 - **Gravity**: Emergent from φ/ψ dynamics at cosmic scales
 
-### **Proposed Testable Hypotheses (v0.1.1)**
+### **Proposed Testable Hypotheses (v0.1.21)**
 - Scale transitions that approximately follow golden-ratio proportions
 - Observable fractal patterns in quantum-to-classical transitions
 - Toy-model level predictions for black hole dynamics and cosmic expansion
@@ -101,7 +100,7 @@ MER reveals deep connections between:
 
 ## Current Status
 
-**Version 0.1.1** - Initial theoretical framework established (first complete draft of Sections 1–5)
+**Version v0.1.21** - Initial theoretical framework established (first complete draft of Sections 1–5)
 
 **Completed**:
 - Conceptual foundation
@@ -144,13 +143,6 @@ https://github.com/mouimet-infinisoft/mer-theory
 
 
 ---
-
-
-<!-- Figures are generated into paper/images/ -->
-
-
-
-<!-- from section-01-introduction.md -->
 
 # 1. Introduction
 
@@ -215,8 +207,6 @@ This section establishes the context, identifies the core problem, and clearly o
 **Next**: [2. Conceptual Framework of MER](section-02-conceptual-framework.md)
 
 
-
-<!-- from section-02-conceptual-framework.md -->
 
 # 2. Conceptual Framework of MER
 
@@ -362,8 +352,6 @@ This section establishes the conceptual foundation of MER Theory, introducing th
 **Next**: [Section 3: Mathematical Structure](section-03-mathematical-structure.md)
 
 
-
-<!-- from section-03-mathematical-structure.md -->
 
 # 3. Mathematical Structure
 
@@ -548,8 +536,6 @@ This section establishes the mathematical foundation of MER Theory, demonstratin
 
 
 
-<!-- from section-04-geometrical-structure.md -->
-
 # 4. Geometrical Structure and Visualization
 
 **Author**: Martin Ouimet  
@@ -574,7 +560,9 @@ The geometric structures described here provide:
 
 ### The Fundamental Topology
 
-![MER Lemniscate](images/lemniscate.png)
+![MER Lemniscate](paper/images/lemniscate.png){width=60%}
+
+*Figure 4.1:* MER lemniscate schematic. The left lobe (φ-dominated) shows expansion and outward flux; the right lobe (ψ-dominated) shows regulation and inward flux.
 
 The **lemniscate** (∞) represents the most fundamental geometric manifestation of φ/ψ conjugate cycles:
 
@@ -686,7 +674,15 @@ $$E_n = E_0 \cdot \varphi^n \quad (n = 0, 1, 2, \ldots)$$
 
 ---
 
-![Mandelbrot Set (detail)](images/mandelbrot.png)
+*Figure 4.2:* Detail of the Mandelbrot set boundary used to illustrate fractal boundaries and critical scales.
+
+![Mandelbrot Set (detail)](paper/images/mandelbrot.png){width=70%}
+
+## 4.4 Fibonacci Spirals and Scale Transitions
+
+![Fibonacci Spiral](paper/images/fibonacci_spiral.png){width=60%}
+
+*Figure 4.3:* Fibonacci spiral schematic illustrating scale transitions.
 
 ## 4.3 Vertex / Black Holes and Critical Points
 
@@ -946,8 +942,6 @@ For compact visual summaries of these structures, see: [Section 4 Diagrams: Geom
 
 
 
-<!-- from section-05-scientific-applications.md -->
-
 # 5. Concrete Scientific Applications
 
 **Author**: Martin Ouimet  
@@ -1021,8 +1015,8 @@ Where:
 
 ```
 For electron double-slit:
-- Standard detector (L_O = 100 μm): ε ≈ 0.01 → V ≈ 0.95 
-- High-res detector (L_O = 10 nm): ε ≈ 100 → V ≈ 0.00 
+- Standard detector (L_O = 100 μm): ε ≈ 0.01 → V ≈ 0.95 ✓
+- High-res detector (L_O = 10 nm): ε ≈ 100 → V ≈ 0.00 ✓
 ```
 
 #### Numerical Example: Double-Slit Experiment
@@ -1055,7 +1049,7 @@ Visibility = exp(-0.01 * (0.010)**2)
            ~ 1.0 (perfect interference)
 ```
 
-**Experimental result**: Visibility ≈ 0.95-1.0  **Agreement excellent**
+**Experimental result**: Visibility ≈ 0.95-1.0 ✓ **Agreement excellent**
 
 ---
 
@@ -1191,7 +1185,7 @@ Where:
 *This is a MER-specific conjecture not present in standard quantum mechanics and would require targeted long-distance Bell tests for validation or falsification.*
 
 ```
-At d = 1 m:    CHSH ≈ 2.828 (standard QM) 
+At d = 1 m:    CHSH ≈ 2.828 (standard QM) ✓
 At d = 10 km:  CHSH ≈ 2.72  (4% decrease)
 At d = 100 km: CHSH ≈ 2.50  (12% decrease)
 ```
@@ -1532,7 +1526,7 @@ Standard Lorenz: σ=10, ρ=28, β=8/3
 Fractal dimension: D ≈ 2.06
 
 MER Lorenz: σ=1.618, ρ=2.618, β=0.382
-Fractal dimension: D ≈ 1.62 ≈ φ 
+Fractal dimension: D ≈ 1.62 ≈ φ ✓
 ```
 
 ---
@@ -1693,7 +1687,7 @@ v_flat = √(GM_visible · φ²)
        ≈ 1.618 · v_Newtonian
 ```
 
-**Observed**: Rotation velocities are typically 1.5-2× higher than expected from visible matter. 
+**Observed**: Rotation velocities are typically 1.5-2× higher than expected from visible matter. ✓
 
 ---
 
@@ -1793,7 +1787,7 @@ Heart rate variability (HRV) should show:
 - Power spectrum: 1/f^β with β ≈ 1/φ ≈ 0.618
 ```
 
-**Observed**: Healthy HRV has D ≈ 1.5-1.7 
+**Observed**: Healthy HRV has D ≈ 1.5-1.7 ✓
 
 ---
 
@@ -1818,7 +1812,7 @@ P(size) ∝ size^(-τ)
 Where τ = φ ≈ 1.618
 ```
 
-**Observed**: τ ≈ 1.5 (close to φ) 
+**Observed**: τ ≈ 1.5 (close to φ) ✓
 
 ---
 
@@ -1848,7 +1842,7 @@ Distribution: P(r) ∝ exp(-|r|^φ)
 Volatility autocorrelation: C(τ) ∝ τ^(-1/φ)
 ```
 
-**Observed**: Fat tails with exponent ~1.5-1.7 (close to φ) 
+**Observed**: Fat tails with exponent ~1.5-1.7 (close to φ) ✓
 
 ---
 
@@ -1876,7 +1870,7 @@ Var(T, Δt) ∝ (Δt)^(1/φ)
            ∝ (Δt)^0.618
 ```
 
-**Observed**: Hurst exponent H ≈ 0.6-0.7 (close to 1/φ) 
+**Observed**: Hurst exponent H ≈ 0.6-0.7 (close to 1/φ) ✓
 
 ---
 
@@ -1899,7 +1893,7 @@ P(size) ∝ size^(-φ)
 
 **Prediction**: Cascade exponent ≈ -1.618
 
-**Observed**: Typical exponents -1.5 to -2.0 
+**Observed**: Typical exponents -1.5 to -2.0 ✓
 
 ---
 
@@ -1944,16 +1938,16 @@ The following table summarizes simple MER-inspired toy relations and how their n
 
 | Phenomenon | MER-inspired relation | Observed | Agreement (purely numerical) |
 |------------|-----------------------|----------|------------------------------|
-| Double-slit visibility | V ~ exp(-αε²) | V ≈ 0.95-1.0 |  Excellent |
-| CHSH parameter | 2.828 at short distance | 2.8 ± 0.1 |  Excellent |
-| Gravitational constant | G ~ φ²c^4/(8π) | 6.67×10^-¹¹ |  Excellent |
-| Black hole radius | r ~ √2·GM/c² | r = 2GM/c² |  Factor √2 |
+| Double-slit visibility | V ~ exp(-αε²) | V ≈ 0.95-1.0 | ✓ Excellent |
+| CHSH parameter | 2.828 at short distance | 2.8 ± 0.1 | ✓ Excellent |
+| Gravitational constant | G ~ φ²c^4/(8π) | 6.67×10^-¹¹ | ✓ Excellent |
+| Black hole radius | r ~ √2·GM/c² | r = 2GM/c² | ✓ Factor √2 |
 | Hubble constant | H_0 ~ 44 km/s/Mpc | 70 km/s/Mpc | ~ Factor φ |
-| Spiral pitch angle | 31.7° | 10-30° |  Good |
-| Rotation curve | v ~ φ·v_Newtonian | v ~ 1.5-2×v_N |  Good |
-| Star formation | n = φ ≈ 1.618 | n ≈ 1.4 |  Good |
+| Spiral pitch angle | 31.7° | 10-30° | ✓ Good |
+| Rotation curve | v ~ φ·v_Newtonian | v ~ 1.5-2×v_N | ✓ Good |
+| Star formation | n = φ ≈ 1.618 | n ≈ 1.4 | ✓ Good |
 | Lorenz dimension | D ≈ φ | D ≈ 2.06 | ~ Close |
-| HRV dimension | D ≈ φ | D ≈ 1.5-1.7 |  Excellent |
+| HRV dimension | D ≈ φ | D ≈ 1.5-1.7 | ✓ Excellent |
 
 **Overall**: Several of these toy correspondences land within factors of order unity (sometimes near φ), but given their heuristic construction they should be viewed as suggestive numerology, not confirmation of MER.
 
@@ -2012,5 +2006,7 @@ The following table summarizes simple MER-inspired toy relations and how their n
 **Continue to**: [Section 6: Reproducible Methodology](section-06-reproducible-methodology.md)
 
 **Return to**: [Table of Contents](TOC.md)
+
+
 
 
