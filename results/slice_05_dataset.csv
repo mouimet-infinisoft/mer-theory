@@ -1,0 +1,11 @@
+label,particle,epsilon,V_obs,V_mer_pred,V_std_pred,err_mer_pct,source
+Tonomura-1989,electron,4.200000e-06,0.9500,1.0000,0.9700,5.3%,"Tonomura et al. Am.J.Phys. 57,117 (1989)"
+Merli-1976,electron,3.165000e-06,0.8800,1.0000,0.9200,13.6%,"Merli et al. Am.J.Phys. 44,306 (1976)"
+Carnal-He-1991,He atom,7.050000e-06,0.8200,1.0000,0.8500,22.0%,"Carnal & Mlynek, PRL 66,2689 (1991)"
+Shimizu-Ne-1992,Ne atom,3.410000e-06,0.7500,1.0000,0.7800,33.3%,"Shimizu et al., PRA 46,R17 (1992)"
+Zeilinger-neutron-1988,neutron,1.360000e-05,0.9100,1.0000,0.9300,9.9%,"Zeilinger et al., Rev.Mod.Phys. 60,1067 (1988)"
+Arndt-C60-1999,C60,2.873178e-01,0.4600,0.2485,0.5000,46.0%,"Arndt et al., Nature 401,680 (1999)"
+Nairz-C70-2003,C70,2.600210e-01,0.4000,0.3197,0.4300,20.1%,"Nairz et al., Am.J.Phys. 71,319 (2003)"
+Gerlich-PFNS8-2007,PFNS8 (C60F48),2.457180e-01,0.3300,0.3612,0.3500,9.4%,"Gerlich et al., Nature Physics 3,711 (2007)"
+Hackermuller-C60-hot-2004,C60 heated ~3000K,1.726692e+00,0.1800,0.0000,0.2000,100.0%,"Hackermuller et al., Nature 427,711 (2004)"
+Eibenberger-2013,TPPF152 (810 atoms),1.550019e-01,0.3300,0.6668,—,102.1%,"Eibenberger et al., PCCP 15,14696 (2013)"

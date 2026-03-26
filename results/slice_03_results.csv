@@ -1,0 +1,6 @@
+attractor,measurements,closest_base,dev_phi,dev_sqrt2,dev_e,phi_wins
+Lorenz,lobe_ratio=1.0205; freq_ratio=1.0362; return_slope=0.0685; fractal_dim=1.6773,sqrt2,0.6970,0.5951,1.7677,False
+Rössler,freq_ratio=1.5111; return_slope=0.4860; fractal_dim=1.4137,sqrt2,0.4811,0.3419,1.5813,False
+Duffing,freq_ratio=3.0500; return_slope=0.4764; fractal_dim=1.6555,phi,0.8703,0.9383,1.2121,True
+Hénon,lobe_ratio=1.1366; return_slope=0.4919; fractal_dim=1.2594,sqrt2,0.6554,0.4516,1.7557,False
+Logistic,freq_ratio=1.1351; return_slope=0.1113; density_ratio=1.0259,sqrt2,0.8606,0.6568,1.9609,False

@@ -1,0 +1,486 @@
+# MER Validation Roadmap - GitHub Issues Import File
+# Save as mer-roadmap.yml and import via GitHub import or CLI
+
+issues:
+  - title: "1.0 PHASE 1: Validate φ/ψ Existence (Months 1-2)"
+    body: |
+      Central question: Is the golden ratio φ empirically detectable in physical systems?
+
+      Objective: Run 4 independent empirical slices (atomic spectra, molecular vibrations, chaos, markets) and produce a phase verdict.
+
+      Deliverables (explicit):
+      - scripts/slice_01_atomic_spectra.py (entry point: main())
+      - scripts/slice_02_molecular_vibrations.py
+      - scripts/slice_03_chaos_phi_emergence.py
+      - scripts/slice_04_market_cycles.py
+      - data/ (see per-slice data schema below)
+      - outputs/ with CSVs and publication-quality figures (PNG/SVG)
+      - docs/PHASE_1_VERDICT.md
+
+      Acceptance criteria (strict): φ detected (per-slice criteria below) in ≥2 domains with combined Fisher p<0.05.
+
+      CI & reproducibility:
+      - Provide `requirements.txt` with pinned versions (example below)
+      - Provide `tests/test_slice_XX.py` for each slice verifying expected outputs and schema
+      - Add `.github/workflows/ci.yml` to run pytest and basic linting
+
+      Example requirements.txt (pin):
+      numpy==1.26.0
+      pandas==2.2.0
+      scipy==1.11.0
+      matplotlib==3.8.0
+      requests==2.31.0
+      yfinance==0.2.31
+      sympy==1.12
+
+      Note: Each slice issue below contains exact data sources, file schemas, function signatures, tests, and acceptance criteria.
+    labels: [phase, phase-1, wbs]
+    milestone: "Month 1-2"
+
+  - title: "1.1 Slice 1.1: Atomic Spectra φ-Ratio Analysis"
+    body: |
+      WBS: 1.1
+
+      Summary
+      - Test whether atomic energy levels for selected elements follow E_n ≈ E_0 · φ^n better than competing bases.
+
+      Data sources (exact):
+      - NIST ASD API (energy levels): https://physics.nist.gov/PhysRefData/ASD/
+      - Use element list: ['H','He','Li','Be','C','N','O','Na','Mg','Al','Si','S','Ca','Fe','Cu','Zn','Ag','Au'] (18 elements)
+
+      Files to produce (exact paths & schemas):
+      - data/nist_spectra/{ELEMENT}.csv
+        columns: element, level_index, term_label, energy_eV, uncertainty_eV, configuration
+      - outputs/slice_01_fits.csv
+        columns: element, base, fit_a, fit_r2, chi2, mean_rel_error_percent, n_levels_used
+      - outputs/slice_01_summary.csv
+        columns: element, phi_rank, phi_mean_error_pct, phi_p_value
+
+      Script contract (function signatures required):
+      - def load_nist_levels(element: str) -> pandas.DataFrame
+      - def fit_exponential_basis(energies: np.ndarray, base: float) -> dict
+      - def rank_bases(energies: np.ndarray, bases: List[float]) -> List[Tuple[float, float]]
+      - def run_element_analysis(element: str) -> dict
+      - def main(elements: List[str]) -> None  # writes CSVs to outputs/
+
+      Statistical procedure (rigorous):
+      1. For each element, select bound energy levels with clear assignment (exclude continuum lines).
+      2. Fit model E_n = A · b^n for bases b in {φ, e, π, 2, sqrt2} using nonlinear least squares on n vs log(E_n).
+      3. Compute χ² using reported uncertainties when available; otherwise use bootstrap to estimate residual variance.
+      4. For each element compute ranking of bases by AICc and r².
+      5. Meta-analysis: use binomial test for fraction of elements where φ ranks #1 vs expected by chance (1/5).
+
+      Unit tests (tests/test_slice_01.py):
+      - test_load_nist_levels_returns_dataframe()
+      - test_fit_exponential_basis_on_synthetic_data(): create synthetic E_n = 1.0*φ**n + noise and assert recovered base within 1%
+      - test_outputs_schema(): run main on H and ensure outputs CSV contains required columns
+
+      Acceptance criteria (exact):
+      - φ ranks #1 in ≥30% of tested elements (≥6/18), AND
+      - For elements where φ ranks #1, mean_rel_error_percent < 15%, AND
+      - Meta-analysis Fisher/binomial combined p-value < 0.05.
+
+      Time estimate: 2 weeks (40h data acquisition + 40h analysis & docs)
+
+      Priority tasks (day-by-day):
+      - Day 1: Implement loader + cache for NIST calls; store raw CSVs under data/nist_spectra/
+      - Day 2-3: Implement fitting and model-selection pipeline + unit tests
+      - Day 4-6: Run on 5 seed elements, validate edge cases, tune preprocessing
+      - Day 7-10: Run full 18-element analysis, produce figures
+      - Day 11-14: Write `docs/slice_01_verdict.md` (methods, results, limitations)
+
+    labels: [slice, phase-1, atomic-physics, rigorous]
+    milestone: "Month 1-2"
+
+  - title: "1.2 Slice 1.2: Molecular Vibrational Spectra Analysis"
+    body: |
+      WBS: 1.2
+
+      Summary
+      - Test whether vibrational modes in small/medium molecules produce mode ratios close to φ^k.
+
+      Data sources (exact):
+      - NIST Chemistry WebBook vibrational spectra: https://webbook.nist.gov/
+      - Supplement with: https://cccbdb.nist.gov/ and specific journal SI data (list in docs)
+      - Molecule list (minimum 20): H2O, CO2, CH4, NH3, O2, N2, C6H6, C2H5OH, acetone, glucose, HCl, CO, NO2, SO2, H2S, HCN, HCOOH, C60 (if available), benzaldehyde, formaldehyde, toluene
+
+      Files & schema:
+      - data/molecular_frequencies/{molecule}.csv
+        columns: molecule, mode_index, frequency_cm-1, intensity, mode_description
+      - outputs/slice_02_mode_ratios.csv
+        columns: molecule, mode_i, mode_j, ratio, ratio_vs_phi_error_pct, p_value
+
+      Script contract:
+      - def load_molecule_spectra(molecule: str) -> pd.DataFrame
+      - def identify_modes(df, min_intensity: float = 0.0) -> List[float]
+      - def test_phi_ratios(freqs: List[float]) -> pd.DataFrame
+
+      Statistical procedure:
+      - For each molecule, extract fundamental modes (exclude combination/overtone lines unless clearly identified)
+      - Compute ratios ω_j/ω_i for adjacent fundamentals and test closeness to φ^k for small integer k (±1%)
+      - Use permutation test to compute p-values against null model generated by harmonic oscillator random perturbations
+
+      Unit tests (tests/test_slice_02.py):
+      - synthetic harmonic oscillator series with φ scaling recovers detection
+      - loader returns expected columns
+
+      Acceptance criteria (exact):
+      - ≥25% of molecules (≥5/20) show at least one ratio with p<0.05 after multiple-testing correction (Benjamini–Hochberg, q<0.05)
+
+      Time estimate: 2 weeks
+    labels: [slice, phase-1, molecular-physics, rigorous]
+    milestone: "Month 1-2"
+
+  - title: "1.3 Slice 1.3: Chaotic Attractor φ-Emergence Analysis"
+    body: |
+      WBS: 1.3
+
+      Summary
+      - Numerically integrate standard chaotic systems and measure geometric/temporal ratios; test proximity to φ.
+
+      Systems & parameters (explicit):
+      - Lorenz: σ=10, ρ=28, β=8/3; integrate t∈[0,200], dt=0.001
+      - Rössler: a=0.2, b=0.2, c=5.7; t∈[0,100], dt=0.001
+      - Hénon map: a=1.4, b=0.3; iterate 100k steps
+      - Duffing oscillator: α=0.2, β=-1, γ=0.3, δ=0.3; t∈[0,200]
+      - Double pendulum: standard masses/lengths; energy regimes where chaotic motion appears
+
+      Measured quantities & exact extraction methods:
+      - Lobe area/volume: compute via alpha-shape convex approximation and report ratio of primary lobes
+      - Return map slope: construct Poincaré section and compute slope distribution; report dominant ratio
+      - Crossing frequency ratios: FFT of trajectory projections; report peak frequency ratios
+      - Fractal dimension: use box-counting with n>=6 scales; report D
+
+      Files & schema:
+      - data/chaos_trajectories/{system}_{params}.npy  (raw trajectories)
+      - outputs/slice_03_measures.csv
+        columns: system, param_set, measure_name, value, error_estimate
+
+      Script contract:
+      - def integrate_system(name:str, params:dict) -> np.ndarray
+      - def measure_lobe_ratios(traj:np.ndarray) -> dict
+      - def measure_return_map(traj:np.ndarray) -> dict
+
+      Statistical procedure:
+      - For each system and parameter sweep, compute measure distributions and test distance to φ (absolute relative error) vs set of alternatives {e, π, √2, 2}
+      - Use paired bootstrap test to check whether distances to φ are significantly smaller (p<0.05)
+
+      Unit tests: synthetic attractor where known ratios exist; verify pipeline runs end-to-end in CI within time budget (use reduced integration steps)
+
+      Acceptance criteria: At least 2/5 attractors with p<0.05 and stable under ±10% parameter perturbation.
+
+      Time estimate: 2 weeks
+    labels: [slice, phase-1, computational, chaos-theory, rigorous]
+    milestone: "Month 1-2"
+
+  - title: "1.4 Slice 1.4: Financial Time Series φ-Cycle Analysis"
+    body: |
+      WBS: 1.4
+
+      Summary
+      - Detect market cycle peak/trough intervals and test whether successive intervals obey T_{n+1}/T_n ≈ φ.
+
+      Data sources (explicit):
+      - S&P 500 daily adjusted close via yfinance symbol '^GSPC' (start=1950-01-01)
+      - Bitcoin via 'BTC-USD' (start=2010-07-17)
+      - Gold via 'GC=F' (start=1970-01-01)
+      - Crude oil via 'CL=F' (start=1983-01-01)
+
+      Detection methods (implement 3 and compare):
+      - Peak detection via scipy.signal.find_peaks with prominence thresholds
+      - Rolling-window local extrema with minimum distance constraint
+      - Regime-detection via change-point analysis (ruptures package)
+
+      Files & schema:
+      - data/market_data/{symbol}.csv (date, adj_close, volume)
+      - outputs/slice_04_cycles.csv
+        columns: symbol, peak_date, trough_date, interval_days
+      - outputs/slice_04_ratio_stats.csv
+        columns: symbol, method, mean_ratio, std_ratio, p_value_against_phi
+
+      Script contract:
+      - def download_market(symbol:str, start:str) -> pd.DataFrame
+      - def detect_cycles(df:pd.DataFrame, method:str) -> List[date]
+      - def compute_intervals(dates:List[date]) -> np.ndarray
+
+      Statistical tests:
+      - Compare ratio distribution to φ using one-sample t-test and bootstrap CIs; also test against null random-walk model simulated with same Hurst exponent.
+      - Multiple methods must agree or report sensitivity table.
+
+      Acceptance criteria (strict):
+      - At least 2 out of 4 markets show ratio distributions with mean within ±5% of φ and p<0.05 under at least 2 detection methods, and φ-based forecast (ARIMA + φ-adjustment) beats random-walk baseline on 1-year out-of-sample RMSE by >5%.
+
+      Time estimate: 2 weeks
+    labels: [slice, phase-1, finance, rigorous]
+    milestone: "Month 1-2"
+
+  - title: "1.5 Phase 1 Synthesis & Decision"
+    body: |
+      WBS: 1.5
+
+      Tasks (explicit):
+      - [ ] Run `analysis/phase_01_synthesis.py` which must:
+        - Load per-slice outputs (standard CSV schemas above)
+        - Compute Fisher combined p-value for φ presence across slices
+        - Produce `outputs/phase_01_meta_analysis.csv` with per-slice and combined stats
+      - [ ] Generate 4-panel figure `outputs/phase_01_summary_figure.png` (SVG + PNG)
+      - [ ] Write `docs/PHASE_1_VERDICT.md` containing methods, limitations, full statistical tables, and explicit GO/PIVOT/NO-GO decision following acceptance criteria above
+      - [ ] Prepare `papers/phase_01_preprint.tex` minimal reproducible draft including code links and dataset DOIs (or data/ folder paths)
+
+      Decision rule (automated): script returns exit code 0 if GO, 1 if PIVOT, 2 if NO-GO; include human-readable justification in docs.
+
+      Time estimate: 2 weeks
+    labels: [synthesis, phase-1, decision-point, rigorous]
+    milestone: "Month 1-2"
+
+  - title: "2.0 PHASE 2: Validate ε Framework (Months 3-4)"
+    body: |
+      Central question: Does ε = (L_S/L_O + T_S/T_O + E_S/E_O) predict quantum→classical transition?
+
+      Notes (operational definition):
+      - L_S: characteristic system length (meters)
+      - L_O: observer resolution length (meters)
+      - T_S: characteristic system timescale (seconds)
+      - T_O: detector integration time (seconds)
+      - E_S: characteristic energy scale (Joules)
+      - E_O: detector energy resolution (Joules)
+
+      Provide `docs/epsilon_definition.md` with units, measurement recipes, and uncertainty propagation formulas used across slices.
+    labels: [phase, phase-2, wbs]
+    milestone: "Month 3-4"
+
+  - title: "2.1 Slice 2.1: Double-Slit Visibility Prediction"
+    body: |
+      WBS: 2.1
+
+      Summary
+      - Fit V_obs vs ε for 10+ published experiments and test V(ε)=exp(-αε²). Estimate α and CI.
+
+      Precise dataset & extraction protocol:
+      - Canonical papers: Tonomura (1989), Arndt (1999), Juffmann (2012), Eibenberger (2013). Create `docs/slice_05_literature_list.md` with exact tables and extracted parameters.
+      - Data fields to extract per experiment:
+        experiment_id, particle_type, mass_kg, wavelength_m, slit_spacing_m, detector_pixel_m, detector_integration_s, measured_visibility, visibility_uncertainty
+
+      Files & schema:
+      - data/double_slit_experiments/compiled_experiments.csv (columns above)
+      - outputs/slice_05_fit_results.csv: experiment_id, epsilon, V_obs, V_pred, residual, alpha_fit, alpha_ci_low, alpha_ci_high
+
+      Script contract:
+      - def compute_epsilon(params: dict) -> float
+      - def fit_visibility(epsilons: np.ndarray, visibilities: np.ndarray) -> (alpha, ci)
+      - def cross_validate_model(experiments_df) -> dict
+
+      Statistical protocol:
+      - Fit nonlinear least squares with heteroscedastic errors using visibility_uncertainty when available.
+      - Compute R² (adjusted), RMSE, and conduct leave-one-out cross-validation and report prediction intervals.
+
+      Acceptance criteria: R² > 0.7, mean absolute prediction error < 20% of measured visibility, and model outperforms baseline (constant-visibility) by AICc.
+
+      Time estimate: 2 weeks
+    labels: [slice, phase-2, quantum-mechanics, rigorous]
+    milestone: "Month 3-4"
+
+  - title: "2.2 Slice 2.2: Decoherence Time Prediction"
+    body: |
+      WBS: 2.2
+
+      Summary
+      - Compile measured decoherence times (T1, T2) and test candidate functional forms τ = f(ε): power-law, exponential, inverse.
+
+      Data sources (explicit):
+      - IBM/Google publications, arXiv experimental papers, review articles. Create `docs/slice_06_sources.md` with DOIs and extracted tables.
+
+      Required fields per system:
+      - system_id, system_type (supercond_qubit, ion_trap, quantum_dot, nv_center, optomech), size_m, energy_J, detector_resolution, T1_s, T2_s, temperature_K
+
+      Output schema:
+      - outputs/slice_06_fits.csv: system_id, epsilon, tau_observed_s, tau_pred_s, model_type, fit_params, r2
+
+      Script contract:
+      - def estimate_epsilon_for_system(entry: dict) -> float
+      - def fit_candidate_models(epsilons, taus) -> DataFrame (models ranked by AICc)
+
+      Statistical protocol:
+      - Fit on log-log and linear scales, use nested-model comparison (likelihood ratio) and cross-validation; account for measurement uncertainties and censored data.
+
+      Acceptance criteria: best model predicts τ within factor of 3 for ≥70% of test systems (or R²>0.6 on held-out data).
+
+      Time estimate: 2 weeks
+    labels: [slice, phase-2, quantum-computing, rigorous]
+    milestone: "Month 3-4"
+
+  - title: "2.3 Slice 2.3: Projection Filter Theoretical Derivation"
+    body: |
+      WBS: 2.3
+
+      Objective
+      - Provide at least one first-principles derivation of P_λ = exp(-αε²) or a clear mathematical reason this cannot hold.
+
+      Deliverables & artifacts:
+      - notebooks/slice_07_derivation.ipynb with symbolic steps and references
+      - papers/projection_filter_derivation.tex with formal derivation
+      - docs/slice_07_calculations.pdf
+
+      Approaches to implement (each must be attempted explicitly):
+      - Coarse-graining entropy-based derivation (derive constant α dimensions)
+      - Density-matrix decoherence mapping (show mapping from coupling spectrum to ε)
+      - Simple RG flow toy model with scale parameter and show exponential suppression
+      - Information-theory channel capacity derivation using mutual information and maximum-entropy constraints
+
+      Validation checklist:
+      - Dimensional analysis pass
+      - Limiting behavior: ε→0 ⇒ P_λ→1, ε→∞ ⇒ P_λ→0
+      - Provide order-of-magnitude estimate for α in at least one physical system
+
+      Acceptance criteria: At least one derivation produces exp(-αε²) with physically interpretable α and consistent limiting behavior.
+
+      Time estimate: 2 weeks
+    labels: [slice, phase-2, theoretical, rigorous]
+    milestone: "Month 3-4"
+
+  - title: "2.4 Slice 2.4: Experimental Proposals - New Tests of ε"
+    body: |
+      WBS: 2.4
+
+      Objective
+      - Produce 3 fully specified experimental proposals with predicted MER vs standard QM outcomes and SNR estimates.
+
+      Deliverable template (required fields per proposal):
+      - Title
+      - Abstract (3 lines)
+      - Equipment list with model numbers
+      - Parameter ranges and alignment tolerances
+      - Numerical prediction plots (MER vs QM)
+      - Estimated SNR and integration time to 5σ
+      - Cost estimate and timeline
+      - Potential collaborator groups (names and emails if public)
+
+      Simulation requirements:
+      - Provide scripts to simulate both MER and standard QM predictions and produce mock datasets stored in outputs/slice_08_simulations/
+
+      Acceptance criteria:
+      - At least one proposal is table-top feasible (<$75k), and at least one shows >3σ distinguishability between MER and QM within realistic integration times.
+
+      Time estimate: 2 weeks
+    labels: [slice, phase-2, experimental, proposals, rigorous]
+    milestone: "Month 3-4"
+
+  - title: "2.5 Phase 2 Synthesis & Decision"
+    body: |
+      WBS: 2.5
+
+      Tasks (explicit):
+      - [ ] Run `analysis/phase_02_synthesis.py` that loads slice outputs, computes combined predictive metrics (MAE, RMSE, combined p-values), and generates `docs/PHASE_2_VERDICT.md`.
+      - [ ] Produce `outputs/phase_02_mer_vs_standard.csv` with side-by-side comparisons and effect sizes.
+
+      Decision rule: GO to Phase 3 if ε predicts ≥2 independent phenomena with prediction error <30% and theoretical derivation produced a plausible α; else PIVOT/NO-GO with documented reasons.
+
+      Time estimate: 2 weeks
+    labels: [synthesis, phase-2, decision-point, rigorous]
+    milestone: "Month 3-4"
+
+  - title: "3.0 PHASE 3: Validate Unification (Months 5-6)"
+    body: |
+      Central question: Can MER (φ/ψ + ε or ε alone) reproduce QM and GR predictions?
+
+      Note: Phase 3 runs only if Phase 1 OR Phase 2 meets GO criteria. All slices below require reproducible numerical code and unit tests.
+    labels: [phase, phase-3, wbs]
+    milestone: "Month 5-6"
+
+  - title: "3.1 Slice 3.1: Quantum Harmonic Oscillator Reproduction"
+    body: |
+      WBS: 3.1
+
+      Summary
+      - Implement MER dynamics for 1D harmonic oscillator and extract energy spectrum; compare numerically to ℏω(n+1/2).
+
+      Implementation details:
+      - Use finite-difference discretization with grid N>=2048 (test convergence)
+      - Provide parameter sweep over ε and report limit ε→0
+
+      Output schema:
+      - outputs/slice_09_energy_levels.csv: level_index, E_mer_J, E_qm_J, rel_error_pct
+
+      Acceptance criteria: ground & first few excited states within 10% and correct spacing within 10%.
+
+      Time estimate: 2 weeks
+    labels: [slice, phase-3, quantum-mechanics, rigorous]
+    milestone: "Month 5-6"
+
+  - title: "3.2 Slice 3.2: Hydrogen Atom Spectrum Reproduction"
+    body: |
+      WBS: 3.2
+
+      Summary
+      - Extend MER to 3D radial problem with Coulomb potential and compare energy levels and degeneracies to QM.
+
+      Implementation details:
+      - Use spherical coordinate reduction to radial equation, grid N>=4096 for radial coordinate with appropriate mapping r∈[0,R_max]
+      - Provide convergence tests and stability analysis
+
+      Acceptance criteria: ground state energy within 10% and 1/n^2 scaling reproduced for first several n.
+
+      Time estimate: 2 weeks
+    labels: [slice, phase-3, atomic-physics, rigorous]
+    milestone: "Month 5-6"
+
+  - title: "3.3 Slice 3.3: Black Hole Event Horizon Reproduction"
+    body: |
+      WBS: 3.3
+
+      Summary
+      - Provide toy MER gravitational collapse model and compare predicted horizon radius scaling to r_s = 2GM/c^2.
+
+      Deliverables:
+      - outputs/slice_11_horizon_vs_mass.csv (mass_kg, r_mer_m, r_schwarzschild_m, ratio)
+      - Document assumptions and approximations clearly in docs/slice_11_derivation.pdf
+
+      Acceptance criteria: predicted radius within factor of 2 over mass range tested.
+
+      Time estimate: 2 weeks
+    labels: [slice, phase-3, general-relativity, rigorous]
+    milestone: "Month 5-6"
+
+  - title: "3.4 Slice 3.4: Cosmic Expansion & Hubble Constant"
+    body: |
+      WBS: 3.4
+
+      Summary
+      - Use MER large-scale toy model to derive expansion law and compute H0 estimate; compare to observational constraints.
+
+      Deliverables:
+      - outputs/slice_12_hubble_prediction.csv (model_params, H0_pred_km_s_Mpc, notes)
+      - Visual comparison to Planck and SNe Ia data (plots in outputs/)
+
+      Acceptance criteria: H0 within factor of 2 and qualitative explanation for acceleration.
+
+      Time estimate: 2 weeks
+    labels: [slice, phase-3, cosmology, rigorous]
+    milestone: "Month 5-6"
+
+  - title: "3.5 Phase 3 Synthesis & Final Assessment"
+    body: |
+      WBS: 3.5
+
+      Tasks (explicit):
+      - [ ] Run `analysis/phase_03_synthesis.py` to create final comparison table and assessment
+      - [ ] Produce docs/MER_FINAL_ASSESSMENT.md (include reproducibility appendix listing commands to reproduce results)
+      - [ ] Prepare `papers/mer_complete.tex` with code and data links
+
+      Time estimate: 2 weeks
+    labels: [synthesis, phase-3, final-assessment, rigorous]
+    milestone: "Month 5-6"
+
+  - title: "4.0 FINAL: Publication & Dissemination (Month 7)"
+    body: |
+      WBS: 4.0
+
+      Tasks:
+      - [ ] Format paper(s) for arXiv and target journals
+      - [ ] Create `README.md` with reproduction steps and DOI links
+      - [ ] Archive code+data on Zenodo and include DOI in paper
+      - [ ] Prepare conference abstracts and outreach materials
+
+      Time estimate: 2 weeks
+    labels: [publication, dissemination, rigorous]
+    milestone: "Month 7"

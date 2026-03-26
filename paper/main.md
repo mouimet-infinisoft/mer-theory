@@ -68,7 +68,7 @@ MER Theory proposes that **reality is governed by a single universal law**, but 
 - **Resolution capacity** (what we can measure)
 - **Interaction context** (how observer couples to phenomenon)
 
-**Core Insight**: Determinism and probability are not contradictory; they are scale-dependent descriptions of the same underlying dynamics viewed through different observational limitations. Within MER, probability is **epistemic**-it reflects limitations imposed by scale and resolution, not a breakdown of underlying determinism.
+**Core Insight**: Determinism and probability are not contradictory; they are scale-depeandent descriptions of the same underlying dynamics viewed through different observational limitations. Within MER, probability is **epistemic**-it reflects limitations imposed by scale and resolution, not a breakdown of underlying determinism.
 
 ## 2.2 Conjugate Cycles φ/ψ: Expansion and Regulation
 
