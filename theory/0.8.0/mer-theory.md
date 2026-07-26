@@ -15,6 +15,11 @@ status: "Working Draft"
 **Version:** v0.8.0  
 **Version Release Date:** July 2026
 
+**Metadata:**
+- **Metric signature:** $(-,+,+,+)$
+- **Operative coupling:** $\kappa\sqrt{5}$
+- **Golden ratio constants:** $\varphi = (1+\sqrt{5})/2$, $\psi = 1/\varphi$
+
 ---
 
 ## Abstract
