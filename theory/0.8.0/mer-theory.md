@@ -153,7 +153,7 @@ The exact interaction stress–energy tensor from the scalar–vector coupling i
 
 $$T_{\mu\nu}^{({\rm int})} = -\kappa\sqrt{5}\,\Bigl[ (g_{\mu\nu}\nabla\!\cdot\!\varepsilon - \nabla_{(\mu}\varepsilon_{\nu)})\,|\Phi|^2 + \varepsilon_{(\mu}R_{\nu)}\,|\Phi|^2 + R_{\mu\nu}^{(2)}\,|\Phi|^2 - 2\,\varepsilon^\alpha\,\partial_\alpha g_{\mu\nu}\,|\Phi|^2 \Bigr]$$
 
-up to total-derivative boundary terms, where $R_{\mu\nu}^{(2)}$ is the Ricci tensor of the $\varepsilon^\alpha$ submanifold and parentheses denote symmetrisation.
+up to total-derivative boundary terms, where $R_{\mu\nu}^{(2)}$ is the Ricci tensor of the $\varepsilon^\alpha$ submanifold and parentheses denote symmetrisation. Boundary terms are set to zero by imposing decaying falloff conditions on $|\Phi|^2$ and $\varepsilon_\alpha$ at infinity, so the tensor above is the exact physical contribution.
 *Status.* Provisional; derivation below establishes the metric-variation technique, but the curvature sub-term $R_{\mu\nu}^{(2)}$ requires explicit choice of $\mathcal{L}_\varepsilon$.
 
 *Derivation.*  
