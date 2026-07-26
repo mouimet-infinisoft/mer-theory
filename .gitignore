@@ -1,8 +1,6 @@
 # MER Theory Repository - Git Ignore
 
-# PDF drafts (keep in _source-materials)
-*.pdf
-
+# Keep versioned release PDFs under theory/*/ tracked except *.pdf is ignored by default.
 # Temporary files
 *.tmp
 *.bak
