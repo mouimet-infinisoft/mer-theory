@@ -50,3 +50,36 @@ This equation is **provisional** pending metric-signature consistency checks and
 **Derivation.**
 The action dependence on $\epsilon_\nu$ is isolated, and each term class is treated sequentially. Boundary terms are dropped under the vanishing-surface convention, with justification recorded in §B.2.
 
+
+### B.2 Interaction Stress-Energy Tensor via Metric Variation (Proposition 4)
+
+The interaction stress-energy tensor is defined as
+
+$$T_{\mu\nu}^{({\rm int})} = -\frac{2}{\sqrt{-g}}\,\frac{\delta S_{\rm int}}{\delta g^{\mu\nu}}$$
+
+with interaction action
+
+$$S_{\rm int} = \int d^4x\,\sqrt{-g}\,\kappa\sqrt{5}\,(\nabla_\alpha\varepsilon^\alpha)\,|\Phi|^2.$$
+
+**Proposition 4** (Interaction Stress-Energy Tensor — Derivation).  
+The exact tensor is
+
+$$T_{\mu\nu}^{({\rm int})} = -\kappa\sqrt{5}\,\Bigl[(g_{\mu\nu}\nabla\!\cdot\!\varepsilon - \nabla_{(\mu}\varepsilon_{\nu)})\,|\Phi|^2 + \varepsilon_{(\mu}R_{\nu)}\,|\Phi|^2 + R_{\mu\nu}^{(2)}\,|\Phi|^2 - 2\,\varepsilon^\alpha\,\partial_\alpha g_{\mu\nu}\,|\Phi|^2\Bigr]$$
+
+up to total-derivative boundary terms. Boundary terms are set to zero by imposing decaying falloff conditions on $|\Phi|^2$ and $\varepsilon_\alpha$ at infinity, so the tensor above is the exact physical contribution.
+
+*Status.* Provisional; derivation below establishes the metric-variation technique, but the curvature sub-term $R_{\mu\nu}^{(2)}$ needs the explicit choice of $\mathcal{L}_\varepsilon$.
+
+*Epistemic status.* **Proposition 4 (Provisional)**
+
+*Derivation.*  
+Integrating $S_{\rm int}$ by parts before varying the metric exposes the non-conformal Christoffel contribution. Metric variation of the first term gives
+
+$$\delta_1 S_{\rm int} = +\frac{\kappa\sqrt{5}}{2}\int d^4x\sqrt{-g}\,g^{\mu\nu}\delta g_{\mu\nu}\,\varepsilon^\alpha\,\partial_\alpha|\Phi|^2.$$
+
+The Christoffel term produces a non-conformal coupling that, after a second integration by parts, combines with the first term into the symmetric tensor above.
+
+*Physical interpretation.*  
+- $(g_{\mu\nu}\nabla\!\cdot\!\varepsilon - \nabla_{(\mu}\varepsilon_{\nu)})\,|\Phi|^2$ is analogous to a viscous scalar stress.
+- The curvature-dependent terms couple the $\varepsilon$ sector to spacetime geometry.
+- Because $S_{\rm int}$ is not conformally invariant, the tensor introduces effective anisotropic pressure.
