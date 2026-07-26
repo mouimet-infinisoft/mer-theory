@@ -1,11 +1,4 @@
-# MER Theory Repository - Git Ignore
-
-# Keep versioned release PDFs under theory/*/ tracked except *.pdf is ignored by default.
-# Temporary files
-*.tmp
-*.bak
-*~
-
+# .gitignore
 # OS files
 .DS_Store
 Thumbs.db
@@ -16,14 +9,17 @@ Thumbs.db
 *.swp
 *.swo
 
-# Python (if we add simulations later)
+# Claude/hidden config folders
+.claude/
+
+# Python
 __pycache__/
 *.pyc
 *.pyo
 .venv/
 venv/
 
-# LaTeX (if we compile later)
+# LaTeX
 *.aux
 *.log
 *.out
@@ -31,9 +27,6 @@ venv/
 *.synctex.gz
 
 # Build outputs
-build/
+/build/
 dist/
-
-pandoc-*.tar.gz
-pandoc-*/
-pandoc-*/**
+build/
