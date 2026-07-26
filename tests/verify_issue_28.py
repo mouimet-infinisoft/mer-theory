@@ -9,7 +9,8 @@ import sys
 public_data = {
     "LIGO_O4_strain": 1e-21,
     "BICEP_r_bound": 0.036,
-    "cold_atom_floor_seconds": 1.0,
+    "cold_atom_floor_seconds_min": 1.0,   # current experimental lower bound
+    "cold_atom_floor_seconds_tol": 1e-3,  # acceptable floor for theory to be viable
     "kappa_0": 0.042,
     "Phi_0": 1e-3,
     "Lambda_cutoff": 1e6,  # representative cutoff scale in m^-1
@@ -31,30 +32,31 @@ Phi = public_data["Phi_0"]
 ligo_h = public_data["LIGO_O4_strain"]
 Lambda = public_data["Lambda_cutoff"]
 
-# Suppressed source term: kappa * sqrt5 * Phi^2 * Theta(Lambda - |Phi|)
-# Assume Phi << Lambda for all regimes
+# Test 1: LIGO O4 suppression gate
 source_proxy = kappa * sqrt5 * Phi**2
-suppressed = source_proxy  # Phi regime below cutoff
+gw_ratio = source_proxy / ligo_h
+check("LIGO O4: suppressed source term bounded by strain",
+      source_proxy < ligo_h,
+      f"source proxy = {source_proxy:.3e}; LIGO h = {ligo_h:.0e}; ratio = {gw_ratio:.3e}; needs cutoff or smaller Phi")
 
-gw_ratio = suppressed / ligo_h
-check("LIGO O4: dimensionality asserted, suppressed term bounded",
-      source_proxy < 1e10,
-      f"source proxy = {source_proxy:.3e}; LIGO h = {ligo_h:.0e}; ratio = {gw_ratio:.3e}; dimensional analysis embedded")
-
+# Test 2: BICEP/Keck calibration range
 r_bound = public_data["BICEP_r_bound"]
 c_cmb_max = r_bound / (kappa * sqrt5)
-check("BICEP/Keck: C_CMB requires calibration",
-      c_cmb_max > 0.0,
-      f"C_CMB_max = {c_cmb_max:.3f}; must be derived from data")
+check("BICEP/Keck: C_CMB has positive finite range",
+      0.0 < c_cmb_max < 1.0,
+      f"C_CMB_max = {c_cmb_max:.3f}; must be calibrated from data")
 
+# Test 3: Cold atom interferometry coherence floor
 hbar = 1.054e-34
 E_S = 1e-21
 eps0 = 1e-3
 phi = 1.618
 floor_seconds = hbar / (E_S * eps0 * phi)
-check("Cold atom decoherence floor below experimental bound",
-      floor_seconds <= public_data["cold_atom_floor_seconds"],
-      f"floor = {floor_seconds:.3e} s; must be <= 1 s")
+# For the theory to be viable, the predicted floor must not force decoherence faster than experiments can access.
+# If floor < 1 ms, it is falsified by current cold-atom setups.
+check("Cold atom decoherence floor above viable experimental floor",
+      floor_seconds >= public_data["cold_atom_floor_seconds_tol"],
+      f"floor = {floor_seconds:.3e} s; must be >= {public_data['cold_atom_floor_seconds_tol']:.0e} s for viability")
 
 print("=== Issue #28 Public-Data Validation ===")
 for log in logs:
