@@ -83,3 +83,22 @@ The Christoffel term produces a non-conformal coupling that, after a second inte
 - $(g_{\mu\nu}\nabla\!\cdot\!\varepsilon - \nabla_{(\mu}\varepsilon_{\nu)})\,|\Phi|^2$ is analogous to a viscous scalar stress.
 - The curvature-dependent terms couple the $\varepsilon$ sector to spacetime geometry.
 - Because $S_{\rm int}$ is not conformally invariant, the tensor introduces effective anisotropic pressure.
+
+---
+
+### B.3 Soliton Ansatz for Conjecture 1
+
+**Conjecture 1** (Lemniscate Separatrix Soliton Ansatz).  
+The following dimensional ansatz is proposed for a topological soliton solution of the coupled equations:
+
+$$r^2(\theta) = a^2\,\cos(2\theta)\,\exp\!\Bigl[\frac{\varphi}{\psi}\,\varepsilon\Bigr], \qquad \varepsilon = \frac{\|\mathbf{r}_{\rm max}\|}{R_{\rm bound}}$$
+
+where $\varepsilon$ is a dimensionless scale-mismatch parameter, $a$ is the lemniscate semi-axis, and $R_{\rm bound} = a\sqrt{2}$ is the associated stabilisation radius. This equation is stated as a **testable hypothesis** — a soliton ansatz for Conjecture 1, not a derived theorem.
+
+*Status.* Conjecture 1; exact derivation is future work. Named next steps: Bogomolny completion of the coupled scalar-vector system, and self-similar ODE limit under radial scaling.
+
+*Sketch of derivation strategy.*  
+Assume radial symmetry with a single preferred direction embedded in the lemniscate topology. With $\Phi$ independent of $t$ and $\varepsilon_\mu = \delta_\mu^0\,\varepsilon(r,\theta)$, the coupled equations become elliptic-hyperbolic in $(r,\theta)$. In the thin-vortex limit $|\Phi|^2 \approx |\Phi_0|^2 = R_{\rm bound}^{-2}\,\delta(\varepsilon)\,\delta(\cos 2\theta)$, the topological density localises on the lemniscate separatrix $r = a\sqrt{\cos 2\theta}$. The exponential factor is then a first-order modulation required by the interaction action.
+
+*Falsifiability.*  
+The ansatz predicts a specific angular modulation. High-resolution simulation of the $\Phi$–$\varepsilon$ system should show lemniscate-symmetric density lobes; deviation falsifies Conjecture 1.
