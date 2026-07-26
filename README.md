@@ -35,7 +35,6 @@ This honesty about status is intentional. The goal is to build a credible, revie
 - `RELEASES.md` — Versioned artifact index
 - `CITATION.cff` — Citation metadata
 - `VERSION.md` — Current version indicator
-- `scripts/` — Research slice scripts and release helpers
 - `_source-materials/` — Research notes, archived planning docs, and experimental outputs
 
 ---
