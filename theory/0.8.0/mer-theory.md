@@ -13,7 +13,7 @@ status: "Working Draft"
 
 **Author:** Martin Ouimet  
 **Version:** v0.8.0  
-**Voracious Release Date:** July 2026
+**Version Release Date:** July 2026
 
 ---
 
