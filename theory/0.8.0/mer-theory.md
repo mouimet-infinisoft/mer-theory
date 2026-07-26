@@ -142,7 +142,8 @@ All formulas in this section use lowercase notation for experimental proxies (e.
 
 ### 5.1 Gravitational-Wave Phase Lag
 
-The gravitational-wave row in the falsification table is grounded in a concrete linearized ε-sector derivation. The effective phase lag predicted by the ε-sector linearization is
+The gravitational-wave row in the falsification table is grounded in a concrete linearized ε-sector derivation. The effective ε-sector dispersion underlies the following phase-lag expression:
+
 δϕ_GW = C_GW · (κ̃ √5) · ε̄ · (L_GW / λ_GW),
 
 where:
