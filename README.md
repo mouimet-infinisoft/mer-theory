@@ -1,30 +1,31 @@
 # MER Theory
 
-**Multi-scale Emergent Reality Theory**
+**Multi-scale Emergent Reality Theory — Working Draft**
 
-> A unified physics framework bridging quantum mechanics and general relativity through observer-relative scale dynamics.
+> A proposed physics framework exploring whether observer-relative scale dynamics can offer a unifying perspective across quantum and relativistic regimes. This is a work-in-progress proposition, not an established theory.
 
 **Author**: Martin Ouimet  
 **License**: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)  
 **Repository**: https://github.com/mouimet-infinisoft/mer-theory  
 
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18286576.svg)](https://doi.org/10.5281/zenodo.18286576)
-
 ---
 
-## What is MER Theory?
+## What is this?
 
-MER Theory proposes that the apparent contradictions between quantum mechanics (probabilistic, microscopic) and general relativity (deterministic, macroscopic) arise from **observer-relative scale perception**, not fundamental incompatibility.
+This repository contains the evolving manuscript, versioned releases, and supporting materials for **Multi-scale Emergent Reality Theory (MER Theory)**.
 
-### Core Insight
+MER Theory is a **propositional framework** that explores scale-dependent dynamics as a possible unifying concept across quantum mechanics, classical regimes, and general relativity. It is explicitly labeled as such because:
 
-**Reality is scale-dependent.** What appears:
-- **Quantum/probabilistic** at one scale
-- **Classical/deterministic** at another scale
-- **Cosmic/relativistic** at yet another scale
+- The core equations are **proposed**, not experimentally validated.
+- Several results are labeled **conjectures** rather than theorems because they lack rigorous derivation or empirical confirmation.
+- The golden-ratio/phi-psi coupling is a **postulated** structural assumption, not an empirically established fact.
+- Experimental predictions currently provide **qualitative functional forms**, not calibrated, testable bounds.
 
-...are all **projections of the same underlying universal dynamics** viewed through different observational windows.
+This honesty about status is intentional. The goal is to build a credible, reviewable body of work that clearly distinguishes:
+
+- **Postulates** — assumed axioms
+- **Propositions** — derived results from those axioms
+- **Conjectures** — plausible but unproven claims
 
 ---
 
@@ -35,33 +36,36 @@ MER Theory proposes that the apparent contradictions between quantum mechanics (
 - `CITATION.cff` — Citation metadata
 - `VERSION.md` — Current version indicator
 - `scripts/` — Research slice scripts and release helpers
+- `_source-materials/` — Research notes, archived planning docs, and experimental outputs
 
 ---
 
-## Versioned Releases
+## Current Status
 
-| Version | Tag | Artifact |
-|---------|-----|----------|
-| v0.7.0 | v0.7.0 | `theory/0.7.0/mer-theory.pdf` |
-| v0.6.0 | v0.6.0 | `theory/0.6.0/mer-theory.pdf` |
-| v0.5.0 | v0.5.0 | `theory/0.5.0/mer-theory.pdf` |
-| v0.4.0 | v0.4.0 | `theory/0.4.0/mer-theory.txt` |
-| v0.3.0 | v0.3.0 | `theory/0.3.0/mer-theory.pdf` |
-| v0.2.0 | v0.2.0 | `theory/0.2.0/mer-theory.pdf` |
+**Latest release**: v0.7.0  
+**Author**: Martin Ouimet  
+**License**: CC BY 4.0
 
-See `RELEASES.md` for release review artifacts.
+MER Theory remains a **work in progress**. The v0.7.0 release corrected a key mathematical defect in the scalar sector and restored exact probability conservation in the quantum limit. However, major components remain provisional or unverified:
+
+- The vector field equation is not yet fully derived from the action.
+- The interaction stress-energy tensor requires re-derivation via metric variation.
+- Postulate 2 (golden-ratio coupling) may need reframing, since scalar dynamics depend only on `sqrt(5)`.
+- Experimental predictions lack proportionality constants and cannot yet be falsified by data.
+
+These gaps are tracked in GitHub issues: #26 (roadmap), #27 (vector derivations), #28 (calibration and Postulate 2).
 
 ---
 
-## Epistemic Status
+## Epistemic Classification
 
-MER Theory is a **work in progress, exploratory framework**. The three-tier epistemic classification used in the monograph:
+The manuscript uses explicit epistemic labels to avoid overclaiming:
 
-- **Postulate** — assumed axiom
-- **Proposition** — derived result
-- **Conjecture** — plausible but unproven
+- **Postulate** — assumed without proof; foundational constraint
+- **Proposition** — mathematically derived from postulates
+- **Conjecture** — suggested by structure or analogy, not yet proven or tested
 
-The theory mixes precise internal definitions with heuristic mechanisms. Speculative correspondences are explicitly labeled as such and should be treated as starting points for discussion, not established physical results.
+Any claim not yet meeting derivation or validation standards is labeled accordingly.
 
 ---
 
