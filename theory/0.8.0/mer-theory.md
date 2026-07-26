@@ -165,12 +165,11 @@ Multiply by C_GW ≈ 1.10:
 
 This is many orders of magnitude below foreseeable LISA sensitivity (~10⁻⁸ rad), so current experiments cannot probe κ̃ at the upper end of the prior. The falsification criterion is therefore parameter-range exclusion rather than detection: measurements placing a 95% C.L. upper bound |δϕ_GW| < 1.0 × 10⁻⁸ rad would require κ̃ < 4.5 × 10⁻²⁹ · m, pushing the prior toward the lower quantum-gravity end. This bound remains **Conjecture** pending full metric variation of the interaction stress-energy tensor and completion of the linearized gravity calculation in §5.5.
 
+> **Scope note:** The full linearized-ε derivation behind the phase-lag scaling is provided in §5.5 as a draft from issue #29; it remains provisional pending the finalized interaction stress-energy tensor.
+
 ### 5.2 Atom-Interferometry Phase Shift
 
 **Conjecture 3** (Atom Interferometry). MER predicts an additional perturbation to the matter-wave phase due to the real part term −2 √5 κ ħ ∂_t ε⁰.
-
-Phase shift:
-Phase shift:
 
 Δϕ_int = 2 √5 · κ̃ (Δε⁰) · (L_int / v_int),
 
