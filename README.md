@@ -80,8 +80,8 @@ For questions, collaboration, or academic inquiries, please open an issue on Git
 ### How to Cite
 
 ```
-Ouimet, M. (2026). Multi-scale Emergent Reality Theory: A Unified Framework
-for Quantum Mechanics and General Relativity. GitHub repository.
+Ouimet, M. (2026). Multi-scale Emergent Reality Theory: A Proposed
+Scale-Dependent Dynamics Framework. Version 0.7.0.
 https://github.com/mouimet-infinisoft/mer-theory
 ```
 
